@@ -1,0 +1,544 @@
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Account Number: 
+250240120175
+Enter Account Holder Name: 
+Anjum
+Enter Date of Opening of the Account: 
+16-08-2020
+Enter Minimum Balance: 
+6000
+Account Added Successfully!!................
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Account Number: 
+250240120187
+Enter Account Holder Name: 
+Shreya
+Enter Date of Opening of the Account: 
+20-05-2024
+Enter Minimum Balance: 
+5000
+Account Added Successfully!!................
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Account Number: 
+250240120183
+Enter Account Holder Name: 
+Ankita
+Enter Date of Opening of the Account: 
+03-03-2025
+Enter Minimum Balance: 
+8000
+Account Added Successfully!!................
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Account Number: 
+250240120122
+Enter Account Holder Name: 
+Nupur
+Enter Date of Opening of the Account: 
+24-06-2022
+Enter Minimum Balance: 
+1500
+Account Added Successfully!!................
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 6000.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5000.0
+
+Account: 
+accNO: 250240120183
+accName: Ankita
+dateOfOpening: 2025-03-03
+balance: 8000.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1500.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+7
+
+Sorting of Account Number in Ascending Order is done Successfully............
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1500.0
+
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 6000.0
+
+Account: 
+accNO: 250240120183
+accName: Ankita
+dateOfOpening: 2025-03-03
+balance: 8000.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5000.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+8
+
+Sorting of Date of Opening of Account in Ascending Order is done Successfully............
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 6000.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1500.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5000.0
+
+Account: 
+accNO: 250240120183
+accName: Ankita
+dateOfOpening: 2025-03-03
+balance: 8000.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+3
+Enter the Account Number for which details to be shown
+250240120122
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1500.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+4
+Enter the Account number from which Amount to be Transfered: 
+250240120183
+Enter the Account Number to which Amount is to be Tranfered: 
+250240120175
+Enter Amount to be Transfered: 
+1000
+Amount Transfered Successfully..............
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 7000.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1500.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5000.0
+
+Account: 
+accNO: 250240120183
+accName: Ankita
+dateOfOpening: 2025-03-03
+balance: 7000.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+6
+Interest is applied for All Accounts...........
+Interest is applied for All Accounts...........
+Interest is applied for All Accounts...........
+Interest is applied for All Accounts...........
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 7840.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1680.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5600.0
+
+Account: 
+accNO: 250240120183
+accName: Ankita
+dateOfOpening: 2025-03-03
+balance: 7840.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+5
+Enter Account Number which is to be removed from the Account List:
+250240120183
+Account Removed Successfully
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 7840.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1680.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5600.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+9
+Removing Account: 250240120122With Account Balance is: 1680.0
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1680.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+2
+
+All Accounts Details are: 
+Account: 
+accNO: 250240120175
+accName: Anjum
+dateOfOpening: 2020-08-16
+balance: 7840.0
+
+Account: 
+accNO: 250240120122
+accName: Nupur
+dateOfOpening: 2022-06-24
+balance: 1680.0
+
+Account: 
+accNO: 250240120187
+accName: Shreya
+dateOfOpening: 2024-05-20
+balance: 5600.0
+
+
+********Accounts Menu************
+1. Add Account
+2. Display All Accounts using Enchanced For Loop
+3. Find Account and Display it's Details
+4. Fund Transfer
+5. Remove Account
+6. Apply Interests
+7. Sort Accounts by Account number
+8. Sort Accounts by Account Opening Date
+9. Check for ConcurrentModifications
+10. Exit from the program
+*****************************
+
+Enter your Choice
+10
+Program Exit Successfully..........

@@ -1,0 +1,432 @@
+											Assignment - 9
+==============================================================================================================================================================
+1.Consider following tables
+    product(pid,pname,price,qty)
+    product_details(pid,amt)
+    amt =price * qty
+Write a trigger which will calculate amt every time any update is done in the price of an item. 
+-------------------------------------------------------------------------------------------------
+
+Ans :
+
+mysql> create table product
+    -> (pid int primary key auto_increment,pname varchar(20) unique not null,price int,qty int);
+Query OK, 0 rows affected (0.08 sec)
+
+mysql> create table product_details
+	-> (pid int primary key, amount int, 
+	foreign key(pid) references product(pid) on delete cascade);
+Query OK, 0 rows affected (0.05 sec)
+
+mysql> delimiter ;
+mysql> delimiter //
+mysql> create trigger calculate_amt
+    -> after update
+    -> on product
+    -> for each row
+    -> begin
+    ->  declare amount int;
+    ->  if old.price <> new.price
+    ->  then
+    ->          update product_details
+    ->          set amount = new.price * new.qty
+    ->          where pid = new.pid;
+    ->  end if;
+    ->
+    -> end //
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> insert into product (pname,price,qty) values ('Mobile Phone',25000,2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into product (pname,price,qty) values ('Hair Dryer',2000,3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into product (pname,price,qty) values ('Laptop',49999,3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from product;
++-----+--------------+-------+------+
+| pid | pname        | price | qty  |
++-----+--------------+-------+------+
+|   1 | Mobile Phone | 25000 |    2 |
+|   2 | Hair Dryer   |  2000 |    3 |
+|   3 | Laptop       | 49999 |    3 |
++-----+--------------+-------+------+
+3 rows in set (0.01 sec)
+
+mysql> insert into product_details(pid,amount) values(1,25000*2);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into product_details(pid,amount) values(2,2000*3);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> insert into product_details(pid,amount) values(3,49999*3);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from product_details;
++-----+--------+
+| pid | amount |
++-----+--------+
+|   1 |  50000 |
+|   2 |   6000 |
+|   3 | 149997 |
++-----+--------+
+3 rows in set (0.00 sec)
+
+--- here now after updating price of laptop in product table the changes also done in product_details table
+
+mysql> update product
+    -> set price = 54000
+    -> where pid = 3;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from product;
++-----+--------------+-------+------+
+| pid | pname        | price | qty  |
++-----+--------------+-------+------+
+|   1 | Mobile Phone | 25000 |    2 |
+|   2 | Hair Dryer   |  2000 |    3 |
+|   3 | Laptop       | 54000 |    3 |
++-----+--------------+-------+------+
+3 rows in set (0.00 sec)
+
+mysql> select * from product_details;
++-----+--------+
+| pid | amount |
++-----+--------+
+|   1 |  50000 |
+|   2 |   6000 |
+|   3 | 162000 |
++-----+--------+
+3 rows in set (0.00 sec)
+
+==============================================================================================================================================================
+
+2. Consider following table
+   emp_wage(eno,ename,sal,over_time)
+   eno : pk auto inc
+Write a trigger which will insert over_time as 400 if value of over_time entered is null. 
+-------------------------------------------------------------------------------------------------
+Ans: 
+
+mysql> create table emp_wage
+    -> (eno int primary key auto_increment,ename varchar(20), sal decimal(7,2), over_time int);
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> delimiter //
+mysql> create trigger bef_insert
+    -> before insert
+    -> on emp_wage
+    -> for each row
+    -> begin
+    ->  if new.over_time is null
+    ->  then
+    ->          set new.over_time = 400;
+    ->  end if;
+    ->
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+
+mysql> insert into emp_wage(ename,sal,over_time)
+    -> values ('Anjum',45000,800),
+    -> ('Ankita',60000,1000);
+Query OK, 2 rows affected (0.01 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from emp_wage
+    -> ;
++-----+--------+----------+-----------+
+| eno | ename  | sal      | over_time |
++-----+--------+----------+-----------+
+|   1 | Anjum  | 45000.00 |       800 |
+|   2 | Ankita | 60000.00 |      1000 |
++-----+--------+----------+-----------+
+2 rows in set (0.00 sec)
+
+mysql> insert into emp_wage(ename,sal,over_time)
+    -> values('Shreya',35000,null);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> select * from emp_wage;
++-----+--------+----------+-----------+
+| eno | ename  | sal      | over_time |
++-----+--------+----------+-----------+
+|   1 | Anjum  | 45000.00 |       800 |
+|   2 | Ankita | 60000.00 |      1000 |
+|   3 | Shreya | 35000.00 |       400 |
++-----+--------+----------+-----------+
+3 rows in set (0.00 sec)
+==============================================================================================================================================================
+
+3.Consider following table
+      order_master(oid,pname,qty,price)
+      oid : pk auto inc
+      order_log(oid,odate,amt)
+Write a trigger which will create a log of all orders once order is placed.
+-------------------------------------------------------------------------------------------------
+Ans:
+
+mysql> create table order_master
+    -> (oid int primary key auto_increment,pname varchar(20),qty int,price int);
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> create table order_log
+    -> (oid int, odate date, amount int);
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter //
+mysql> create trigger after_order
+    -> after insert
+    -> on order_master
+    -> for each row
+    -> begin
+    ->  declare amount int;
+    ->  set amount = new.price * new.qty;
+    ->  insert into order_log
+    ->  values(new.oid,curdate(),amount);
+    ->
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql>
+mysql> delimiter ;
+mysql> insert into order_master
+    -> ^C
+mysql> desc order_master;
++-------+-------------+------+-----+---------+----------------+
+| Field | Type        | Null | Key | Default | Extra          |
++-------+-------------+------+-----+---------+----------------+
+| oid   | int         | NO   | PRI | NULL    | auto_increment |
+| pname | varchar(20) | YES  |     | NULL    |                |
+| qty   | int         | YES  |     | NULL    |                |
+| price | int         | YES  |     | NULL    |                |
++-------+-------------+------+-----+---------+----------------+
+4 rows in set (0.00 sec)
+
+mysql> insert into order_master(pname,qty,price)
+    -> values ('books',4,60),
+    -> ('shirts',2,150),
+    -> ('shoes',3,300);
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from order_master;
++-----+--------+------+-------+
+| oid | pname  | qty  | price |
++-----+--------+------+-------+
+|   1 | books  |    4 |    60 |
+|   2 | shirts |    2 |   150 |
+|   3 | shoes  |    3 |   300 |
++-----+--------+------+-------+
+3 rows in set (0.00 sec)
+
+mysql> select * from order_log;
++------+------------+--------+
+| oid  | odate      | amount |
++------+------------+--------+
+|    1 | 2025-03-28 |    240 |
+|    2 | 2025-03-28 |    300 |
+|    3 | 2025-03-28 |    900 |
++------+------------+--------+
+3 rows in set (0.00 sec)
+
+mysql> insert into order_master(pname,qty,price)
+    -> values('Arial',1,260);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from order_master;
++-----+--------+------+-------+
+| oid | pname  | qty  | price |
++-----+--------+------+-------+
+|   1 | books  |    4 |    60 |
+|   2 | shirts |    2 |   150 |
+|   3 | shoes  |    3 |   300 |
+|   4 | Arial  |    1 |   260 |
++-----+--------+------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from order_log;
++------+------------+--------+
+| oid  | odate      | amount |
++------+------------+--------+
+|    1 | 2025-03-28 |    240 |
+|    2 | 2025-03-28 |    300 |
+|    3 | 2025-03-28 |    900 |
+|    4 | 2025-03-28 |    260 |
++------+------------+--------+
+4 rows in set (0.00 sec)
+==============================================================================================================================================================
+
+4.Consider following table
+      cust_master(cid,cname,accno,city)
+     cust_details(cid,deleted_date)
+Write a trigger which will save the information of deleted customer in cust_details table. 
+-------------------------------------------------------------------------------------------------
+Ans:
+
+mysql> create trigger delete_cust
+    -> after delete
+    -> on cust_master
+    -> for each row
+    -> begin
+    ->  insert into cust_details
+    ->  values(old.cid,curdate());
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> insert into cust_master(cname,accno,city)
+    -> values('Pushpak',120148,'Nagpur'),
+    -> ('Shivam',120183,'MP'),
+    -> ('Vishal',120217,'Nashik');
+Query OK, 3 rows affected (0.01 sec)
+Records: 3  Duplicates: 0  Warnings: 0
+
+mysql> select * from cust_master;
++-----+---------+--------+--------+
+| cid | cname   | accno  | city   |
++-----+---------+--------+--------+
+|   1 | Pushpak | 120148 | Nagpur |
+|   2 | Shivam  | 120183 | MP     |
+|   3 | Vishal  | 120217 | Nashik |
++-----+---------+--------+--------+
+3 rows in set (0.00 sec)
+
+mysql> delete
+    -> from cust_master
+    -> where cid = 1;
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from cust_details;
++------+--------------+
+| cid  | deleted_date |
++------+--------------+
+|    1 | 2025-03-28   |
++------+--------------+
+1 row in set (0.00 sec)
+
+mysql> select * from cust_master;
++-----+--------+--------+--------+
+| cid | cname  | accno  | city   |
++-----+--------+--------+--------+
+|   2 | Shivam | 120183 | MP     |
+|   3 | Vishal | 120217 | Nashik |
++-----+--------+--------+--------+
+2 rows in set (0.00 sec)
+
+==============================================================================================================================================================
+
+5.create table med_master
+(mno int primary key auto_increment,
+ mname varchar(15),
+ stock int
+);
+create table med_order
+(mid int primary key auto_increment,
+ mno int,
+ qty int);
+Create above tables and write the trigger which will insert data in med_order table if stock drops down below 15.
+Use update after trigger.
+------------------------------------------------------------------------------------------------------------------
+Ans:
+
+mysql> delimiter //
+mysql> create trigger update_stock
+    -> after update
+    -> on med_master
+    -> for each row
+    -> begin
+    ->  declare qty int;
+    ->  if new.stock < 15
+    ->  then
+    ->          set qty = new.stock;
+    ->          insert into med_order(mno,qty)
+    ->          values(new.mno,qty);
+    ->  end if;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> insert into med_master(mname,stock)
+    ->     values('crosine',30),
+    ->     ('Paracetamol',15),
+    ->     ('saradon',20),
+    ->     ('azitromicine',50);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from med_master;
++-----+--------------+-------+
+| mno | mname        | stock |
++-----+--------------+-------+
+|   1 | crosine      |    30 |
+|   2 | Paracetamol  |    15 |
+|   3 | saradon      |    20 |
+|   4 | azitromicine |    50 |
++-----+--------------+-------+
+4 rows in set (0.00 sec)
+
+mysql> select * from med_order;
+Empty set (0.00 sec)
+
+mysql> update med_master
+    -> set stock =12
+    -> where mno = 2;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from med_order;
++-----+------+------+
+| mid | mno  | qty  |
++-----+------+------+
+|   1 |    2 |   12 |
++-----+------+------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

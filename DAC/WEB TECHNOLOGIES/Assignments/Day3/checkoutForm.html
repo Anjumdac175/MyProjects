@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CheckoutForm</title>
+    <style>
+        body{
+            background-color: #2B3035;
+            color: azure;
+        }
+        
+        .custom-container{
+            padding-left: 15rem;
+            padding-right: 15rem;
+        }
+        .custom-input::placeholder {
+            color: grey;
+            opacity: 1;  /* optional, makes it fully visible */
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid custom-container">
+        <!-- ---------------------Main Header---------------------- -->
+        <div class="row mt-5 mx-4 text-center">
+            <div class="col-12 py-1">
+                <img src="bootstrap-icon.png" alt="bootstrap image" class="img-fluid" style="width: 80px;">
+            </div>
+            <div class="col-12 py-1 fs-2 fw-semibold">Checkout form</div>
+            <div class="col-12 py-1 fs-5 fw-light">
+                <p>Below is an example form built entirely with Bootstrap’s form controls. 
+                    Each required form group has a validation state that can be triggered by attempting to submit the form without completing it.</p>
+            </div>
+        </div>
+        <!-- ----------------------Billing Address------------------------------------------ -->
+        <div class="row mx-5 d-flex justify-content-between">
+            <div class="col-8 fs-4 fw-semibold pt-5 pb-3">Billing address</div>
+            <div class="col-8">
+                <div class="row">
+                    <div class="col-6">
+                        <label for="" class="form-label my-2">First name</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                    <div class="col-6">
+                        <label for="" class="form-label my-2">Last name</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label my-2">Username</label>
+                        <div class="input-group mb-3">
+                            <span class="input-group-text bg-dark text-light border border-secondary" id="basic-addon1">@</span>
+                            <input type="text" class="form-control custom-input border-secondary bg-dark text-light" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                          </div>
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label my-2"> Email(optional)</label>
+                        <input type="text" class="form-control custom-input border-secondary bg-dark text-light" placeholder="you@example.com">
+                       
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label my-2"> Address</label>
+                        <input type="text" class="form-control custom-input border-secondary bg-dark text-light" placeholder="1234 Main St">
+                        
+                    </div>
+                    <div class="col-12">
+                        <label for="" class="form-label my-2">Address 2(optional)</label>
+                        <input type="text" class="form-control custom-input border-secondary bg-dark text-light" placeholder="Apartment or Suite">
+                        
+                    </div>
+                    <div class="row">
+                        <div class="col-5">
+                            <label for="" class="form-label">Country</label>
+                            <select name="country" id="country" class="form-select border-secondary bg-dark text-light">
+                                <option selected disabled>Choose.....</option>
+                                <option value="IN">India</option>
+                                <option value="US"> United States</option>
+                            </select>
+                        </div>
+                        <div class="col-4">
+                            <label for="" class="form-label">State</label>
+                            <select name="state" id="state" class="form-select border-secondary bg-dark text-light">
+                                <option selected disabled>Choose.....</option>
+                                <option value="AP">Andhra Pradesh</option>
+                                <option value="US"> California</option>
+                            </select>
+                        </div>
+                        <div class="col-3">
+                            <label for="" class="form-label">Zip</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                        </div>
+                    </div>
+                </div>
+                    <!-- ----------------------Shipping Address------------------------------------ -->
+                <div class="row py-4">
+                    <div class="col-12 border-top border-bottom border-1 border-secondary py-4">
+                        <div class="form-check">
+                            <input class="form-check-input bg-dark" type="checkbox" value="checkDefault">
+                            <label class="form-check-label" for="checkDefault">Shipping address is the same as my billing address</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input bg-dark" type="checkbox" value="checkDefault">
+                            <label class="form-check-label" for="checkDefault">Save this information for next time</label>
+                          </div>
+                    </div>
+                </div>
+
+                <!-- -----------------------------Payment Mode------------------------------ -->
+                <div class="row border-bottom border-1 border-secondary">
+                    <div class="col-12 fs-4 fw-semibold pb-2">Payment</div>
+                        <div class="form-check">
+                            <input class="form-check-input bg-dark" type="radio" name="radioDefault" id="radioDefault1" checked>
+                            <label class="form-check-label" for="radioDefault1">Credit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input bg-dark" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">Debit card</label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input bg-dark" type="radio" name="radioDefault" id="radioDefault1">
+                            <label class="form-check-label" for="radioDefault1">Paypal</label>
+                        </div>
+                    <div class="col-6 mt-3">
+                        <label for="" class="form-label"> Name on card</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                    <div class="col-6 mt-3">
+                        <label for="" class="form-label"> Credit card number</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                    <div class="col-3 mt-3 mb-4">
+                        <label for="" class="form-label"> Expiration</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                    <div class="col-3 mt-3 mb-4">
+                        <label for="" class="form-label">CVV</label>
+                        <input type="text" class="form-control border-secondary bg-dark text-light">
+                    </div>
+                </div>
+                <div class="col-12 mt-4">
+                    <button class="btn btn-primary btn-lg w-100">Continue to Checkout</button>
+                </div>
+            </div>
+                <!--  ------------------------Your cart------------------------------------------>
+                <div class="col-4">
+                    <div class="d-flex justify-content-between">
+                        <span class="fs-4 fw-semibold text-primary">Your cart</span>
+                        <span class="badge rounded-pill text-bg-primary fs-6">3</span>
+                    </div>
+                    <!------------------------------- List of descriptions------------------------------------ -->
+                    <ul class="list-group ">
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-secondary bg-dark text-light">
+                            <div>
+                                <span class=""> Product name</span><br>
+                                <span class="text-secondary"> Brief description</span>
+                            </div>
+                           
+                          <span class="badge text-secondary fs-6">$12</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-secondary bg-dark text-light">
+                            <div>
+                                <span> Second Product</span> <br>
+                                <span class="text-secondary"> Brief description</span>
+                            </div>
+                          <span class="badge text-secondary fs-6">$8</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-secondary bg-dark text-light">
+                            <div>
+                                <span>Third item</span> <br>
+                                <span class="text-secondary"> Brief description</span>
+                            </div>  
+                          <span class="badge text-secondary fs-6 ">$5</span>
+                        </li>
+                        <li class="list-group-item d-flex justify-content-between align-items-center border-secondary bg-dark text-light">
+                            <div>
+                                <span class="text-success"> Promo code</span> <br>
+                                <span class="text-success"> EXAMPLECODE</span>
+                            </div>
+                            <span class="badge fs-6 text-success">-$5</span>
+                          </li>
+                          <li class="list-group-item d-flex justify-content-between align-items-center border-secondary bg-dark text-light">
+                            <div>
+                                <span>Total (USD) </span>
+                            </div>
+                            <span class="badge text-light fs-6">$20</span>
+                          </li>
+                      </ul>
+                      <div class="input-group mt-3 border border-secondary rounded-2 p-2 bg-dark">
+                        <input type="text" class="form-control bg-dark custom-input border-secondary" placeholder="Promo code" aria-label="Recipient’s username" aria-describedby="button-addon2">
+                        <button class="btn btn-secondary" type="button" id="button-addon2">Reedem</button>
+                      </div>
+                    </div>
+        </div>
+     </div>
+   <div class="col-12 text-center py-5 mt-5">
+    <footer>
+        <span class="text-secondary-subtle"> &copy; 2017–2025 Company Name</span>
+        <div class="py-2">
+            <ul class="d-flex list-unstyled gap-3 justify-content-center text-primary fs-6 fw-semibold text-decoration-underline">
+                <li>Privacy</li>
+                <li>Terms</li>
+                <li>Support</li>
+            </ul>
+        </div>
+    </footer>
+   </div>
+</body>
+</html>

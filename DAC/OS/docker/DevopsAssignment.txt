@@ -1,0 +1,230 @@
+1.Containerize a Plain Java Hello World Application
+
+public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello World from Docker!");
+    }
+}
+
+FROM openjdk:17
+WORKDIR /app
+COPY HelloWorld.java .
+RUN javac HelloWorld.java
+CMD ["java", "HelloWorld"]
+
+docker build -t hello-java .
+docker run hello-java
+
+*******************************************************************************************************************************************
+2. Java with MySQL Integration as discussed in the class
+
+import java.sql.*;
+public class JdbcTest {
+    public static void main(String[] args) {
+        try {
+            Connection conn = DriverManager.getConnection(
+                "jdbc:mysql://mysql:3306/testdb", "root", "password");
+            Statement stmt = conn.createStatement();
+            ResultSet rs = stmt.executeQuery("SELECT * FROM customer");
+            while (rs.next())
+                System.out.println(rs.getInt(1) + " " + rs.getString(2));
+            conn.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
+
+
+FROM openjdk:17
+WORKDIR /app
+COPY . .
+RUN javac JdbcTest.java
+CMD ["java", "JdbcTest"]
+
+
+
+*******************************************************************************************************************************************
+3. Do the above using Docker Compose
+version: '3'
+services:
+  java-app:
+    build: .
+    depends_on:
+      - mysql
+  mysql:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: testdb
+    ports:
+      - "3306:3306"
+	  
+docker run: docker-compose up --build
+
+
+*******************************************************************************************************************************************
+4. Start a Apache/Tomcat container. Change the home page to print "Hello C-DAC". Verify in the browser.
+
+docker run -d --name tomcat -p 8080:8080 tomcat
+docker exec -it tomcat bash
+echo "Hello C-DAC" > /usr/local/tomcat/webapps/ROOT/index.jsp
+
+Visit: http://localhost:8080
+*******************************************************************************************************************************************
+5. For the above, add a Docker Volume.
+
+docker volume create tomcat-vol
+docker run -d --name tomcat-vol \
+  -p 8081:8080 \
+  -v tomcat-vol:/usr/local/tomcat/webapps/ROOT \
+  tomcat
+
+*******************************************************************************************************************************************
+6. Push your "Hello World" Java image to DockerHub.
+
+docker tag hello-java yourdockerhubusername/hello-java
+docker login
+docker push yourdockerhubusername/hello-java
+
+*******************************************************************************************************************************************
+7. Run a Docker container from one of your batch-mate's Docker image pulled from Docker Hub.
+
+docker pull batchmateusername/imagename
+docker run batchmateusername/imagename
+
+*******************************************************************************************************************************************
+8. Create an nginx Pod.
+kubectl run nginx --image=nginx
+
+*******************************************************************************************************************************************
+9. Run the nginx Pod as a service.
+kubectl expose pod nginx --type=NodePort --port=80
+kubectl get svc
+
+*******************************************************************************************************************************************
+10. Change the replicas to 5.
+kubectl scale --replicas=5 deployment/nginx
+
+*******************************************************************************************************************************************
+11. Manually delete a pod. Verify that a new pod gets created.
+
+kubectl get pods
+kubectl delete pod <pod-name>
+kubectl get pods   # New one should appear
+
+*******************************************************************************************************************************************
+12. Create a new repository on GitHub. Clone it on the local machine. Add a "Hello World" Java program and push it to GitHub and verify.
+
+git init
+git remote add origin https://github.com/yourusername/repo.git
+echo "public class HelloWorld { public static void main(String[] args) { System.out.println(\"Hello World\"); } }" > HelloWorld.java
+git add .
+git commit -m "Initial commit"
+git push -u origin master
+
+*******************************************************************************************************************************************
+13. Now create two branches for the above program on the local machine. Edit the same file in both the branches, merge changes, and push the final version on to GitHub.
+
+git branch feature1
+git branch feature2
+
+git checkout feature1
+echo "// Feature 1" >> HelloWorld.java
+git commit -am "Added feature 1"
+
+git checkout feature2
+echo "// Feature 2" >> HelloWorld.java
+git commit -am "Added feature 2"
+
+git checkout master
+git merge feature1
+git merge feature2
+git push
+
+*******************************************************************************************************************************************
+14. Use a yaml file to run nginx deployment with 5 pods in Kubernetes.
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx
+        ports:
+        - containerPort: 80
+
+*******************************************************************************************************************************************
+15. Write a Java program to accept two numbers from the user and display their sum. Create a Docker image and run it as a container.
+
+import java.util.Scanner;
+public class Add {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        System.out.println("Sum: " + (a + b));
+    }
+}
+
+FROM openjdk:17
+WORKDIR /app
+COPY Add.java .
+RUN javac Add.java
+CMD ["java", "Add"]
+
+docker build -t add-java .
+docker run -it add-java
+
+*******************************************************************************************************************************************
+16. Run an Ubuntu container. Open a terminal inside it. Create a directory called cdac. Create a file named hello.txt and store your name in it.
+
+docker run -it --name ubuntu-test ubuntu
+apt update && apt install -y nano
+mkdir cdac
+echo "YourName" > cdac/hello.txt
+
+*******************************************************************************************************************************************
+17. Stop and remove the above container, this time rerun with a volume attached.
+
+docker volume create cdac-vol
+docker run -it --name ubuntu-vol -v cdac-vol:/data ubuntu
+
+*******************************************************************************************************************************************
+18. Stop and remove the container and restart it. Check if the earlier file still exists.
+
+docker stop ubuntu-vol
+docker rm ubuntu-vol
+docker run -it --name ubuntu-vol -v cdac-vol:/data ubuntu
+cat /data/hello.txt
+
+*******************************************************************************************************************************************
+19. Run a fresh Ubuntu container. Install nano editor in it. Open nano and create file 'cdac.txt' containing text 'Hello C-DAC'.
+docker run -it ubuntu
+apt update && apt install -y nano
+nano cdac.txt  # Write: Hello C-DAC
+
+*******************************************************************************************************************************************
+20. Start a MySQL container. Open a terminal inside it. Create a database named testdb. In that database, create a table named 'customer' with fields customer_id and name. Add 5 records.
+docker run -it --name mysql-test -e MYSQL_ROOT_PASSWORD=password -d mysql:5.7
+docker exec -it mysql-test mysql -uroot -ppassword
+
+
+CREATE DATABASE testdb;
+USE testdb;
+CREATE TABLE customer (customer_id INT, name VARCHAR(50));
+INSERT INTO customer VALUES (1, 'John'), (2, 'Jane'), (3, 'Bob'), (4, 'Alice'), (5, 'Tom');
+SELECT * FROM customer;
+
+
+*******************************************************************************************************************************************

@@ -1,0 +1,622 @@
+					DBMS - PL SQL
+------------------------------------------------------
+WHY PLSQL
+->PROCEDURAL CONSTRUCTS - 	supports loops(for, while, loop) and condition statements(if then else);
+->MODULARITY - CAN BE ORGANISED IN BLOCKS, PROCEDURES, FUNCTIONS AND TRIGGERS
+->EXCEPTION HANDLING - can handle error exceptions
+-> IMPROVED PERFORMANCE - Instead of individual queries we can combine more than one 
+--------------------------------------------------------------------------------------------------------
+TYPES OF PL SQL
+1-> STORED PROCEDURES
+2-> STORED FUNCTIONS
+3-> CURSORS
+4-> TRIGGERS
+
+-----------------------------------------------------------------------------------------------------------
+
+1-> STORED PROCEDURES:-
+=========================
+
+--->It is a precompiled block stored in database that performs specific tasks when executed. It helps in code resuablity,security and peroformace optimization
+
+key points : parameters --- IN -- TAKES paramenters
+							OUT -- gives output
+							INOUT -- takes and gives input
+							
+________________________________________________________________________________________________________________________________________________________________________
+
+some practice questions:
+
+create a table with empid,empname,basicsalary,hra, da, tax and net salary
+mysql> create table employee
+    -> (empid int primary key auto_increment,
+    -> empname varchar(15) unique not null,
+    -> basic_salary decimal(7,2),
+    -> HRA decimal(6,2),
+    -> DA decimal(6,2),
+    -> Net_salary decimal(7,2)) auto_increment = 100;
+Query OK, 0 rows affected (0.03 sec)
+
+
+mysql> select * from employee;
++-------+---------+--------------+------+------+------------+
+| empid | empname | basic_salary | HRA  | DA   | Net_salary |
++-------+---------+--------------+------+------+------------+
+|   100 | Anjum   |     25000.00 | NULL | NULL |       NULL |
+|   101 | Ankita  |     35000.00 | NULL | NULL |       NULL |
+|   102 | Shreya  |     45000.00 | NULL | NULL |       NULL |
+|   103 | pranjal |     15000.00 | NULL | NULL |       NULL |
++-------+---------+--------------+------+------+------------+
+4 rows in set (0.00 sec)
+=====================================================================================================================================
+
+1. Retrieve salary from employee table for single in and output
+
+ans:
+
+delimiter //
+create procedure find_salary(IN emp_id int, OUT emp_salary decimal(7,2))
+BEGIN
+	select basic_salary into emp_salary
+	from employee
+	where empid = emp_id;
+END //
+delimiter ;
+
+set @emp_id = 1
+or we can directly write
+call find_salary(@emp_id,@emp_salary);
+select @emp_id as EmployeeId,@emp_salary as Employee_basic_salary;
+
+mysql> select @emp_id as EmployeeId,@emp_salary as Employee_basic_salary;
++------------+-----------------------+
+| EmployeeId | Employee_basic_salary |
++------------+-----------------------+
+|          1 |              25000.00 |
++------------+-----------------------+
+1 row in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------
+2. retrieve multiple row of values;
+ans:
+
+delimiter //
+drop procedure if exists display_all_Empsalary;
+create procedure display_all_Empsalary()
+BEGIN
+	select empid as EmployeeId,empname as Employee_Name, basic_salary as Employee_Salary
+	from employee;
+END //
+delimiter ;
+
+call display_all_Empsalary();
+
+mysql> call display_all_Empsalary();
++------------+---------------+-----------------+
+| EmployeeId | Employee_Name | Employee_Salary |
++------------+---------------+-----------------+
+|        100 | Anjum         |        25000.00 |
+|        101 | Ankita        |        35000.00 |
+|        102 | Shreya        |        45000.00 |
+|        103 | pranjal       |        15000.00 |
++------------+---------------+-----------------+
+4 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------------------------
+3. update in table using procedure fields like hra, da and tax and total net slary calculate for each employee in the table;
+ans:
+
+DELIMITER $$
+drop procedure if exists calculate_Net_salary;
+create procedure calculate_Net_salary(IN emp_id int)
+BEGIN
+	-- declaring variables
+	
+	declare emp_salary decimal(7,2);
+	declare emp_hra decimal(7,2);
+	declare emp_da decimal(6,2);
+	declare emp_tax decimal(7,2);
+	
+	-- fetch data from employee table
+	
+	select basic_salary into emp_salary
+	from employee
+	where empid = emp_id;
+	
+	-- calculate hra and da for each employee
+	
+	SET emp_hra = emp_salary * 0.24;
+	SET emp_da = emp_salary * 0.12;
+	
+	-- calculating tax
+	
+	IF emp_salary > 50000
+	THEN
+		SET emp_tax = (emp_salary + emp_hra + emp_da) * 0.10;
+	ELSEIF emp_salary BETWEEN 30000 AND 50000
+	THEN
+		SET emp_tax = (emp_salary + emp_hra + emp_da) * 0.05;
+	ELSE
+		SET emp_tax = 0;
+	END IF;
+	
+	-- updating table with the following values
+		
+		update employee
+		SET HRA = emp_hra, DA = emp_da, TAX = emp_tax
+		where empid = emp_id;
+	
+END $$
+DELIMITER ;
+
+call calculate_Net_salary(100);
+
+mysql> select * from employee;
++-------+---------+--------------+----------+---------+---------+------------+
+| empid | empname | basic_salary | HRA      | DA      | TAX     | Net_Salary |
++-------+---------+--------------+----------+---------+---------+------------+
+|   100 | Anjum   |     25000.00 |  6000.00 | 3000.00 |    0.00 |       NULL |
+|   101 | Ankita  |     35000.00 |  8400.00 | 4200.00 | 2380.00 |       NULL |
+|   102 | Shreya  |     45000.00 | 10800.00 | 5400.00 | 3060.00 |       NULL |
+|   103 | pranjal |     15000.00 |  3600.00 | 1800.00 |    0.00 |       NULL |
++-------+---------+--------------+----------+---------+---------+------------+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+FUNCTION AND PROCEDURES
+---------------------------------------------------------------------------------------------------------------------------
+
+DELIMITER $$
+create function cal_net_salary(emp_salary decimal(7,2),emp_hra decimal(7,2), emp_da decimal(7,2),emp_tax decimal(7,2)) returns decimal(7,2)
+deterministic
+begin
+	declare net_salary decimal(7,2);
+	set net_salary = (emp_salary + emp_hra + emp_da) - emp_tax;
+	return net_salary;
+end $$
+DELIMITER ;
+
+
+DELIMITER $$
+drop procedure if exists calculate_Net_salary;
+create procedure calculate_Net_salary(IN emp_id int)
+BEGIN
+	-- declaring variables
+	
+	declare emp_salary decimal(7,2);
+	declare emp_hra decimal(7,2);
+	declare emp_da decimal(6,2);
+	declare emp_tax decimal(7,2);
+	declare emp_net_salary decimal(7,2); 
+	
+	-- fetch data from employee table
+	
+	select basic_salary into emp_salary
+	from employee
+	where empid = emp_id;
+	
+	-- calculate hra and da for each employee
+	
+	SET emp_hra = emp_salary * 0.24;
+	SET emp_da = emp_salary * 0.12;
+	
+	-- calculating tax
+	
+	IF emp_salary > 50000
+	THEN
+		SET emp_tax = (emp_salary + emp_hra + emp_da) * 0.10;
+	ELSEIF emp_salary BETWEEN 30000 AND 50000
+	THEN
+		SET emp_tax = (emp_salary + emp_hra + emp_da) * 0.05;
+	ELSE
+		SET emp_tax = 0;
+	END IF;
+	
+	-- calculate net salary
+		
+		set emp_net_salary = cal_net_salary(emp_salary,emp_hra,emp_da,emp_tax);
+	
+	-- updating table with the following values
+		
+		update employee
+		SET HRA = emp_hra, DA = emp_da, TAX = emp_tax, Net_salary = emp_net_salary 
+		where empid = emp_id;
+	
+END $$
+DELIMITER ;
+
+mysql> call calculate_Net_salary(100);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+---------+--------------+----------+---------+---------+------------+
+| empid | empname | basic_salary | HRA      | DA      | TAX     | Net_Salary |
++-------+---------+--------------+----------+---------+---------+------------+
+|   100 | Anjum   |     25000.00 |  6000.00 | 3000.00 |    0.00 |   34000.00 |
+|   101 | Ankita  |     35000.00 |  8400.00 | 4200.00 | 2380.00 |       NULL |
+|   102 | Shreya  |     45000.00 | 10800.00 | 5400.00 | 3060.00 |       NULL |
+|   103 | pranjal |     15000.00 |  3600.00 | 1800.00 |    0.00 |       NULL |
++-------+---------+--------------+----------+---------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> call calculate_Net_salary(101);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+---------+--------------+----------+---------+---------+------------+
+| empid | empname | basic_salary | HRA      | DA      | TAX     | Net_Salary |
++-------+---------+--------------+----------+---------+---------+------------+
+|   100 | Anjum   |     25000.00 |  6000.00 | 3000.00 |    0.00 |   34000.00 |
+|   101 | Ankita  |     35000.00 |  8400.00 | 4200.00 | 2380.00 |   45220.00 |
+|   102 | Shreya  |     45000.00 | 10800.00 | 5400.00 | 3060.00 |       NULL |
+|   103 | pranjal |     15000.00 |  3600.00 | 1800.00 |    0.00 |       NULL |
++-------+---------+--------------+----------+---------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> call calculate_Net_salary(102);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+---------+--------------+----------+---------+---------+------------+
+| empid | empname | basic_salary | HRA      | DA      | TAX     | Net_Salary |
++-------+---------+--------------+----------+---------+---------+------------+
+|   100 | Anjum   |     25000.00 |  6000.00 | 3000.00 |    0.00 |   34000.00 |
+|   101 | Ankita  |     35000.00 |  8400.00 | 4200.00 | 2380.00 |   45220.00 |
+|   102 | Shreya  |     45000.00 | 10800.00 | 5400.00 | 3060.00 |   58140.00 |
+|   103 | pranjal |     15000.00 |  3600.00 | 1800.00 |    0.00 |       NULL |
++-------+---------+--------------+----------+---------+---------+------------+
+4 rows in set (0.00 sec)
+
+mysql> call calculate_Net_salary(103);
+Query OK, 1 row affected (0.01 sec)
+
+mysql> select * from employee;
++-------+---------+--------------+----------+---------+---------+------------+
+| empid | empname | basic_salary | HRA      | DA      | TAX     | Net_Salary |
++-------+---------+--------------+----------+---------+---------+------------+
+|   100 | Anjum   |     25000.00 |  6000.00 | 3000.00 |    0.00 |   34000.00 |
+|   101 | Ankita  |     35000.00 |  8400.00 | 4200.00 | 2380.00 |   45220.00 |
+|   102 | Shreya  |     45000.00 | 10800.00 | 5400.00 | 3060.00 |   58140.00 |
+|   103 | pranjal |     15000.00 |  3600.00 | 1800.00 |    0.00 |   20400.00 |
++-------+---------+--------------+----------+---------+---------+------------+
+4 rows in set (0.00 sec)
+
+=====================================================================================================================================================================
+					cursors
+-------------------------------------------------
+sample data
+
+mysql> create table employee(
+    -> empid int primary key auto_increment,
+    -> ename varchar(15) unique not null,
+    -> department varchar(15),
+    -> basic_salary decimal(7,2),
+    -> net_salary decimal(7,2));
+Query OK, 0 rows affected (0.04 sec)
+
+mysql> insert into employee(ename,department,basic_salary)
+    -> values('Anjum','Government',60000),
+    -> ('Shreya','DAC',90000),
+    -> ('Nupur','Testing',65000),
+    -> ('Vishal','Army',55000);
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from employee;
++-------+--------+------------+--------------+------------+
+| empid | ename  | department | basic_salary | net_salary |
++-------+--------+------------+--------------+------------+
+|     1 | Anjum  | Government |     60000.00 |       NULL |
+|     2 | Shreya | DAC        |     90000.00 |       NULL |
+|     3 | Nupur  | Testing    |     65000.00 |       NULL |
+|     4 | Vishal | Army       |     55000.00 |       NULL |
++-------+--------+------------+--------------+------------+
+4 rows in set (0.00 sec)
+
+==========================================================================================
+1. Write a stored procedure using a cursor to calculate net salary (10% tax).
+ans:
+
+
+delimiter $$
+create procedure calculate_New_salary()
+BEGIN
+	declare done int default 0;
+	declare emp_id int;
+	declare emp_sal decimal(7,2);
+	declare net_sal decimal(7,2);
+	
+	declare emp_cursor cursor for 
+	
+	select empid,basic_salary
+	from employee;
+	
+	declare continue handler for not found set done = 1;
+	
+	open emp_cursor;
+	
+	read_loop: loop
+		fetch emp_cursor into emp_id,emp_sal;
+		
+		IF done
+		then
+			leave read_loop;
+		END IF;
+		IF emp_sal between 50000 and 60000
+		then
+			set net_sal = emp_sal - (emp_sal*0.10);
+		
+		ELSEIF emp_sal between 61000 and 100000
+		then
+			set net_sal = emp_sal - (emp_sal * 0.15);
+		ELSE
+			set net_sal = emp_sal;
+		END IF;
+	
+		UPDATE employee
+		set net_salary = net_sal
+		where empid = emp_id;
+	
+	end loop read_loop;
+	close emp_cursor;
+
+END $$
+delimiter ;
+
+==================================================================================================================
+2. Write a procedure to fetch employee details one by one using a cursor.
+ ans:
+ 
+ DELIMITER $$
+ 
+ DROP PROCEDURE IF EXISTS FETCH_EMPLOYEE;
+ CREATE PROCEDURE FETCH_EMPLOYEE()
+ 
+ BEGIN
+	
+	DECLARE done int default 0;
+	DECLARE empname varchar(20);
+	DECLARE emp_dept varchar(20);
+	
+	DECLARE emp_cur CURSOR FOR
+	
+	SELECT  ename,department
+	from employee;
+	
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+	
+	OPEN emp_cur;
+	
+		read_loop: LOOP
+	
+			FETCH emp_cur into empname,emp_dept;
+		
+			IF done 
+			THEN
+				LEAVE read_loop;
+			END IF;
+		
+			SELECT empname AS 'Employee Name', emp_dept AS 'Employee Department';
+		
+		END LOOP read_loop;
+	
+	CLOSE emp_cur;
+	
+ END $$
+ DELIMITER ;
+ 
+ ===============================================================================================
+3. How can we use a cursor inside a loop to update salaries based on department?
+	Example Rule:
+	HR employees get a 5% salary increase.
+
+	Finance employees get a 7% salary increase.
+
+	IT employees get a 10% salary increase.
+	 
+
+DELIMITER $$
+
+DROP PROCEDURE IF EXISTS UPDATE_EMPSALARY;
+CREATE PROCEDURE UPDATE_EMPSALARY()
+
+BEGIN
+	
+	DECLARE done int default 0;
+	DECLARE eid int;
+	DECLARE dept varchar(20);
+	DECLARE empname varchar(20);
+	DECLARE emp_sal decimal(7,2);
+	DECLARE net_sal decimal(7,2);
+	
+	DECLARE sal_cur CURSOR FOR
+	
+	SELECT empid,ename,department,basic_salary,net_salary
+	FROM employee;
+	
+	DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
+	OPEN sal_cur;
+	
+		read_loop: LOOP
+			
+			FETCH sal_cur into eid,empname,dept,emp_sal,net_sal;
+			
+			IF done 
+			THEN
+				LEAVE read_loop;
+			END IF;
+			
+			IF dept = 'DAC'
+			THEN
+				SET emp_sal = emp_sal*1.05;
+				SET net_sal = net_sal*1.05;
+			
+			ELSEIF dept = 'Government'
+			THEN
+				SET emp_sal = emp_sal*1.07;
+				SET net_sal = net_sal*1.07;
+			
+			ELSEIF dept = 'Army'
+			THEN
+				SET emp_sal = emp_sal*1.10;
+				SET net_sal = net_sal*1.10;
+			ELSE
+				SET emp_sal = emp_sal;
+				SET net_sal = net_sal;
+			END IF;
+	
+			UPDATE employee
+			SET basic_salary = emp_sal,net_salary = net_sal
+			where empid = eid;
+			
+		END LOOP read_loop;
+	
+	CLOSE sal_cur;
+
+END $$
+DELIMITER ;
+ 
+ mysql> call update_empsalary();
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> select * from employee;
++-------+--------+------------+--------------+------------+
+| empid | ename  | department | basic_salary | net_salary |
++-------+--------+------------+--------------+------------+
+|     1 | Anjum  | Government |     68694.00 |   57780.00 |
+|     2 | Shreya | DAC        |     99225.00 |   80325.00 |
+|     3 | Nupur  | Testing    |     65000.00 |   55250.00 |
+|     4 | Vishal | Army       |     66550.00 |   54450.00 |
++-------+--------+------------+--------------+------------+
+4 rows in set (0.00 sec)
+ 
+ =====================================================================================================================================================
+ 
+								Tiggers
+ -------------------------------------------------------------------
+ A trigger is a special stored procedure that acutomatically called by system which executes before or after certain events(like INSERT, UPDATE, DELETE) occure in the table.
+ 
+ INSERT - BEFORE, AFTER
+ UPDATE - BEFORE, AFTER
+ DELETE - BEFORE, AFTER
+ 
+ INSERT
+ -----------
+ BEFORE TRIGGER:
+ ---------------
+ 
+ 1. Create a trigger that automatically capitalizes employee names before inserting a record into the employees table.
+ 
+ DELIMITER $$
+ CREATE TRIGGER before_captial_name
+ BEFORE INSERT ON employee
+ FOR EACH ROW
+ BEGIN
+	SET NEW.ename = UPPER(NEW.ename);
+ END $$
+ DELIMITER ;
+ ========================================================================================================================
+ 2. Create a trigger that automatically capitalize first letter of employee names before inserting a record into the employees table.
+
+ DELIMITER $$
+ DROP TRIGGER IF EXISTS before_captial__Firstname;
+ CREATE TRIGGER before_captial__Firstname
+ BEFORE INSERT ON employee
+ FOR EACH ROW
+ BEGIN
+	SET NEW.ename = CONCAT(UPPER(LEFT(NEW.ename,1)),LOWER(SUBSTRING(NEW.ename,2)));
+ END $$
+ DELIMITER ;
+ ========================================================================================================================
+ 3. Write a trigger that checks if the salary is greater than 20,000 before inserting a new employee. If not, prevent the insertion.
+  
+DELIMITER $$
+CREATE TRIGGER Before_insert_salary
+BEFORE INSERT ON employee
+FOR EACH ROW
+BEGIN
+	IF NEW.basic_salary < 20000
+	THEN
+		SET NEW.basic_salary = 1/0;
+	END IF;
+END $$
+DELIMITER ;
+ 
+ another
+ -----------
+DELIMITER $$
+DROP TRIGGER before_employee_insert;
+CREATE TRIGGER before_employee_insert
+BEFORE INSERT ON employee
+FOR EACH ROW
+BEGIN
+    -- Check if the new salary is less than 20,000
+    IF NEW.basic_salary < 20000 THEN
+        SIGNAL SQLSTATE '45000'
+        SET MESSAGE_TEXT = 'Salary must be at least 20,000';
+    END IF;
+END $$
+DELIMITER ;
+=============================================================================================================================
+Practice Questions: 19. Write a trigger that updates employee count in a department_stats table after any INSERT, UPDATE, or DELETE operation.
+20. Create a trigger that logs changes in both salary and job title in a promotion_history table.
+21. Design a trigger that prevents duplicate email addresses from being inserted into a users table.
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,513 @@
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN101
+Enter Mobile Phone Brand Name: 
+Samsung
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+ios
+Enter Mobile Phone color: 
+black
+Enter Mobile Phone Price (more than 100): 
+45000
+Enter Mobile Phone Ram (GB, at least 1GB): 
+16
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN201
+Enter Mobile Phone Brand Name: 
+OnePlus
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+Android
+Enter Mobile Phone color: 
+white
+Enter Mobile Phone Price (more than 100): 
+54999
+Enter Mobile Phone Ram (GB, at least 1GB): 
+24
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+Iphone
+Enter Mobile Phone Brand Name: 
+Iphone
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+ios
+Enter Mobile Phone color: 
+black
+Enter Mobile Phone Price (more than 100): 
+80000
+Enter Mobile Phone Ram (GB, at least 1GB): 
+8
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN401
+Enter Mobile Phone Brand Name: 
+Realmi
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+Android
+Enter Mobile Phone color: 
+Green
+Enter Mobile Phone Price (more than 100): 
+29999
+Enter Mobile Phone Ram (GB, at least 1GB): 
+12
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN501
+Enter Mobile Phone Brand Name: 
+Lava
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+Android
+Enter Mobile Phone color: 
+Blue
+Enter Mobile Phone Price (more than 100): 
+17999
+Enter Mobile Phone Ram (GB, at least 1GB): 
+4
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN601
+Enter Mobile Phone Brand Name: 
+Vivo
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+ios
+Enter Mobile Phone color: 
+white
+Enter Mobile Phone Price (more than 100): 
+32999
+Enter Mobile Phone Ram (GB, at least 1GB): 
+12
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+2
+
+**********************************
+MobilePhone List..................
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN501	brand: Lava	os: ANDROID	color: Blue	price: 17999.0	ram:4
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+3
+
+**********************************
+Partitioned Data by OS...............
+
+**********************************
+
+Android Phones are:  
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN501	brand: Lava	os: ANDROID	color: Blue	price: 17999.0	ram:4
+
+
+IOS Phones are:  
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+4
+MobilePhones Sorted By Color and then By OS: ..............
+MobilePhone:
+serialNo: SN501	brand: Lava	os: ANDROID	color: Blue	price: 17999.0	ram:4
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+5
+Converted List into Set:............ 
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN501	brand: Lava	os: ANDROID	color: Blue	price: 17999.0	ram:4
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+6
+
+**********************************
+
+MobilePhone Filetered By SerialNo:...........
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+
+**********************************
+
+MobilePhone Filetered By Brand:...........
+
+**********************************
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+
+**********************************
+
+MobilePhone Filetered By OS:...........
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+**********************************
+
+MobilePhone Filetered By Color:...........
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+
+**********************************
+
+MobilePhone Filetered By Price:...........
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+**********************************
+
+MobilePhone Filetered By Ram:...........
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN301
+Enter Mobile Phone Brand Name: 
+Iphone
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+Apple
+java.lang.IllegalArgumentException: No enum constant com.cdac.acts.PhoneOs.APPLE
+	at java.base/java.lang.Enum.valueOf(Enum.java:273)
+	at com.cdac.acts.PhoneOs.valueOf(PhoneOs.java:1)
+	at com.cdac.acts.MobilePhoneTester.MobilePhoneTester.main(MobilePhoneTester.java:58)
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+ios
+Enter Mobile Phone color: 
+Black
+Enter Mobile Phone Price (more than 100): 
+0
+Invalid Price! Please enter a positive value.
+Enter Mobile Phone Price (more than 100): 
+100
+Enter Mobile Phone Ram (GB, at least 1GB): 
+0
+Invalid RAM! Please enter a positive value greater than 0.
+Enter Mobile Phone Ram (GB, at least 1GB): 
+4
+Mobile Phone Record Added Successfully.
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+2
+
+**********************************
+MobilePhone List..................
+
+**********************************
+MobilePhone:
+serialNo: SN101	brand: Samsung	os: IOS	color: black	price: 45000.0	ram:16
+
+MobilePhone:
+serialNo: SN201	brand: OnePlus	os: ANDROID	color: white	price: 54999.0	ram:24
+
+MobilePhone:
+serialNo: Iphone	brand: Iphone	os: IOS	color: black	price: 80000.0	ram:8
+
+MobilePhone:
+serialNo: SN401	brand: Realmi	os: ANDROID	color: Green	price: 29999.0	ram:12
+
+MobilePhone:
+serialNo: SN501	brand: Lava	os: ANDROID	color: Blue	price: 17999.0	ram:4
+
+MobilePhone:
+serialNo: SN601	brand: Vivo	os: IOS	color: white	price: 32999.0	ram:12
+
+MobilePhone:
+serialNo: SN301	brand: Iphone	os: IOS	color: Black	price: 100.0	ram:4
+
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+1
+Enter Mobile Phone Serial No: 
+SN201
+Enter Mobile Phone Brand Name: 
+Apple
+Enter Mobile Phone OS Type(ANDROID or IOS): 
+ios
+Enter Mobile Phone color: 
+White
+Enter Mobile Phone Price (more than 100): 
+25000
+Enter Mobile Phone Ram (GB, at least 1GB): 
+6
+A MobilePhone with this Serial No already exists!
+
+************MobilePhone List********************
+ 1. Add MobilePhone
+ 2. Display All Phones
+ 3. Partition By Android and IOS
+ 4. Sort Color and OS by Comparator of Lambda
+ 5. Convert List into Set Collection
+ 6. Filter Each Field by Stream API
+ 7. Exit from program
+************************************************
+
+Enter your Choice
+7
+Data Saved Successfully.Exiting program.................

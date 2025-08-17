@@ -1,0 +1,409 @@
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+1
+Enter Student Roll No: 
+175
+Enter Student Name: 
+Anjum
+Enter Student Marks: 
+98
+Marks Accepted
+
+Enter Student Department(DAC,AI,DITSS,DBD): 
+dac
+Student added............
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+1
+Enter Student Roll No: 
+186
+Enter Student Name: 
+Shreya
+Enter Student Marks: 
+92
+Marks Accepted
+
+Enter Student Department(DAC,AI,DITSS,DBD): 
+ai
+Student added............
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+1
+Enter Student Roll No: 
+151
+Enter Student Name: 
+Pranjal
+Enter Student Marks: 
+85
+Marks Accepted
+
+Enter Student Department(DAC,AI,DITSS,DBD): 
+dac
+Student added............
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+1
+Enter Student Roll No: 
+122
+Enter Student Name: 
+Nupur
+Enter Student Marks: 
+35
+Marks Accepted
+
+Enter Student Department(DAC,AI,DITSS,DBD): 
+dac
+Student added............
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+1
+Enter Student Roll No: 
+191
+Enter Student Name: 
+Rohan
+Enter Student Marks: 
+36
+Marks Accepted
+
+Enter Student Department(DAC,AI,DITSS,DBD): 
+ai
+Student added............
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+2
+Storing Student Data into File......
+Student Record Saved Successfully into File..
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+3
+Retrieving Students Data From File......
+Student: 
+**********************
+rollNo: 175
+name: Anjum
+marks: 98.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 151
+name: Pranjal
+marks: 85.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 122
+name: Nupur
+marks: 35.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+
+Student: 
+**********************
+rollNo: 191
+name: Rohan
+marks: 36.0
+dept: AI
+
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+4
+Search Student based on Department...........
+
+Enter Student Department: 
+ai
+Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+
+Student: 
+**********************
+rollNo: 191
+name: Rohan
+marks: 36.0
+dept: AI
+
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+5
+Sort Student List based on Marks in Descending Order....
+Student: 
+**********************
+rollNo: 175
+name: Anjum
+marks: 98.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+
+Student: 
+**********************
+rollNo: 151
+name: Pranjal
+marks: 85.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 191
+name: Rohan
+marks: 36.0
+dept: AI
+
+Student: 
+**********************
+rollNo: 122
+name: Nupur
+marks: 35.0
+dept: DAC
+
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+6
+Top Scorers of Students are:.........
+Student: 
+**********************
+rollNo: 175
+name: Anjum
+marks: 98.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 151
+name: Pranjal
+marks: 85.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+7
+Students List By Department are:..........
+AI - [Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+, Student: 
+**********************
+rollNo: 191
+name: Rohan
+marks: 36.0
+dept: AI
+]
+DAC - [Student: 
+**********************
+rollNo: 175
+name: Anjum
+marks: 98.0
+dept: DAC
+, Student: 
+**********************
+rollNo: 122
+name: Nupur
+marks: 35.0
+dept: DAC
+, Student: 
+**********************
+rollNo: 151
+name: Pranjal
+marks: 85.0
+dept: DAC
+]
+Students List By Pass/Fail are: ......... 
+Passed Student List are: 
+Student: 
+**********************
+rollNo: 175
+name: Anjum
+marks: 98.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 151
+name: Pranjal
+marks: 85.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 186
+name: Shreya
+marks: 92.0
+dept: AI
+
+Fail Student List are: 
+Student: 
+**********************
+rollNo: 122
+name: Nupur
+marks: 35.0
+dept: DAC
+
+Student: 
+**********************
+rollNo: 191
+name: Rohan
+marks: 36.0
+dept: AI
+
+
+**********STUDENT MANAGEMENT SYTEM*************
+ 1. Add Student
+ 2. Store Student Records to File
+ 3. Display All Student Records
+ 4. Search Students based on Department
+ 5. Sort Students by Marks
+ 6. Filter Students who Scored More than 75%
+ 7. Using API Group Students By Department and partition By Pass/Fail
+ 8. Exist from Program
+*******************************************
+
+Enter your Choice
+8
+Data Saved Successfully.Exiting from Program.....

@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:controllers\\defaultcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:views\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\firstwebapp\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{783A09DF-AB89-44DE-9C5B-0B8A54E55F73}|FirstWebApp.csproj|solutionrelative:appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\Index.cshtml",
+              "RelativeToolTip": "Views\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T06:43:20.833Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DefaultController.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Controllers\\DefaultController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DefaultController.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Controllers\\DefaultController.cs",
+              "RelativeToolTip": "Controllers\\DefaultController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T06:40:54.045Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAABgAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T06:13:35.646Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-04T06:12:36.611Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAQwB0AAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T05:31:49.798Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.Development.json",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\appsettings.Development.json",
+              "RelativeDocumentMoniker": "appsettings.Development.json",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\appsettings.Development.json",
+              "RelativeToolTip": "appsettings.Development.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-04T05:30:54.99Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\FirstWebApp\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "Controllers\\HomeController.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAQwBYAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-04T05:30:18.485Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

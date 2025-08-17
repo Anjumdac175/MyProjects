@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Entry</title>
+</head>
+<body>
+  <h2>Enter Movie Details</h2>
+  <div id="movie-forms">
+    <!-- Repeat 3 times -->
+    <div>
+      <input type="text" placeholder="Movie Name" class="name">
+      <input type="number" placeholder="Price" class="price">
+      <input type="text" placeholder="Seat" class="seat">
+    </div><br>
+    <div>
+      <input type="text" placeholder="Movie Name" class="name">
+      <input type="number" placeholder="Price" class="price">
+      <input type="text" placeholder="Seat" class="seat">
+    </div><br>
+    <div>
+      <input type="text" placeholder="Movie Name" class="name">
+      <input type="number" placeholder="Price" class="price">
+      <input type="text" placeholder="Seat" class="seat">
+    </div><br>
+  </div>
+  <button onclick="submitMovies()">Submit Movies</button>
+  <button onclick="loadMovies()">Show Movies</button>
+
+  <h3>Movie Table</h3>
+  <table border="1" id="movie-table">
+    <tr><th>Name</th><th>Price</th><th>Seat</th></tr>
+  </table>
+
+  <script>
+    function submitMovies() {
+      const names = document.querySelectorAll('.name');
+      const prices = document.querySelectorAll('.price');
+      const seats = document.querySelectorAll('.seat');
+
+      const movies = [];
+      for (let i = 0; i < 3; i++) {
+        movies.push({
+          name: names[i].value,
+          price: prices[i].value,
+          seat: seats[i].value
+        });
+      }
+
+      // AJAX POST
+      const xhr = new XMLHttpRequest();
+      xhr.open('POST', '/add-movies');
+      xhr.setRequestHeader('Content-Type', 'application/json');
+      xhr.onload = function () {
+        alert('Movies stored successfully!');
+      };
+      xhr.send(JSON.stringify(movies));
+    }
+
+    function loadMovies() {
+      const xhr = new XMLHttpRequest();
+      xhr.open('GET', '/get-movies');
+      xhr.onload = function () {
+        const movies = JSON.parse(xhr.responseText);
+        const table = document.getElementById('movie-table');
+        table.innerHTML = '<tr><th>Name</th><th>Price</th><th>Seat</th></tr>';
+        movies.forEach(m => {
+          const row = `<tr><td>${m.name}</td><td>${m.price}</td><td>${m.seat}</td></tr>`;
+          table.innerHTML += row;
+        });
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

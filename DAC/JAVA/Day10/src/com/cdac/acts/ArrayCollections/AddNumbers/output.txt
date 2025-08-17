@@ -1,0 +1,36 @@
+Enter no of numbers to be added
+10
+Enter Number: 1
+20.12
+Enter Number: 2
+52.12
+Enter Number: 3
+45.12
+Enter Number: 4
+65
+Enter Number: 5
+89.23
+Enter Number: 6
+48.02
+Enter Number: 7
+17.15
+Enter Number: 8
+66.32
+Enter Number: 9
+98
+Enter Number: 10
+75.20
+
+Printing of Number in the List...........
+20.12
+52.12
+45.12
+65.0
+89.23
+48.02
+17.15
+66.32
+98.0
+75.2
+
+Sum of All Numbers is:...........576.28

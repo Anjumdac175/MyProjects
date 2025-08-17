@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pizza Shop</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container mt-5">
+  <h2 class="mb-4">Pizza Order Form</h2>
+  <form id="pizzaForm">
+    <div class="mb-3">
+      <label>Name:</label>
+      <input type="text" class="form-control" id="name" required>
+    </div>
+
+    <div class="mb-3">
+      <label>Pizza Sauce:</label>
+      <select id="sauce" class="form-select">
+        <option>Tomato Pizza Sauce</option>
+        <option>White Garlic Sauce</option>
+        <option>Barbecue Sauce</option>
+      </select>
+    </div>
+
+    <div class="mb-3">
+      <label>Toppings:</label><br>
+      <input type="checkbox" value="Cheese" class="topping"> Cheese<br>
+      <input type="checkbox" value="Olives" class="topping"> Olives<br>
+      <input type="checkbox" value="Supreme Pizza" class="topping"> Supreme Pizza<br>
+    </div>
+
+    <div class="mb-3">
+      <label>Delivery Instructions:</label>
+      <textarea class="form-control" id="instructions" rows="3"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit Order</button>
+    <button type="button" class="btn btn-secondary" onclick="loadOrders()">Show Orders</button>
+  </form>
+
+  <hr class="my-4">
+
+  <h3>Orders Table</h3>
+  <table class="table table-bordered" id="orderTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Sauce</th>
+        <th>Toppings</th>
+        <th>Instructions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    document.getElementById("pizzaForm").addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const sauce = document.getElementById("sauce").value;
+      const instructions = document.getElementById("instructions").value.trim();
+      const toppings = Array.from(document.querySelectorAll(".topping:checked")).map(el => el.value);
+
+      // Validations
+      if (name.length < 5) return alert("Name must be at least 5 characters long.");
+      if (sauce === "Tomato Pizza Sauce" && toppings.includes("Supreme Pizza")) {
+        return alert("Cannot select Supreme Pizza toppings with Tomato Pizza Sauce.");
+      }
+      if (instructions.split(" ").filter(w => w).length < 5) {
+        return alert("Delivery instructions must be at least 5 words.");
+      }
+
+      const order = { name, sauce, toppings, instructions };
+
+      // AJAX POST
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "/submit-order");
+      xhr.setRequestHeader("Content-Type", "application/json");
+      xhr.onload = function () {
+        alert("Order submitted!");
+        document.getElementById("pizzaForm").reset();
+      };
+      xhr.send(JSON.stringify(order));
+    });
+
+    function loadOrders() {
+      const xhr = new XMLHttpRequest();
+      xhr.open("GET", "/get-orders");
+      xhr.onload = function () {
+        const orders = JSON.parse(xhr.responseText);
+        const tbody = document.querySelector("#orderTable tbody");
+        tbody.innerHTML = "";
+        orders.forEach(order => {
+          const row = `<tr>
+            <td>${order.name}</td>
+            <td>${order.sauce}</td>
+            <td>${order.toppings.join(", ")}</td>
+            <td>${order.instructions}</td>
+          </tr>`;
+          tbody.innerHTML += row;
+        });
+      };
+      xhr.send();
+    }
+  </script>
+</body>
+</html>

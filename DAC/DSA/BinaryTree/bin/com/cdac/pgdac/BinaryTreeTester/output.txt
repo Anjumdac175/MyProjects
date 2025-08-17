@@ -1,0 +1,60 @@
+Build Your Binart Tree: 
+Enter Data for Root node or ('n' for skip): 
+12
+Enter Data for Left Child for 12 node or ('n' for skip): 
+4
+Enter Data for Left Child for 4 node or ('n' for skip): 
+n
+Enter Data for Right Child for 4 node or ('n' for skip): 
+7
+Enter Data for Left Child for 7 node or ('n' for skip): 
+5
+Enter Data for Left Child for 5 node or ('n' for skip): 
+n
+Enter Data for Right Child for 5 node or ('n' for skip): 
+7
+Enter Data for Left Child for 7 node or ('n' for skip): 
+n
+Enter Data for Right Child for 7 node or ('n' for skip): 
+n
+Enter Data for Right Child for 7 node or ('n' for skip): 
+3
+Enter Data for Left Child for 3 node or ('n' for skip): 
+n
+Enter Data for Right Child for 3 node or ('n' for skip): 
+n
+Enter Data for Right Child for 12 node or ('n' for skip): 
+3
+Enter Data for Left Child for 3 node or ('n' for skip): 
+9
+Enter Data for Left Child for 9 node or ('n' for skip): 
+10
+Enter Data for Left Child for 10 node or ('n' for skip): 
+n
+Enter Data for Right Child for 10 node or ('n' for skip): 
+3
+Enter Data for Left Child for 3 node or ('n' for skip): 
+n
+Enter Data for Right Child for 3 node or ('n' for skip): 
+n
+Enter Data for Right Child for 9 node or ('n' for skip): 
+11
+Enter Data for Left Child for 11 node or ('n' for skip): 
+n
+Enter Data for Right Child for 11 node or ('n' for skip): 
+n
+Enter Data for Right Child for 3 node or ('n' for skip): 
+n
+Elements in Tree after In-order Traversal are: 
+4 5 7 7 3 12 10 3 9 11 3 
+Elements in Tree after Pre-order Traversal are: 
+12 4 7 5 7 3 3 9 10 3 11 
+Elements in Tree after Post-order Traversal are: 
+7 5 3 7 4 3 10 11 9 3 12 
+No of Leaf Nodes in tree are: 11
+
+No of Leaf Nodes in tree are: 4
+
+Occurent of : 7 is: 2
+
+Occurent of : 3 is: 3

@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BFAD9DE8-3007-49BA-8FA7-F7DE88C1CC8E}|..\\AsynExample\\AsynExample.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\asynexample\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\linqienumerable\\linqienumerable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|solutionrelative:linqienumerable\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\linqienumerable\\linqienumerable\\iqueryablesample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|solutionrelative:linqienumerable\\iqueryablesample.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\linqienumerable\\linqienumerable\\student.part1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|solutionrelative:linqienumerable\\student.part1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\linqienumerable\\linqienumerable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{84E69998-80EA-470F-BF80-925BD38EBD5F}|LinqIEnumerable\\LinqIEnumerable.csproj|solutionrelative:linqienumerable\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\AsynExample\\Program.cs",
+              "RelativeDocumentMoniker": "..\\AsynExample\\Program.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\AsynExample\\Program.cs",
+              "RelativeToolTip": "..\\AsynExample\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-01T05:34:59.157Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IQueryableSample.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\IQueryableSample.cs",
+              "RelativeDocumentMoniker": "LinqIEnumerable\\IQueryableSample.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\IQueryableSample.cs",
+              "RelativeToolTip": "LinqIEnumerable\\IQueryableSample.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T14:18:27.127Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Student.part1.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Student.part1.cs",
+              "RelativeDocumentMoniker": "LinqIEnumerable\\Student.part1.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Student.part1.cs",
+              "RelativeToolTip": "LinqIEnumerable\\Student.part1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:46:20.122Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Student.cs",
+              "RelativeDocumentMoniker": "LinqIEnumerable\\Student.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Student.cs",
+              "RelativeToolTip": "LinqIEnumerable\\Student.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:43:25.31Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Program.cs",
+              "RelativeDocumentMoniker": "LinqIEnumerable\\Program.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\LinqIEnumerable\\LinqIEnumerable\\Program.cs",
+              "RelativeToolTip": "LinqIEnumerable\\Program.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAQwH4AAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-30T13:38:03.89Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

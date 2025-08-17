@@ -1,0 +1,9 @@
+Shell Scripting is the process pf writing a series of commands
+for the Unix/Linux shell to execute.
+
+A Shell is a commandi-line interpreter that provides a user interface for the operating system.
+It allows users to execute commands. run programs and manage system resources.
+
+Bash and Sh are the default/Original Unix shells.
+
+we write a Shebang(#!/bin.bash) at the beginning to specify the interpreter

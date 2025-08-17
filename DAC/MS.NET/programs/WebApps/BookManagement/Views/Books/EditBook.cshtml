@@ -1,0 +1,42 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model BookManagement.Models.Book
+@{
+    ViewBag.Title = "Edit Book";
+    Layout = "_Layout";
+}
+
+<div class="container-fluid mt-4">
+    <h2 class="text-center">Details of @Model.Title</h2>
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(model => model.BookId)
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title)
+            @Html.TextBoxFor(model => model.Title, new {@class = "form-control"})
+            @Html.ValidationMessageFor(model => model.Title)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Author)
+            @Html.TextBoxFor(model => model.Author, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Author)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Price)
+            @Html.TextBoxFor(model => model.Price, new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.Price)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.PublisherId,"Publishers")
+            @Html.DropDownListFor(model => model.PublisherId,(SelectList)ViewBag.Publishers,"Select Publishers", new { @class = "form-control" })
+            @Html.ValidationMessageFor(model => model.PublisherId)
+        </div>
+        <div class="mt-3">
+            <input class="btn btn-success" type = "submit" value="Save Changes"/>
+        </div>
+    }
+    <div class="mt-3">
+        <a href="/Books/Index" class="btn btn-success">Back to Home</a>
+    </div>
+</div>

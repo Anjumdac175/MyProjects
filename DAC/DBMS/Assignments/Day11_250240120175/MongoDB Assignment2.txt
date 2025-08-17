@@ -1,0 +1,213 @@
+																Assigment - 11
+-------------------------------------------------------------------------------------------------------------------------------------------------
+1.Change rating of movie Kesari to 2  
+
+dbtlab> db.movie.updateOne({name:'Kesari'},{$set:{rating:2}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+dbtlab> db.movie.find({name:'Kesari'},{_id:0})
+[
+  {
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 2,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  }
+]
+====================================================================================================================================================
+2.increase the price of all tickits by Rs 20 for Amitabh's movie. 
+
+dbtlab> db.movie.updateMany({actor:/^[Aa]mitabh/},{$inc:{price:20}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+dbtlab> db.movie.find({actor:/^[Aa]mitabh/},{_id:0,name:1,actor:1,price:1})
+[
+  {
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    price: 310
+  },
+  {
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    price: 370
+  },
+  {
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    price: 280
+  }
+]
+====================================================================================================================================================
+
+3.Delete key rating for movie Kesari
+
+dbtlab> db.movie.update({name:'Kesari'},{$unset:{rating:" "}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+dbtlab> db.movie.find({name:'Kesari'})
+[
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  }
+]
+====================================================================================================================================================
+4.Increase price by 50 and change rating to 7 for movie 3 idiots.
+
+dbtlab> db.movie.update({name:'3 idiots'},{$set:{rating:7},$inc: {price:50}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+dbtlab> db.movie.find({name:'3 idiots'})
+[
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 7,
+    ticket_no: 150,
+    price: 350
+  }
+]
+==================================================================================================================================================== 
+10.For movie "kahani 2" change rating to 5.
+dbtlab> db.movie.update({name:'kahani 2'},{$set:{rating:5}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+dbtlab> db.movie.find({name:'kahani 2'})
+[
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 5,
+    price: 200
+  }
+] 
+====================================================================================================================================================
+11.Change price =400 and increase rating by 2 for all movies with name Kahani in it.
+dbtlab> db.movie.updateMany({name:/^[kK]ahani.*/},{$set:{price:400}, $inc:{rating:2}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+
+dbtlab> db.movie.find({name:/^[kK]ahani/})
+[
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 400,
+    ac7tors: [ 'bbbb' ],
+    rating: 10,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 7,
+    price: 400
+  }
+]
+====================================================================================================================================================
+12.Decrease price of all movies by Rs.40.
+
+
+ 
+16.Create a capped collection of size 5 by name dept.
+Store dno,  dname,location.Test this capped collection by adding new documents.
+
+dbtlab> db.createCollection('dept',{max:5,size:1000,capped:true})
+{ ok: 1 }
+dbtlab> db.dept.insertMany([{dno:101,dname:'AC',loc:'Pune'},{dno:102,dname:'HR',loc:'Delhi'},{dno:103,dname:'Mkt',loc:'Nashik'},{dno:104,dname:'sales',loc:'Uk'},{dno:105,dname:'Finance',loc:'Goa'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67ea658495f3c0d44db7123c'),
+    '1': ObjectId('67ea658495f3c0d44db7123d'),
+    '2': ObjectId('67ea658495f3c0d44db7123e'),
+    '3': ObjectId('67ea658495f3c0d44db7123f'),
+    '4': ObjectId('67ea658495f3c0d44db71240')
+  }
+}
+dbtlab> db.dept.find({},{_id:0})
+[
+  { dno: 101, dname: 'AC', loc: 'Pune' },
+  { dno: 102, dname: 'HR', loc: 'Delhi' },
+  { dno: 103, dname: 'Mkt', loc: 'Nashik' },
+  { dno: 104, dname: 'sales', loc: 'Uk' },
+  { dno: 105, dname: 'Finance', loc: 'Goa' }
+]
+dbtlab> db.dept.insertOne({dno:106,dname:'Mgm',loc:'UK'})
+{
+  acknowledged: true,
+  insertedId: ObjectId('67ea65dc95f3c0d44db71241')
+}
+dbtlab> db.dept.find({},{_id:0})
+[
+  { dno: 102, dname: 'HR', loc: 'Delhi' },
+  { dno: 103, dname: 'Mkt', loc: 'Nashik' },
+  { dno: 104, dname: 'sales', loc: 'Uk' },
+  { dno: 105, dname: 'Finance', loc: 'Goa' },
+  { dno: 106, dname: 'Mgm', loc: 'UK' }
+]
+dbtlab>
+====================================================================================================================================================

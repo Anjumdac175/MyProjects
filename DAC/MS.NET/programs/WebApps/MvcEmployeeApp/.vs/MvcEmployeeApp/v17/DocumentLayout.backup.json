@@ -1,0 +1,121 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:views\\employee\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\models\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:models\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:models\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\mvcemployeeapp\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5E7D21E2-3566-4CD2-A8AC-D706F18829A5}|MvcEmployeeApp.csproj|solutionrelative:controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T09:17:31.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T09:15:44.656Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "EmployeeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Models\\EmployeeRepository.cs",
+              "RelativeDocumentMoniker": "Models\\EmployeeRepository.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Models\\EmployeeRepository.cs",
+              "RelativeToolTip": "Models\\EmployeeRepository.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBUAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T05:24:29.542Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Models\\Employee.cs",
+              "RelativeDocumentMoniker": "Models\\Employee.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Models\\Employee.cs",
+              "RelativeToolTip": "Models\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T05:24:10.632Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmployeeController.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T05:23:39.064Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Views\\Employee\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Employee\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\MvcEmployeeApp\\Views\\Employee\\Index.cshtml",
+              "RelativeToolTip": "Views\\Employee\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAwwBIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T05:25:23.303Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

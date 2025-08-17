@@ -1,0 +1,336 @@
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+1
+Enter Account Holder Name: 
+Anjum
+Enter Date of Opening Account: 
+16/08/2020
+Enter Minimum Balance: 
+500
+Error: Balance must be more than 1000
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+1
+Enter Account Holder Name: 
+Anjum
+Enter Date of Opening Account: 
+16/08/2020
+Enter Minimum Balance: 
+5000
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+2
+Account Details are: 
+***************************
+
+Account [acno: 250240120176, accName: Anjum, dateOfOpening: 2020-08-16, balance: 5000.0]
+***************************
+
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+1
+Enter Account Holder Name: 
+Shreya
+Enter Date of Opening Account: 
+20/05/2022
+Enter Minimum Balance: 
+2000
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+2
+Account Details are: 
+***************************
+
+Account [acno: 250240120176, accName: Anjum, dateOfOpening: 2020-08-16, balance: 5000.0]
+Account [acno: 250240120177, accName: Shreya, dateOfOpening: 2022-05-20, balance: 2000.0]
+***************************
+
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+3
+Enter the Account No to which amount is to be depoisted
+250240120176
+Enter the amount to be Deposited: 
+20000
+Amount Depoisted Successfully!.......New Balance is 25000.0
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+3
+Enter the Account No to which amount is to be depoisted
+250240120177
+Enter the amount to be Deposited: 
+50000
+Amount Depoisted Successfully!.......New Balance is 52000.0
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+2
+Account Details are: 
+***************************
+
+Account [acno: 250240120176, accName: Anjum, dateOfOpening: 2020-08-16, balance: 25000.0]
+Account [acno: 250240120177, accName: Shreya, dateOfOpening: 2022-05-20, balance: 52000.0]
+***************************
+
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+4
+Enter the Amount from which you want Witdraw amount
+250240120177
+Enter amount to be Withdraw: 
+10000
+Amount Withdraw Successfully!............NEw Balance is: 42000.0
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+2
+Account Details are: 
+***************************
+
+Account [acno: 250240120176, accName: Anjum, dateOfOpening: 2020-08-16, balance: 25000.0]
+Account [acno: 250240120177, accName: Shreya, dateOfOpening: 2022-05-20, balance: 42000.0]
+***************************
+
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+5
+Unmodified list is created!!!
+Exception in thread "main" java.lang.UnsupportedOperationException
+	at java.base/java.util.Collections$UnmodifiableCollection.add(Collections.java:1067)
+	at com.cdac.acts.Account.AccountTester.AccountMain.main(AccountMain.java:132)
+	
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+2
+Account Details are: 
+***************************
+
+Account [acno: 250240120175, accName: Anjum, dateOfOpening: 2020-08-16, balance: 25000.0]
+Account [acno: 250240120176, accName: Shreya, dateOfOpening: 2022-05-20, balance: 42000.0]
+***************************
+
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+6
+Using UpperBound<? extends T>.....
+Account [acno: 250240120175, accName: Anjum, dateOfOpening: 2020-08-16, balance: 25000.0]
+Account [acno: 250240120176, accName: Shreya, dateOfOpening: 2022-05-20, balance: 42000.0]
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+7
+Using LowerBound<? super T>.......
+Account [acno: 250240120175, accName: Anjum, dateOfOpening: 2020-08-16, balance: 25000.0]
+Account [acno: 250240120176, accName: Shreya, dateOfOpening: 2022-05-20, balance: 42000.0]
+
+**********AccountMenu***********
+
+*******************************
+1. Add Account
+2. Print All Accounts
+3. Deposit Amount
+4. Withdraw Amount
+5. Create unmodified from existing list
+6. Use Upper Bound
+7. Use Lower Bound
+8. Exit
+
+*******************************
+
+Enter your choice
+8
+Exit Successfully
+

@@ -1,0 +1,168 @@
+OS ASSIGNMENTS
+
+
+Linux Basic
+_____________________________________________________________________________________________________________
+
+1) How to Display the contents of a text file named "example.txt" in the terminal
+Ans: cat example.txt
+
+output
+_______
+Shell Scripting is the process pf writing a series of commands
+for the Unix/Linux shell to execute.
+
+A Shell is a commandi-line interpreter that provides a user interface for the operating system.
+It allows users to execute commands. run programs and manage system resources.
+
+Bash and Sh are the default/Original Unix shells.
+
+we write a Shebang(#!/bin.bash) at the beginning to specify the interpreter
+____________________________________________________________________________________________________________________
+
+2) Command use to list all files and directories in the current directory
+Ans: ls
+
+output
+_______
+total 12
+-rwxrwxrwx 1 anjum_shaik anjum_shaik 2730 Mar  8 18:38 Assignment_Ans.txt
+drwxrwxrwx 1 anjum_shaik anjum_shaik 4096 Mar  8 17:35 backup
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 18:29 data.txt
+drwxrwxrwx 1 anjum_shaik anjum_shaik 4096 Mar  8 17:24 documents
+-rwxrwxrwx 1 anjum_shaik anjum_shaik  404 Mar  8 17:20 example.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 17:32 file1.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik  249 Mar  8 17:48 fruits.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik 1021 Mar  8 18:12 logfile.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 18:04 newname.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik  653 Mar  8 18:02 report.pdf
+___________________________________________________________________________________________________________________
+
+3) Create a new directory named "documents" in the current directory
+Ans: mkdir documents
+
+___________________________________________________________________________________________________________________
+
+4) Command use to copy a file named "file1.txt" from the current directory to another directory named "backup"
+Ans: cp file1.txt ./backup
+
+output
+_______
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ ls
+Assignment_Ans.txt  data.txt   example.txt  fruits.txt   newname.txt
+backup              documents  file1.txt    logfile.txt  report.pdf
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ cp file1.txt ./backup
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ cd backup
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/backup$ ls
+file1.txt
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/backup$ ls -l
+total 0
+-rwxrwxrwx 1 anjum_shaik anjum_shaik 0 Mar  8 18:43 file1.txt
+___________________________________________________________________________________________________________________
+
+5) Navigate to the parent directory of the current directory
+Ans: cd ..
+
+6) Command use to search for the word "apple" in a file named "fruits.txt" 
+Ans: grep "apple" fruits.txt
+output
+_______
+Eat an apple a day to keep away from doctor.
+___________________________________________________________________________________________________________________
+
+7) Command use to recursively remove a directory named "old_files" along with all its contents.
+Ans: rm -r oldfiles
+
+output
+______
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ mkdir oldfiles
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ ls
+Assignment_Ans.txt  data.txt   example.txt  fruits.txt   newname.txt  report.pdf
+backup              documents  file1.txt    logfile.txt  oldfiles
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ cd oldfiles
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/oldfiles$ touch file1.txt
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/oldfiles$ touch report.pdf
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/oldfiles$ mkdir impfiles
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/oldfiles$ touch logfile.txt
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1/oldfiles$ ls -l
+total 0
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 18:49 file1.txt
+drwxrwxrwx 1 anjum_shaik anjum_shaik 4096 Mar  8 18:50 impfiles
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 18:50 logfile.txt
+-rwxrwxrwx 1 anjum_shaik anjum_shaik    0 Mar  8 18:49 report.pdf
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ rm -r oldfiles
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ ls
+Assignment_Ans.txt  data.txt   example.txt  fruits.txt   newname.txt
+backup              documents  file1.txt    logfile.txt  report.pdf
+___________________________________________________________________________________________________________________
+
+8) Command use to find out the size of a file named "report.pdf" in kilobytes.
+Ans: du -k report.pdf
+
+___________________________________________________________________________________________________________________
+9) Command you rename a file named "oldname.txt" to "newname.txt".
+Ans: mv oldname.txt newname.txt
+
+___________________________________________________________________________________________________________________
+10) Command use to display the last 10 lines of a file named "logfile.txt".
+Ans: tail -10 logfile.txt
+
+output
+______
+ cat logfile.txt
+To display the last 10 lines of a file named logfile.txt, you can use the tail command in Linux.
+- The sky is blue during the day.
+- Water boils at 100 degrees Celsius.
+- Birds migrate to warmer places during winter.
+- The sun rises in the east and sets in the west.
+- Plants need sunlight to perform photosynthesis.
+- Earth has one natural satellite, the Moon.
+- Gravity keeps everything grounded on Earth.
+- Lions are known as the king of the jungle.
+- Honey never spoils, even after thousands of years.
+- The Great Wall of China is visible from space.
+- Human body is made up of 60% water.
+- Antarctica is the coldest place on Earth.
+- The Amazon Rainforest produces 20% of the world’s oxygen.
+- There are seven continents on Earth.
+- Dolphins are highly intelligent marine animals.
+- The human heart beats around 100,000 times a day.
+- Mount Everest is the tallest mountain in the world.
+- Bananas are a rich source of potassium.
+- A leap year occurs every four years.
+- Electricity travels at the speed of light.
+
+anjum_shaik@LAPTOP-ULHD2438:/mnt/c/Users/Shaik Mohd Suhail/desktop/OS/Day1$ tail -10 logfile.txt
+- Antarctica is the coldest place on Earth.
+- The Amazon Rainforest produces 20% of the world’s oxygen.
+- There are seven continents on Earth.
+- Dolphins are highly intelligent marine animals.
+- The human heart beats around 100,000 times a day.
+- Mount Everest is the tallest mountain in the world.
+- Bananas are a rich source of potassium.
+- A leap year occurs every four years.
+- Electricity travels at the speed of light.
+___________________________________________________________________________________________________________________
+11) Command to create a new user named "john" on the system
+Ans: sudo useradd john (then by giving pswd of particular sudo you can able to create a new user)
+
+___________________________________________________________________________________________________________________
+12) command use to set the password for the user "john".
+Ans: sudo passwd john (then you will get to type a new passwd and retype it. then it will succuessfully set) 
+
+___________________________________________________________________________________________________________________
+13) Command to remove a user named "alice" from the system, along with their home directory and files.
+Ans: sudo userdel alice (for delete only username), if along with files then (sudo userdel -r alice) 
+
+___________________________________________________________________________________________________________________
+14) Command use to grant read and write permissions to the owner, and only read permissions to the group and others, for a file named "data.txt".
+Ans: chmod 644 data.txt
+
+output
+______
+
+-r-xr-xr-x 1 anjum_shaik anjum_shaik   32 Mar  8 18:58 data.txt
+-rw-r--r-- 1 anjum_shaik anjum_shaik   32 Mar  8 18:58 data.txt
+___________________________________________________________________________________________________________________
+15) Command to change the owner of a directory named "shared" to the user "bob" and the group "staff". 
+Ans: To change the owner of the shared directory to user bob and group staff use the command "chown bob:staff shared".

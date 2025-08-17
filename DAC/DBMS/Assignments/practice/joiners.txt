@@ -1,0 +1,159 @@
+inner join
+----------------------------------------------
+create emp and dept tables;
+mysql> select * from emp;
++-----+----------+----------+--------+
+| eid | ename    | esalary  | deptno |
++-----+----------+----------+--------+
+|  11 | Ambani   | 80000.00 |    103 |
+|  12 | prabhas  | 50000.00 |    100 |
+|  13 | Ms Dhoni | 40000.00 |    101 |
+|  14 | Munnawar | 20000.00 |   NULL |
++-----+----------+----------+--------+
+4 rows in set (0.00 sec)
+
+mysql> select * from dept;
++--------+----------+
+| deptno | deptname |
++--------+----------+
+|    103 | Business |
+|    100 | Movie    |
+|    101 | Sports   |
+|    102 | Stand_up |
++--------+----------+
+4 rows in set (0.00 sec)
+
+-----------------------------------------------------------
+1.retrive employees with their department name
+
+ans:
+inner join
+mysql> select e.eid,e.ename,d.deptname
+    -> from emp e
+    -> inner join dept d
+    -> on e.deptno = d.deptno;
++-----+----------+----------+
+| eid | ename    | deptname |
++-----+----------+----------+
+|  11 | Ambani   | Business |
+|  12 | prabhas  | Movie    |
+|  13 | Ms Dhoni | Sports   |
++-----+----------+----------+
+3 rows in set (0.00 sec)
+-----------------------------------------------------------------
+2.Retrieve all employees and their department names
+
+mysql> select e.eid,e.ename,d.deptname
+    -> from emp e
+    -> left join dept d
+    -> on e.deptno = d.deptno;
++-----+----------+----------+
+| eid | ename    | deptname |
++-----+----------+----------+
+|  11 | Ambani   | Business |
+|  12 | prabhas  | Movie    |
+|  13 | Ms Dhoni | Sports   |
+|  14 | Munnawar | NULL     |
++-----+----------+----------+
+4 rows in set (0.00 sec)
+-------------------------------------------------------------------
+
+3.Retrieve employees and their all department names
+
+mysql> select e.eid,e.ename,d.deptname
+    -> from emp e
+    -> right join dept d
+    -> on e.deptno = d.deptno;
++------+----------+----------+
+| eid  | ename    | deptname |
++------+----------+----------+
+|   11 | Ambani   | Business |
+|   12 | prabhas  | Movie    |
+|   13 | Ms Dhoni | Sports   |
+| NULL | NULL     | Stand_up |
++------+----------+----------+
+4 rows in set (0.00 sec)
+------------------------------------------------------------------------
+
+4.Retrieve all employees and their all department names
+
+mysql> select e.eid,e.ename,d.deptno,d.deptname
+    -> from emp e
+    -> left join dept d
+    -> on e.deptno = d.deptno
+    -> union
+    -> select e.eid,e.ename,d.deptno,d.deptname
+    -> from emp e
+    -> right join dept d
+    -> on e.deptno = d.deptno
+    -> ;
++------+----------+--------+----------+
+| eid  | ename    | deptno | deptname |
++------+----------+--------+----------+
+|   11 | Ambani   |    103 | Business |
+|   12 | prabhas  |    100 | Movie    |
+|   13 | Ms Dhoni |    101 | Sports   |
+|   14 | Munnawar |   NULL | NULL     |
+| NULL | NULL     |    102 | Stand_up |
++------+----------+--------+----------+
+5 rows in set (0.01 sec)
+------------------------------------------------------------------------
+
+5.Write a query to find employees who do not belong to any department.
+
+mysql> select e.eid,e.ename
+    -> from emp e
+    -> left join dept d
+    -> on e.deptno = d.deptno
+    -> where e.deptno is null;
++-----+----------+
+| eid | ename    |
++-----+----------+
+|  14 | Munnawar |
++-----+----------+
+1 row in set (0.00 sec)
+-----------------------------------------------------------------------------
+6.Write a query to find departments that do not have any employees.
+
+mysql> select d.deptno,d.deptname
+    -> from emp e
+    -> right join dept d
+    -> on e.deptno = d.deptno
+    -> where e.deptno is null;
++--------+----------+
+| deptno | deptname |
++--------+----------+
+|    102 | Stand_up |
++--------+----------+
+1 row in set (0.00 sec)
+------------------------------------------------------------------------------
+7. Write a query to find employees who belong to either movie or business departments.
+
+mysql> select e.eid,e.ename,d.deptname
+    -> from emp e
+    -> inner join dept d
+    -> on e.deptno = d.deptno
+    -> where d.deptname IN ('movie','business');
++-----+---------+----------+
+| eid | ename   | deptname |
++-----+---------+----------+
+|  11 | Ambani  | Business |
+|  12 | prabhas | Movie    |
++-----+---------+----------+
+2 rows in set (0.00 sec)
+-------------------------------------------------------------------------------
+8.Write a query to show all employees and their department names, but replace NULL DeptName with "No Department".
+
+mysql> select e.eid,e.ename,ifnull(d.deptname,'No Department') as Deptname
+    -> from emp e
+    -> left join dept d
+    -> on e.deptno = d.deptno;
++-----+----------+---------------+
+| eid | ename    | Deptname      |
++-----+----------+---------------+
+|  11 | Ambani   | Business      |
+|  12 | prabhas  | Movie         |
+|  13 | Ms Dhoni | Sports        |
+|  14 | Munnawar | No Department |
++-----+----------+---------------+
+4 rows in set (0.00 sec)

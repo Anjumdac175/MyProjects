@@ -1,0 +1,29 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model IEnumerable<MvcEmployeeApp.Models.Employee>
+@{
+    ViewBag.Title = "Employee List";
+}
+
+<h2>Employees List</h2>
+<table border="1", cellpadding="10">
+    <tr>
+        <th>EmpId</th>
+        <th>EmpName</th>
+        <th>Salary</th>
+        <th>DeptNo</th>
+    </tr>
+    @foreach (var item in Model)
+    
+    {
+        <tr>
+            <td>@item.EmpNo</td>
+            <td>@item.EmpName</td>
+            <td>@item.Basic</td>
+            <td>@item.DeptNo</td>
+        </tr>    
+    }
+
+
+</table>

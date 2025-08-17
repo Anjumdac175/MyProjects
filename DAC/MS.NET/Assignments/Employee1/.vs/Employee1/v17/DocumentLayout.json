@@ -1,0 +1,36 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\Assignments\\Employee1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BB979AEA-8890-4F5E-9A64-E66975F00ABA}|..\\Employee2\\Employee2.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\assignments\\employee2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\Assignments\\Employee2\\Program.cs",
+              "RelativeDocumentMoniker": "..\\Employee2\\Program.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\Assignments\\Employee2\\Program.cs",
+              "RelativeToolTip": "..\\Employee2\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T19:54:06.39Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

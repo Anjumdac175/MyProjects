@@ -1,0 +1,33 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@model StudentDatabase.Models.Student;
+@{
+    ViewBag.Title = "Edit Student";
+    Layout = "~/Views/Shared/_MyLayout.cshtml";
+}
+
+<h2 class="text-center">Edit Student Details</h2>
+<form asp-action="Update" method="post" class="container mt-4">
+    <input type="hidden" asp-for="RollNo" />
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label">Student Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Age" class="form-label">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-success" >Save Changes</button>
+    </div>
+</form>
+

@@ -1,0 +1,21 @@
+******Circle********
+
+Enter radius of Circle
+10.25
+
+Area of Circle is: 330.106375
+Perimeter of Circle is: 64.411
+
+Circle is Drawable............
+
+******Rectangle********
+
+Enter Length of Rectangle
+10.26
+Enter breadth of Rectangle
+30.25
+
+Area of Rectangle is: 310.365
+Perimeter of Circle is: 81.02
+
+Rectangle Can be Drawable..........

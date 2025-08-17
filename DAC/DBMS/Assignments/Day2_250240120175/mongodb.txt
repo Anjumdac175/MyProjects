@@ -1,0 +1,1948 @@
+test> show dbs
+admin   40.00 KiB
+config  12.00 KiB
+local   40.00 KiB
+test> show dbs
+Anjum    8.00 KiB
+admin   40.00 KiB
+config  60.00 KiB
+local   40.00 KiB
+test> use Anjum
+switched to db Anjum
+Anjum> show collections
+movie
+Anjum> db.movie.find()
+[
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 200,
+    ac7tors: [ 'bbbb' ],
+    rating: 8,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 3,
+    ticket_no: 150,
+    price: 200
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a882'),
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 3,
+    ticket_no: 550,
+    price: 260
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 5,
+    price: 200
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5c8283789eb55675f0272933'),
+    name: 'uri',
+    rating: 5,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 3,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5ca456072952ebdd7ae2a930'),
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 2,
+    price: 270,
+    ticket_no: 210,
+    rdate: ISODate('2019-01-23T00:00:00.000Z'),
+    others: { director: 'R Balki', songs: 'Amit trivedi' }
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5ca47ef82952ebdd7ae2a932'),
+    name: 'newton',
+    ticket_no: 690,
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310,
+    lastmodified: ISODate('2019-09-28T14:47:49.204Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    _id: ObjectId('5d89e9adfd4adc2f84279f43'),
+    name: 'chichore',
+    price: 274,
+    rating: 4.3,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  },
+  {
+    _id: ObjectId('5d8f51ce065d3e2aa902aa22'),
+    name: 'dream girl',
+    actor: [ 'ayushman', 'nushrat bharucha' ],
+    price: 250,
+    rating: null
+  },
+  { _id: ObjectId('5d8f6eec620d2353221b91dd'), price: 280 }
+]
+Anjum> db.createCollection('Employee')
+{ ok: 1 }
+Anjum> db.Employee.find()
+
+Anjum> db.Employee.insert({Id:1,Name:'Anjum',Salary:60000, Dept:'IT'},{Id:2,Name:'Shreya',Salary:90000,Dept:'FullStack'})
+DeprecationWarning: Collection.insert() is deprecated. Use insertOne, insertMany, or bulkWrite.
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67ec0fefd734cc69aab71236') }
+}
+Anjum> db.Employee.insertMany({Id:1,Name:'Anjum',Salary:60000, Dept:'IT'},{Id:2,Name:'Shreya',Salary:90000,Dept:'FullStack'})
+MongoInvalidArgumentError: Argument "docs" must be an array of documents
+Anjum> db.Employee.insertMany([{Id:1,Name:'Anjum',Salary:60000, Dept:'IT'},{Id:2,Name:'Shreya',Salary:90000,Dept:'FullStack'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67ec1037d734cc69aab71237'),
+    '1': ObjectId('67ec1037d734cc69aab71238')
+  }
+}
+Anjum> db.Employee.find()
+[
+  {
+    _id: ObjectId('67ec0fefd734cc69aab71236'),
+    Id: 1,
+    Name: 'Anjum',
+    Salary: 60000,
+    Dept: 'IT'
+  },
+  {
+    _id: ObjectId('67ec1037d734cc69aab71237'),
+    Id: 1,
+    Name: 'Anjum',
+    Salary: 60000,
+    Dept: 'IT'
+  },
+  {
+    _id: ObjectId('67ec1037d734cc69aab71238'),
+    Id: 2,
+    Name: 'Shreya',
+    Salary: 90000,
+    Dept: 'FullStack'
+  }
+]
+Anjum> db.Employee.remove({Id:1})
+DeprecationWarning: Collection.remove() is deprecated. Use deleteOne, deleteMany, findOneAndDelete, or bulkWrite.
+{ acknowledged: true, deletedCount: 2 }
+Anjum> db.Employee.deleteOne({Id:1})
+{ acknowledged: true, deletedCount: 0 }
+Anjum> db.Employee.find()
+[
+  {
+    _id: ObjectId('67ec1037d734cc69aab71238'),
+    Id: 2,
+    Name: 'Shreya',
+    Salary: 90000,
+    Dept: 'FullStack'
+  }
+]
+Anjum> db.Employee.insertMany([{Id:1,Name:'Anjum',Salary:50000,Dept:'IT'},{Id:3,Name:'Pranjal',Salary:65000,Dept:'Developer'}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67ec116dd734cc69aab71239'),
+    '1': ObjectId('67ec116dd734cc69aab7123a')
+  }
+}
+Anjum> db.Employee.find()
+[
+  {
+    _id: ObjectId('67ec1037d734cc69aab71238'),
+    Id: 2,
+    Name: 'Shreya',
+    Salary: 90000,
+    Dept: 'FullStack'
+  },
+  {
+    _id: ObjectId('67ec116dd734cc69aab71239'),
+    Id: 1,
+    Name: 'Anjum',
+    Salary: 50000,
+    Dept: 'IT'
+  },
+  {
+    _id: ObjectId('67ec116dd734cc69aab7123a'),
+    Id: 3,
+    Name: 'Pranjal',
+    Salary: 65000,
+    Dept: 'Developer'
+  }
+]
+Anjum> db.Employee.drop()
+true
+Anjum> show dbs
+Anjum    40.00 KiB
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+Anjum> use Employee
+switched to db Employee
+Employee> show collections
+
+Employee> show dbs
+Anjum    40.00 KiB
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+Employee> db.Dept.insert({dept_id:101,dept_name:'IT'})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67ec1257d734cc69aab7123b') }
+}
+Employee> db.Dept.insert({dept_id:102,dept_name:'HR'})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67ec1265d734cc69aab7123c') }
+}
+Employee> db.Dept.insert({dept_id:103,dept_name:'Sales'})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67ec1270d734cc69aab7123d') }
+}
+Employee> db.Dept.find()
+[
+  {
+    _id: ObjectId('67ec1257d734cc69aab7123b'),
+    dept_id: 101,
+    dept_name: 'IT'
+  },
+  {
+    _id: ObjectId('67ec1265d734cc69aab7123c'),
+    dept_id: 102,
+    dept_name: 'HR'
+  },
+  {
+    _id: ObjectId('67ec1270d734cc69aab7123d'),
+    dept_id: 103,
+    dept_name: 'Sales'
+  }
+]
+Employee> show dbs
+Anjum      40.00 KiB
+Employee   40.00 KiB
+admin      40.00 KiB
+config    108.00 KiB
+local      40.00 KiB
+Employee> db.dropDatabase()
+{ ok: 1, dropped: 'Employee' }
+Employee> show dbs
+Anjum    40.00 KiB
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+Employee> use Anjum
+switched to db Anjum
+Anjum> show collections
+movie
+Anjum> db.movie.find()
+[
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 200,
+    ac7tors: [ 'bbbb' ],
+    rating: 8,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 3,
+    ticket_no: 150,
+    price: 200
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a882'),
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 3,
+    ticket_no: 550,
+    price: 260
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 5,
+    price: 200
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5c8283789eb55675f0272933'),
+    name: 'uri',
+    rating: 5,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 3,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5ca456072952ebdd7ae2a930'),
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 2,
+    price: 270,
+    ticket_no: 210,
+    rdate: ISODate('2019-01-23T00:00:00.000Z'),
+    others: { director: 'R Balki', songs: 'Amit trivedi' }
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5ca47ef82952ebdd7ae2a932'),
+    name: 'newton',
+    ticket_no: 690,
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310,
+    lastmodified: ISODate('2019-09-28T14:47:49.204Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    _id: ObjectId('5d89e9adfd4adc2f84279f43'),
+    name: 'chichore',
+    price: 274,
+    rating: 4.3,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  },
+  {
+    _id: ObjectId('5d8f51ce065d3e2aa902aa22'),
+    name: 'dream girl',
+    actor: [ 'ayushman', 'nushrat bharucha' ],
+    price: 250,
+    rating: null
+  },
+  { _id: ObjectId('5d8f6eec620d2353221b91dd'), price: 280 }
+]
+Anjum> db.movie.find({rating:3})
+[
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 3,
+    ticket_no: 150,
+    price: 200
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a882'),
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 3,
+    ticket_no: 550,
+    price: 260
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 3,
+    price: 340,
+    actor: "['Anil kapoor']"
+  }
+]
+Anjum> db.movie.find({rating:3,price:250})
+
+Anjum> db.movie.find({rating:3,price:300})
+
+Anjum> db.movie.find({rating:3,price:350})
+
+Anjum> db.movie.find({rating:3,price:300})
+
+Anjum> db.movie.find({rating:4,price:300})
+
+Anjum> db.movie.find({rating:4,price:250})
+[
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  }
+]
+Anjum> db.movie.find({rating{$gt:3}})
+Uncaught:
+SyntaxError: Unexpected token, expected "," (1:21)
+
+> 1 | db.movie.find({rating{$gt:3}})
+    |                      ^
+  2 |
+
+Anjum> db.movie.find({rating:{$gt:3}})
+[
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 200,
+    ac7tors: [ 'bbbb' ],
+    rating: 8,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 5,
+    price: 200
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5c8283789eb55675f0272933'),
+    name: 'uri',
+    rating: 5,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    _id: ObjectId('5d89e9adfd4adc2f84279f43'),
+    name: 'chichore',
+    price: 274,
+    rating: 4.3,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  }
+]
+Anjum> db.movie.find({rating:{$gt:3},price:{$gt:300}})
+[
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  }
+]
+Anjum> db.movie.find({rating:{$gt:3},price:{$gt:300}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 }
+]
+Anjum> db.movie.find($or[{rating:4},{price:{$gt:300}}])
+ReferenceError: $or is not defined
+Anjum> db.movie.find({$or:[{rating:4},{price:{$gt:300}}]})
+[
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 4
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 3,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5ca47ef82952ebdd7ae2a932'),
+    name: 'newton',
+    ticket_no: 690,
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310,
+    lastmodified: ISODate('2019-09-28T14:47:49.204Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  }
+]
+Anjum> db.movie.find({$or:[{rating:4},{price:{$gt:300}}]},{name:1,price:1,rating:1,_id:0})
+[
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'newton', price: 310 },
+  { name: 'mission mangal', price: 350, rating: 6 }
+]
+Anjum> db.movie.find({$or:[{price:250},{price:350},{price:450}]},{name:1,price:1,rating:1,_id:0})
+[
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'dream girl', price: 250, rating: null }
+]
+Anjum> db.movie.find({name:1,price:1,rating:1,_id:0})
+
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0})
+[
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'newton', price: 310 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { name: 'dream girl', price: 250, rating: null },
+  { price: 280 }
+]
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).count()
+18
+Anjum> db.movie.find({price:{$in:{250,350,450}}},{name:1,rating:1,price:1,_id:0})
+Uncaught:
+SyntaxError: Unexpected token (1:30)
+
+> 1 | db.movie.find({price:{$in:{250,350,450}}},{name:1,rating:1,price:1,_id:0})
+    |                               ^
+  2 |
+
+Anjum> db.movie.find({price:{$in:[250,350,450]}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'dream girl', price: 250, rating: null }
+]
+Anjum> db.movie.find({price:{$nin:[250,350,450]}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'newton', price: 310 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 }
+]
+Anjum> db.movie.find({price:{$not:{$gte:200 , $lte:400}}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 }
+]
+Anjum> db.movie.find({price:{$not:{$gt:200 , $lt:400}}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 }
+]
+Anjum> db.movie.find({rating:{$mod:[2,1]}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'uri', rating: 5 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 }
+]
+Anjum> db.movie.find({rating:{$mod:[2,0]}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'chichore', price: 274, rating: 4.3 }
+]
+Anjum> db.movie.find({rating:{$mod:[5,0]}},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'uri', rating: 5 }
+]
+Anjum> db.movie.find({},{name:1,rating:1,price:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 }
+]
+Anjum> db.movie.find({},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+[
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'newton', price: 310 },
+  { price: 280 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 }
+]
+Anjum> db.movie.find({},{name:1,rating:1,price:1,_id:0}).sort({price:-1}).limit(2)
+[
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'sholay', rating: 6, price: 350 }
+]
+Anjum> db.movie.find({},{name:1,rating:1,price:1,_id:0}).sort({price:1}).limit(4)
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani 2', rating: 5, price: 200 }
+]
+Anjum> db.movie.find({},{name:1,rating:1,price:1,_id:0}).sort({price:1}).skip(2).limit(4)
+[
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'padmavat', rating: 4, price: 250 }
+]
+Anjum> db.movie.find({actor:'amithab'},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+
+Anjum> db.movie.find({actor:'amitabh'},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+[ { name: 'aradhana', rating: 3, price: 260 } ]
+Anjum> db.movie.find({actor:/^[Aa]amitabh/},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+
+Anjum> db.movie.find({actor:/^[Aa]mitabh/},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+[
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'aradhana', rating: 3, price: 260 }
+]
+Anjum> db.movie.find({actor:/^[Aa]kshay kumar/},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+
+Anjum> db.movie.find({actor:/^[Aa]kshay Kumar/},{name:1,rating:1,price:1,_id:0}).sort({price:-1})
+[ { name: 'Kesari', rating: 6, price: 350 } ]
+Anjum> db.movie.find({rating:null},{name:1,rating:1,price:1,_id:0})
+[
+  { name: 'newton', price: 310 },
+  { name: 'dream girl', price: 250, rating: null },
+  { price: 280 }
+]
+Anjum> db.movie.find({name:/^[0-9]/},{name:1_id:0})
+Uncaught:
+SyntaxError: A numeric separator is only allowed between two digits. (1:37)
+
+> 1 | db.movie.find({name:/^[0-9]/},{name:1_id:0})
+    |                                      ^
+  2 |
+
+Anjum> db.movie.find({name:/^[0-9]/},{name:1,_id:0})
+[ { name: '3 idiots' } ]
+Anjum> db.movie.find({name:/^.*[0-9]$/},{name:1,_id:0})
+[ { name: 'kahani 2' } ]
+Anjum> db.movie.find({name:/^[A-Za-z]/},{name:1,_id:0})
+[
+  { name: 'kahani' },
+  { name: 'lagaan' },
+  { name: 'sholay' },
+  { name: 'aradhana' },
+  { name: 'kahani 2' },
+  { name: 'Andhadhund' },
+  { name: 'Andhadhund' },
+  { name: 'uri' },
+  { name: 'Dil dhadakane do' },
+  { name: 'Kesari' },
+  { name: 'paa' },
+  { name: 'padmavat' },
+  { name: 'newton' },
+  { name: 'mission mangal' },
+  { name: 'chichore' },
+  { name: 'dream girl' }
+]
+Anjum> db.movie.find({name:/^[A-Za-z]/},{name:1,_id:0}).count()
+16
+Anjum> db.movie.find({'actor.0':/^[Aa]mitabh/},{name:1,_id:0}).count()
+2
+Anjum> db.movie.find({'actor.0':/^[Aa]mitabh/},{name:1,_id:0})
+[ { name: 'aradhana' }, { name: 'paa' } ]
+Anjum> db.movie.find({'actor.1':/^[Aa]mitabh/},{name:1,_id:0})
+[ { name: 'sholay' } ]
+Anjum> db.createCollection('product',{max:3,size:500,capped:true})
+{ ok: 1 }
+Anjum> db.product.insertMany([{name:'Dairy milk',price:120},{name:'pen',price:30},{name:'chips',price:20}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId('67ec236cd734cc69aab7123e'),
+    '1': ObjectId('67ec236cd734cc69aab7123f'),
+    '2': ObjectId('67ec236cd734cc69aab71240')
+  }
+}
+Anjum> db.product.find()
+[
+  {
+    _id: ObjectId('67ec236cd734cc69aab7123e'),
+    name: 'Dairy milk',
+    price: 120
+  },
+  { _id: ObjectId('67ec236cd734cc69aab7123f'), name: 'pen', price: 30 },
+  {
+    _id: ObjectId('67ec236cd734cc69aab71240'),
+    name: 'chips',
+    price: 20
+  }
+]
+Anjum> db.product.insert({name:'ice cream',price:60})
+{
+  acknowledged: true,
+  insertedIds: { '0': ObjectId('67ec23dbd734cc69aab71241') }
+}
+Anjum> db.product.find()
+[
+  { _id: ObjectId('67ec236cd734cc69aab7123f'), name: 'pen', price: 30 },
+  {
+    _id: ObjectId('67ec236cd734cc69aab71240'),
+    name: 'chips',
+    price: 20
+  },
+  {
+    _id: ObjectId('67ec23dbd734cc69aab71241'),
+    name: 'ice cream',
+    price: 60
+  }
+]
+Anjum> use anjum
+switched to db anjum
+anjum> show collections
+
+anjum> use Anjum
+switched to db Anjum
+Anjum> show collections
+movie
+product
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 200 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 }
+]
+Anjum> db.movie.updateOne({name:'3 idiots'},{$set:{price:500}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: '3 idiots', rating: 3, price: 500 }
+]
+Anjum> db.movie.updateMany({name:/kahani[0-9]$/},{$set:{price:500}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'kahani', price: 200, rating: 8 },
+  { name: 'kahani 2', rating: 5, price: 200 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: '3 idiots', rating: 3, price: 500 }
+]
+Anjum> db.movie.updateMany({name:/^kahani.*/},{$set:{price:500}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 6, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'kahani', price: 500, rating: 8 },
+  { name: '3 idiots', rating: 3, price: 500 },
+  { name: 'kahani 2', rating: 5, price: 500 }
+]
+Anjum> db.movie.find({},{name:1,actor:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, actor: [ 'Tabbu' ], rating: 4 },
+  {
+    name: 'uri',
+    rating: 5,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    name: 'padmavat',
+    rating: 4,
+    price: 250,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ]
+  },
+  {
+    name: 'dream girl',
+    actor: [ 'ayushman', 'nushrat bharucha' ],
+    price: 250,
+    rating: null
+  },
+  {
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 3,
+    price: 260
+  },
+  {
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 2,
+    price: 270
+  },
+  {
+    name: 'chichore',
+    price: 274,
+    rating: 4.3,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  },
+  { price: 280 },
+  {
+    name: 'newton',
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310
+  },
+  {
+    name: 'Dil dhadakane do',
+    rating: 3,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    price: 350
+  },
+  {
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    price: 350
+  },
+  {
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350
+  },
+  {
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 4
+  },
+  {
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    price: 500,
+    rating: 8
+  },
+  {
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 3,
+    price: 500
+  },
+  {
+    name: 'kahani 2',
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 5,
+    price: 500
+  }
+]
+Anjum> db.movie.find({actor:/^[Aa]mir.*/},{name:1,actor:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  {
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 6,
+    price: 350
+  },
+  {
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 3,
+    price: 500
+  }
+]
+Anjum> db.movie.updateMany({actor:/^[Aa]mir/},{$set:{rating:8}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 2,
+  modifiedCount: 2,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 3, price: 260 },
+  { name: 'paa', rating: 2, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 3, price: 340 },
+  { name: 'lagaan', rating: 8, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'kahani', price: 500, rating: 8 },
+  { name: '3 idiots', rating: 8, price: 500 },
+  { name: 'kahani 2', rating: 5, price: 500 }
+]
+Anjum> db.movie.updateMany({rating:{$lt:4}},{$set:{rating:5}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 4 },
+  { name: 'uri', rating: 5 },
+  { name: 'padmavat', rating: 4, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 5, price: 260 },
+  { name: 'paa', rating: 5, price: 270 },
+  { name: 'chichore', price: 274, rating: 4.3 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 5, price: 340 },
+  { name: 'lagaan', rating: 8, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 4 },
+  { name: 'kahani', price: 500, rating: 8 },
+  { name: '3 idiots', rating: 8, price: 500 },
+  { name: 'kahani 2', rating: 5, price: 500 }
+]
+Anjum> db.movie.updateMany({rating:{$lt:5}},{$max:{rating:7}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 4,
+  modifiedCount: 4,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 7 },
+  { name: 'uri', rating: 5 },
+  { name: 'padmavat', rating: 7, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 5, price: 260 },
+  { name: 'paa', rating: 5, price: 270 },
+  { name: 'chichore', price: 274, rating: 7 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 5, price: 340 },
+  { name: 'lagaan', rating: 8, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 7 },
+  { name: 'kahani', price: 500, rating: 8 },
+  { name: '3 idiots', rating: 8, price: 500 },
+  { name: 'kahani 2', rating: 5, price: 500 }
+]
+Anjum> db.movie.updateMany({rating:{$gt:7}},{$min:{rating:5}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 3,
+  modifiedCount: 3,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 7 },
+  { name: 'uri', rating: 5 },
+  { name: 'padmavat', rating: 7, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 5, price: 260 },
+  { name: 'paa', rating: 5, price: 270 },
+  { name: 'chichore', price: 274, rating: 7 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 5, price: 340 },
+  { name: 'lagaan', rating: 5, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 7 },
+  { name: 'kahani', price: 500, rating: 5 },
+  { name: '3 idiots', rating: 5, price: 500 },
+  { name: 'kahani 2', rating: 5, price: 500 }
+]
+Anjum> db.movie.updateMany({rating:{$lt:6}},{$max:{rating:9}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 8,
+  modifiedCount: 8,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 7 },
+  { name: 'uri', rating: 9 },
+  { name: 'padmavat', rating: 7, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 9, price: 260 },
+  { name: 'paa', rating: 9, price: 270 },
+  { name: 'chichore', price: 274, rating: 7 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 9, price: 340 },
+  { name: 'lagaan', rating: 9, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 7 },
+  { name: 'kahani', price: 500, rating: 9 },
+  { name: '3 idiots', rating: 9, price: 500 },
+  { name: 'kahani 2', rating: 9, price: 500 }
+]
+Anjum> db.movie.find().sort({price:1})
+[
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId('5c8283789eb55675f0272933'),
+    name: 'uri',
+    rating: 9,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 7,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5d8f51ce065d3e2aa902aa22'),
+    name: 'dream girl',
+    actor: [ 'ayushman', 'nushrat bharucha' ],
+    price: 250,
+    rating: null
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a882'),
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 9,
+    ticket_no: 550,
+    price: 260
+  },
+  {
+    _id: ObjectId('5ca456072952ebdd7ae2a930'),
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 9,
+    price: 270,
+    ticket_no: 210,
+    rdate: ISODate('2019-01-23T00:00:00.000Z'),
+    others: { director: 'R Balki', songs: 'Amit trivedi' }
+  },
+  {
+    _id: ObjectId('5d89e9adfd4adc2f84279f43'),
+    name: 'chichore',
+    price: 274,
+    rating: 7,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  },
+  { _id: ObjectId('5d8f6eec620d2353221b91dd'), price: 280 },
+  {
+    _id: ObjectId('5ca47ef82952ebdd7ae2a932'),
+    name: 'newton',
+    ticket_no: 690,
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310,
+    lastmodified: ISODate('2019-09-28T14:47:49.204Z')
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 9,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 9,
+    ticket_no: 410,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 500,
+    ac7tors: [ 'bbbb' ],
+    rating: 9,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 9,
+    ticket_no: 150,
+    price: 500
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 9,
+    price: 500
+  }
+]
+Anjum> db.movie.updateOne({name:'lagaan'},{$unset:{ticket_no:" "}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+Anjum> db.movie.find().sort({price:1})
+[
+  {
+    _id: ObjectId('5bf6a38c57b2d4cc676c7a96'),
+    name: 'Andhadhund',
+    price: null,
+    actor: [ 'Tabbu' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId('5c8283789eb55675f0272933'),
+    name: 'uri',
+    rating: 9,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    _id: ObjectId('5ca47e5b2952ebdd7ae2a931'),
+    name: 'padmavat',
+    rating: 7,
+    price: 250,
+    ticket_no: 300,
+    actor: [
+      'Deepika',
+      'shahid kapoor',
+      'ranveer singh',
+      'aditi Rao',
+      'aaaaa'
+    ],
+    cancellation: { date: Timestamp({ t: 1567175239, i: 1 }) }
+  },
+  {
+    _id: ObjectId('5d8f51ce065d3e2aa902aa22'),
+    name: 'dream girl',
+    actor: [ 'ayushman', 'nushrat bharucha' ],
+    price: 250,
+    rating: null
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a882'),
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 9,
+    ticket_no: 550,
+    price: 260
+  },
+  {
+    _id: ObjectId('5ca456072952ebdd7ae2a930'),
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 9,
+    price: 270,
+    ticket_no: 210,
+    rdate: ISODate('2019-01-23T00:00:00.000Z'),
+    others: { director: 'R Balki', songs: 'Amit trivedi' }
+  },
+  {
+    _id: ObjectId('5d89e9adfd4adc2f84279f43'),
+    name: 'chichore',
+    price: 274,
+    rating: 7,
+    actor: [ 'sushant', 'shradha kapoor', 'zzz', 'harshal' ]
+  },
+  { _id: ObjectId('5d8f6eec620d2353221b91dd'), price: 280 },
+  {
+    _id: ObjectId('5ca47ef82952ebdd7ae2a932'),
+    name: 'newton',
+    ticket_no: 690,
+    actor: [ 'Rajkumar Rao', 'Pankaj Tripathi' ],
+    price: 310,
+    lastmodified: ISODate('2019-09-28T14:47:49.204Z')
+  },
+  {
+    _id: ObjectId('5c865923d82c19b8ed996550'),
+    name: 'Dil dhadakane do',
+    rating: 9,
+    price: 340,
+    actor: "['Anil kapoor']"
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a880'),
+    name: 'lagaan',
+    actor: [ 'amir', 'angraz' ],
+    rating: 9,
+    price: 350,
+    cancellation: {
+      date: Timestamp({ t: 1554356003, i: 1 }),
+      reason: 'user request'
+    },
+    lastModified: ISODate('2019-04-04T05:33:23.022Z')
+  },
+  {
+    _id: ObjectId('5aaa3334639395f86922a881'),
+    name: 'sholay',
+    actor: [
+      'Dharamendra',
+      'Amitabh',
+      'Sachin Pilgaokar',
+      'Dharamendra',
+      'Dharamendra',
+      'Mr. Khote',
+      'jaya bacchan',
+      'sanjiv kapoor'
+    ],
+    rating: 6,
+    ticket_no: 550,
+    price: 350,
+    position: [ 2, 2 ]
+  },
+  {
+    _id: ObjectId('5ca453ef2952ebdd7ae2a92f'),
+    name: 'Kesari',
+    actor: [ 'Akshay Kumar', 'Pariniti chopra' ],
+    rating: 6,
+    price: 350,
+    ticket_no: 270,
+    rdate: ISODate('2019-01-23T00:00:00.000Z')
+  },
+  {
+    _id: ObjectId('5d6935a3470e2bef2a82cdfa'),
+    name: 'mission mangal',
+    price: 350,
+    actor: [ 'Sonakshi', 'Vidya Balan' ],
+    rating: 6
+  },
+  {
+    _id: ObjectId('5bf6a36f57b2d4cc676c7a95'),
+    name: 'Andhadhund',
+    price: 400,
+    actor: [ 'Ayushman', 'radhika' ],
+    rating: 7
+  },
+  {
+    _id: ObjectId('5aaa31a2639395f86922a87e'),
+    name: 'kahani',
+    actor: [ 'aaaa', 'bbbb', 'karan', 'karri', 'vidya' ],
+    ticket_no: 420,
+    price: 500,
+    ac7tors: [ 'bbbb' ],
+    rating: 9,
+    lastmodified: ISODate('2019-04-07T11:25:40.634Z')
+  },
+  {
+    _id: ObjectId('5aaa31ee639395f86922a87f'),
+    name: '3 idiots',
+    actor: [ 'Kareena Kapoor', 'amir', 'kareena', 'mahadavan', 'sharman' ],
+    rating: 9,
+    ticket_no: 150,
+    price: 500
+  },
+  {
+    _id: ObjectId('5aab6da4639395f86922a883'),
+    name: 'kahani 2',
+    ticket_no: 820,
+    actor: [
+      'vidya',  'Arjun',
+      'Jonny',  'nawaz',
+      'prasad', 'Shreyas',
+      'Jonny',  'yash'
+    ],
+    rating: 9,
+    price: 500
+  }
+]
+Anjum> db.movie.updateOne({price:200},{$inc:{price:100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Anjum> db.movie.updateMany({price:200},{$inc:{price:100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Anjum> db.movie.updateMany({price:{$le:200}},{$inc:{price:100}})
+MongoServerError: unknown operator: $le
+Anjum> db.movie.updateMany({price:{$lt:200}},{$inc:{price:100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 0,
+  modifiedCount: 0,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 7 },
+  { name: 'uri', rating: 9 },
+  { name: 'padmavat', rating: 7, price: 250 },
+  { name: 'dream girl', price: 250, rating: null },
+  { name: 'aradhana', rating: 9, price: 260 },
+  { name: 'paa', rating: 9, price: 270 },
+  { name: 'chichore', price: 274, rating: 7 },
+  { price: 280 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 9, price: 340 },
+  { name: 'lagaan', rating: 9, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'Andhadhund', price: 400, rating: 7 },
+  { name: 'kahani', price: 500, rating: 9 },
+  { name: '3 idiots', rating: 9, price: 500 },
+  { name: 'kahani 2', rating: 9, price: 500 }
+]
+Anjum> db.movie.updateMany({price:{$lt:300}},{$inc:{price:100}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 6,
+  modifiedCount: 6,
+  upsertedCount: 0
+}
+Anjum> db.movie.find({},{name:1,price:1,rating:1,_id:0}).sort({price:1})
+[
+  { name: 'Andhadhund', price: null, rating: 7 },
+  { name: 'uri', rating: 9 },
+  { name: 'newton', price: 310 },
+  { name: 'Dil dhadakane do', rating: 9, price: 340 },
+  { name: 'lagaan', rating: 9, price: 350 },
+  { name: 'sholay', rating: 6, price: 350 },
+  { name: 'Kesari', rating: 6, price: 350 },
+  { name: 'padmavat', rating: 7, price: 350 },
+  { name: 'mission mangal', price: 350, rating: 6 },
+  { name: 'dream girl', price: 350, rating: null },
+  { name: 'aradhana', rating: 9, price: 360 },
+  { name: 'paa', rating: 9, price: 370 },
+  { name: 'chichore', price: 374, rating: 7 },
+  { price: 380 },
+  { name: 'Andhadhund', price: 400, rating: 7 },
+  { name: 'kahani', price: 500, rating: 9 },
+  { name: '3 idiots', rating: 9, price: 500 },
+  { name: 'kahani 2', rating: 9, price: 500 }
+]
+Anjum> db.movie.find({actor:{$size:3}},{name:1,actor:1,price:1,rating:1,_id:0})
+[
+  {
+    name: 'aradhana',
+    actor: [ 'amitabh', 'prem', 'rajesh khanna' ],
+    rating: 9,
+    price: 360
+  },
+  {
+    name: 'uri',
+    rating: 9,
+    actor: [ 'vicky kaushal', 'yami', 'Paresh Rawal' ]
+  },
+  {
+    name: 'paa',
+    actor: [ 'Amitabh', 'vidya balan', 'Abhishek' ],
+    rating: 9,
+    price: 370
+  }
+]
+Anjum>

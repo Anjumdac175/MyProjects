@@ -1,0 +1,157 @@
+Enter how may Employees should add: 
+2
+
+==========Employee Menu===========
+
+1.Add Employee
+2. Display All Employees
+3. Exit from Program
+
+===============================
+
+Enter your choice: 
+1
+Choose Type of Employee
+***************************
+1. PermanentEmployee
+2. ContractEmployee
+***************************
+1
+Enter Name: 
+Anjum
+Enter Date of Birth: 
+16/08/1998
+Enter Address: 
+***************************
+
+Enter HouseNo: 
+3-149
+
+Enter City: 
+Pulivendula
+
+Enter Pincode: 
+516390
+
+Enter State: 
+Andhra Pradesh
+Enter Department from (HR,FINANCE,SALES,MARKETING,OPERATIONS): 
+sales
+Enter Date of Joining: 
+10/10/2019
+
+*******************
+Enter Basic Salary: 
+23120
+Enter Incentives: 
+7869
+Enter SpecialAllowance: 
+1553
+
+*******************
+
+Employee Added Successfully!!....
+Choose Type of Employee
+***************************
+1. PermanentEmployee
+2. ContractEmployee
+***************************
+2
+Enter Name: 
+Shreya
+Enter Date of Birth: 
+20/04/2002
+Enter Address: 
+***************************
+
+Enter HouseNo: 
+5A
+
+Enter City: 
+Pashan
+
+Enter Pincode: 
+516390
+
+Enter State: 
+Maharastra
+Enter Department from (HR,FINANCE,SALES,MARKETING,OPERATIONS): 
+marketing
+Enter Date of Joining: 
+25/02/2025
+
+*******************
+Enter HourlyRate: 
+1300
+Enter TotalHourlyWorked: 
+8
+
+*******************
+
+Employee Added Successfully!!....
+
+==========Employee Menu===========
+
+1.Add Employee
+2. Display All Employees
+3. Exit from Program
+
+===============================
+
+Enter your choice: 
+2
+Employee
+[
+ empName: Anjum
+ empNo: 250240120100
+ Date of Birth: 16/08/1998
+
+ Address:
+ houseNo: 3-149
+ city: Pulivendula
+ pincode: 516390
+ state: Andhra Pradesh
+
+ dept: Sales Department
+ Date of Joining: 10/10/2019
+
+ PermEmployee:
+ basicSalary: 23120.0
+ incentives: 7869.0
+ specialAllowance: 1553.0
+]
+
+Calculated Salary: 32542.0
+Employee
+[
+ empName: Shreya
+ empNo: 250240120101
+ Date of Birth: 20/04/2002
+
+ Address:
+ houseNo: 5A
+ city: Pashan
+ pincode: 516390
+ state: Maharastra
+
+ dept: Marketing Department
+ Date of Joining: 25/02/2025
+
+ ContractEmployee[
+ hourlyRate: 1300.0
+ totalHoursWorked: 8
+]
+
+Calculated Salary: 10400.0
+
+==========Employee Menu===========
+
+1.Add Employee
+2. Display All Employees
+3. Exit from Program
+
+===============================
+
+Enter your choice: 
+3
+Exit successfully!!!

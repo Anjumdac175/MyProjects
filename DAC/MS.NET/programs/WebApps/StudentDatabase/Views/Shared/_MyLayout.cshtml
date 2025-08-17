@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title - Student Management App</title>
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+</head>
+    <body>
+        <!----------Header----------->
+        <nav class="navabar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">StudentApp</a>
+                    <div class="collapse navbar-collapse">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active" asp-controller="Student" asp-action="Index">Home</a>
+                                </li>
+                                <li>
+                        <a class="nav-link" asp-controller="Student" asp-action="ShowStudent">Student List</a>
+                                </li>
+                            </ul>
+                            <span class="navbar-text text-white">
+                               Welcome,@ViewBag.User
+                            </span>
+                    </div>
+            </div>
+        </nav>
+
+        <!-------Page Content-------->
+        <div class="container mt-4">@RenderBody()</div>
+
+        <!---------------Footer----------------->
+        <footer class="bg-dark text-white text-center py-3 mt-4">
+            &copy;2025 Student Management App
+        </footer>
+
+        <!-- Bootstrap JS -->
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    </body>
+</html>

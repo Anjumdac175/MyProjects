@@ -1,0 +1,5 @@
+FROM openjdk:17-slim
+WORKDIR /exam
+COPY MySqlTester.java /exam
+COPY mysql-connector-j-9.3.0.jar /exam
+CMD [ "java","-cp","mysql-connector-j-9.3.0.jar","MySqlTester.java" ]

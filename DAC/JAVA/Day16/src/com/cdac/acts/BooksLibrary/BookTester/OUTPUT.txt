@@ -1,0 +1,294 @@
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+101
+Enter Book Title: 
+To Kill a Mockingbird
+Enter Author Name: 
+Harper Lee
+Enter Genre of the Book: 
+FICTION
+Enter Book Publish Year: 
+21-06-1960
+Enter Price of Book: 
+399.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+102
+Enter Book Title: 
+The Great Gatsby
+Enter Author Name: 
+F. Scott Fitzgerald
+Enter Genre of the Book: 
+FICTION
+Enter Book Publish Year: 
+25-05-1925
+Enter Price of Book: 
+499.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+201
+Enter Book Title: 
+Gone Girl
+Enter Author Name: 
+Gillian Flynn
+Enter Genre of the Book: 
+MYSTRY
+Enter Book Publish Year: 
+12-12-2012
+Enter Price of Book: 
+350.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+202
+Enter Book Title: 
+The Da Vinci Code
+Enter Author Name: 
+Dan Brown
+Enter Genre of the Book: 
+MYSTRY
+Enter Book Publish Year: 
+13-03-2003
+Enter Price of Book: 
+520.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+301
+Enter Book Title: 
+A Brief History of Time
+Enter Author Name: 
+Stephen Hawking
+Enter Genre of the Book: 
+SCIENCE
+Enter Book Publish Year: 
+18-08-1988
+Enter Price of Book: 
+600.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+401
+Enter Book Title: 
+Clean Code
+Enter Author Name: 
+Robert C. Martin
+Enter Genre of the Book: 
+TECHNOLOGY
+Enter Book Publish Year: 
+22-02-2008
+Enter Price of Book: 
+599.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+2
+Books {
+bookId: 101
+title: To Kill a Mockingbird
+author: Harper Lee
+genre: FICTION
+pubyear: 1960-06-21
+price:399.0
+}
+Books {
+bookId: 102
+title: The Great Gatsby
+author: F. Scott Fitzgerald
+genre: FICTION
+pubyear: 1925-05-25
+price:499.0
+}
+Books {
+bookId: 201
+title: Gone Girl
+author: Gillian Flynn
+genre: MYSTRY
+pubyear: 2012-12-12
+price:350.0
+}
+Books {
+bookId: 202
+title: The Da Vinci Code
+author: Dan Brown
+genre: MYSTRY
+pubyear: 2003-03-13
+price:520.0
+}
+Books {
+bookId: 301
+title: A Brief History of Time
+author: Stephen Hawking
+genre: SCIENCE
+pubyear: 1988-08-18
+price:600.0
+}
+Books {
+bookId: 401
+title: Clean Code
+author: Robert C. Martin
+genre: TECHNOLOGY
+pubyear: 2008-02-22
+price:599.0
+}
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+501
+Enter Book Title: 
+Sapiens: A Brief History of Humankind
+Enter Author Name: 
+Yuval Noah Harari
+Enter Genre of the Book: 
+HISTORY
+Enter Book Publish Year: 
+10-11-2011
+Enter Price of Book: 
+450.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Book ID: 
+601
+Enter Book Title: 
+Harry Potter and the Sorcerer's Stone
+Enter Author Name: 
+J.K. Rowling
+Enter Genre of the Book: 
+FANTASY
+Enter Book Publish Year: 
+16-08-1997
+Enter Price of Book: 
+650.00
+Book Record Saved Successfully
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+2
+Books {
+bookId: 101
+title: To Kill a Mockingbird
+author: Harper Lee
+genre: FICTION
+pubyear: 1960-06-21
+price:399.0
+}
+Books {
+bookId: 102
+title: The Great Gatsby
+author: F. Scott Fitzgerald
+genre: FICTION
+pubyear: 1925-05-25
+price:499.0
+}
+Books {
+bookId: 201
+title: Gone Girl
+author: Gillian Flynn
+genre: MYSTRY
+pubyear: 2012-12-12
+price:350.0
+}
+Books {
+bookId: 202
+title: The Da Vinci Code
+author: Dan Brown
+genre: MYSTRY
+pubyear: 2003-03-13
+price:520.0
+}
+Books {
+bookId: 301
+title: A Brief History of Time
+author: Stephen Hawking
+genre: SCIENCE
+pubyear: 1988-08-18
+price:600.0
+}
+Books {
+bookId: 401
+title: Clean Code
+author: Robert C. Martin
+genre: TECHNOLOGY
+pubyear: 2008-02-22
+price:599.0
+}
+Books {
+bookId: 501
+title: Sapiens: A Brief History of Humankind
+author: Yuval Noah Harari
+genre: HISTORY
+pubyear: 2011-11-10
+price:450.0
+}
+Books {
+bookId: 601
+title: Harry Potter and the Sorcerer's Stone
+author: J.K. Rowling
+genre: FANTASY
+pubyear: 1997-08-16
+price:650.0
+}
+***********BOOKSLIST**********************
+ 1. Add Book
+ 2. Print Books
+ 3. Exit from Program************************
+
+Enter Your Choice
+3
+Exit Successfully

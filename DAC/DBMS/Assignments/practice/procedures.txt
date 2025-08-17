@@ -1,0 +1,514 @@
+1. Retrieve Employees by Manager
+Objective: Create a stored procedure that retrieves all employees under a specific manager.
+
+Input: p_manager_id IN NUMBER (Manager's employee ID)
+Output: List of employees with their details (Employee ID, First Name, Last Name, Job Title, Salary)
+Business Logic: The procedure should return employees whose manager_id matches the given p_manager_id.
+
+Ans:
+
+mysql> delimiter //
+mysql> create procedure p_manager(IN emp_id int)
+    -> begin
+    ->  select employee_id,first_name,last_name,job_id,salary
+    ->  from employees
+    ->  where manager_id = emp_id;
+    ->
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+
+mysql> set @emp_id  = 102;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call p_manager(@emp_id);
++-------------+------------+-----------+---------+---------+
+| employee_id | first_name | last_name | job_id  | salary  |
++-------------+------------+-----------+---------+---------+
+|         103 | Alexander  | Hunold    | IT_PROG | 9000.00 |
++-------------+------------+-----------+---------+---------+
+1 row in set (0.00 sec)
+
+mysql> set @emp_id  = 122;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> call p_manager(@emp_id);
++-------------+------------+------------+----------+---------+
+| employee_id | first_name | last_name  | job_id   | salary  |
++-------------+------------+------------+----------+---------+
+|         133 | Jason      | Mallin     | ST_CLERK | 3300.00 |
+|         134 | Michael    | Rogers     | ST_CLERK | 2900.00 |
+|         135 | Ki         | Gee        | ST_CLERK | 2400.00 |
+|         136 | Hazel      | Philtanker | ST_CLERK | 2200.00 |
+|         188 | Kelly      | Chung      | SH_CLERK | 3800.00 |
+|         189 | Jennifer   | Dilly      | SH_CLERK | 3600.00 |
+|         190 | Timothy    | Gates      | SH_CLERK | 2900.00 |
+|         191 | Randall    | Perkins    | SH_CLERK | 2500.00 |
++-------------+------------+------------+----------+---------+
+8 rows in set (0.00 sec)
+
+
+
+============================================================================================================================================================================================2. Update Employee Salary
+Objective: Create a stored procedure that updates the salary of a given employee based on their employee ID.
+Input: p_employee_id IN NUMBER, p_new_salary IN NUMBER
+Output: Success message or error message if the employee is not found.
+Business Logic: The procedure should check if the employee exists and then update their salary. If the employee doesn't exist, return an error message.
+
+ans
+
+
+mysql> delimiter //
+mysql> create procedure UpdateEmployeeSalary(IN emp_id int,IN emp_salary decimal(7,2))
+    -> begin
+    ->  if (select employee_id from employees where employee_id = emp_id) is not NULL
+    ->  then
+    ->          update employees
+    ->          set salary = emp_salary
+    ->          where employee_id = emp_id;
+    ->
+    ->          select 'Success: data entered successfully!!' as Message;
+    ->
+    ->  else
+    ->          select 'Error: Employee not found!!' as Message;
+    ->  end if;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> call UpdateEmployeeSalary(103,25000);
++--------------------------------------+
+| Message                              |
++--------------------------------------+
+| Success: data entered successfully!! |
++--------------------------------------+
+1 row in set (0.02 sec)
+
+mysql> select * from employees where employee_id = 103;
++-------------+------------+-----------+---------+--------------+------------+---------+----------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email   | phone_number | hire_date  | job_id  | salary   | commission_pct | manager_id | department_id |
++-------------+------------+-----------+---------+--------------+------------+---------+----------+----------------+------------+---------------+
+|         103 | Alexander  | Hunold    | AHUNOLD | 590.423.4567 | 1990-01-03 | IT_PROG | 25000.00 |           NULL |        102 |            60 |
++-------------+------------+-----------+---------+--------------+------------+---------+----------+----------------+------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> call UpdateEmployeeSalary(10,35000);
++-----------------------------+
+| Message                     |
++-----------------------------+
+| Error: Employee not found!! |
++-----------------------------+
+1 row in set (0.00 sec)
+
+============================================================================================================================================================================================
+
+3. Employee Count by Department
+Objective: Create a stored procedure that returns the count of employees in a specific department.
+Input: p_department_id IN NUMBER
+Output: Count of employees in that department.
+Business Logic: The procedure should count the employees in the specified department and return the result.
+
+mysql> delimiter //
+mysql> create procedure CountEmployeeInDepartment(IN dept_id int)
+    -> begin
+    ->  declare count_emp int;
+    ->  select count(employee_id) into count_emp
+    ->  from employees
+    ->  where department_id = dept_id;
+    ->
+    ->  select count_emp;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> call CountEmployeeInDepartment(122);
++-----------+
+| count_emp |
++-----------+
+|         0 |
++-----------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> call CountEmployeeInDepartment(100);
++-----------+
+| count_emp |
++-----------+
+|         6 |
++-----------+
+1 row in set (0.00 sec)
+
+
+
+
+============================================================================================================================================================================================
+
+4. Employee Job Title and Salary Information
+Objective: Create a stored procedure that retrieves employees' job titles and salary information based on a specific job title.
+Input: p_job_id IN VARCHAR2
+Output: List of employees with job title and salary.
+Business Logic: The procedure should return the employee ID, first name, last name, and salary for employees with the specified job title.
+
+Ans:
+
+mysql> delimiter //
+mysql> drop procedure if exists Employee_job_Salary;
+    -> create procedure Employee_job_Salary(IN ejob varchar(20))
+    -> begin
+    ->  select Employee_id, first_name, last_name, salary, count(job_id) over(partition by job_id) as Job_count
+    ->  from employees
+    ->  where job_id = ejob;
+    -> end //
+Query OK, 0 rows affected (0.02 sec)
+
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> delimiter ;
+mysql> call Employee_job_Salary('IT_PROG');
++-------------+------------+-----------+----------+-----------+
+| Employee_id | first_name | last_name | salary   | Job_count |
++-------------+------------+-----------+----------+-----------+
+|         103 | Alexander  | Hunold    | 25000.00 |         5 |
+|         104 | Bruce      | Ernst     |  6000.00 |         5 |
+|         105 | David      | Austin    |  4800.00 |         5 |
+|         106 | Valli      | Pataballa |  4800.00 |         5 |
+|         107 | Diana      | Lorentz   |  4200.00 |         5 |
++-------------+------------+-----------+----------+-----------+
+5 rows in set (0.00 sec)
+
+
+============================================================================================================================================================================================
+5. Promote Employee
+Objective: Create a stored procedure to promote an employee by changing their job title and salary.
+Input: p_employee_id IN NUMBER, p_new_job_id IN VARCHAR2, p_salary_increase IN NUMBER
+Output: Success or failure message.
+Business Logic: The procedure should check if the employee exists, and then update the job_id and salary based on the provided values. Ensure salary increase is not less than a certain percentage (e.g., 10%).
+
+ans:
+
+mysql> delimiter //
+mysql> drop procedure if exists promote_employee;
+    -> create procedure promote_employee(IN emp_id int, IN new_job varchar(20), IN hike_sal decimal(7,2))
+    -> begin
+    ->  declare cur_sal decimal(7,2);
+    ->  declare min_sal_increase decimal(7,2);
+    ->  if(select employee_id from employees where employee_id = emp_id) is not NULL
+    ->  then
+    ->          select salary into cur_sal
+    ->          from employees
+    ->          where employee_id = emp_id;
+    ->
+    ->          if cur_sal is not NULL
+    ->          then
+    ->                  set min_sal_increase = cur_sal * 0.10;
+    ->
+    ->                  if hike_sal >= min_sal_increase
+    ->                  then
+    ->                          update employees
+    ->                          set job_id = new_job, salary = salary+hike_sal
+    ->                          where employee_id = emp_id;
+    ->
+    ->                          select 'Success: data update successfully!!' as Message;
+    ->                  else
+    ->                          select 'Error: Salary should increase atlest by 10%' as Message;
+    ->                  end if;
+    ->          else
+    ->                  select 'Error: salary is not found' as Message;
+    ->          end if;
+    ->  else
+    ->          select 'Error: Employee not found' as Mesaage;
+    ->  end if;
+    -> end //
+Query OK, 0 rows affected, 1 warning (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+
+mysql> call promote_employee(104,'HR_REP',1000);
++-------------------------------------+
+| Message                             |
++-------------------------------------+
+| Success: data update successfully!! |
++-------------------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select *
+    -> from employees
+    -> where employee_id = 104;
++-------------+------------+-----------+--------+--------------+------------+--------+---------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email  | phone_number | hire_date  | job_id | salary  | commission_pct | manager_id | department_id |
++-------------+------------+-----------+--------+--------------+------------+--------+---------+----------------+------------+---------------+
+|         104 | Bruce      | Ernst     | BERNST | 590.423.4568 | 1991-05-21 | HR_REP | 7000.00 |           NULL |        103 |            60 |
++-------------+------------+-----------+--------+--------------+------------+--------+---------+----------------+------------+---------------+
+1 row in set (0.00 sec)
+
+mysql> call promote_employee(203,'PR_REP',100);
++---------------------------------------------+
+| Message                                     |
++---------------------------------------------+
+| Error: Salary should increase atlest by 10% |
++---------------------------------------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+
+
+============================================================================================================================================================================================
+6. Employee Payroll Report
+Objective: Create a stored procedure that generates a payroll report for a specific date range.
+Input: p_start_date IN DATE, p_end_date IN DATE
+Output: A list of employees along with their payroll details (Employee ID, Name, Job Title, Salary, Bonus, Total Pay).
+Business Logic: The procedure should return payroll data (including salary and any bonuses) for employees who were active during the specified date range.
+
+ans:
+
+delimiter //
+create procedure PayrollReport(IN s_date date, IN e_date date)
+begin
+	select e.employee_id,concat(e.first_name,' ',e.last_name) as EmpName, j.job_title, e.salary, (e.salary*0.10) as Bonus, (e.salary+(e.salary*0.10)) as Total_pay
+	from employees e
+	join job_history jh
+	on e.employee_id = jh.employee_id
+	join jobs j
+	on jh.job_id = j.job_id
+	where e.hire_date between s_date and e_date;
+
+end //
+delimiter ;
+
+call PayrollReport('1993-01-13','1998-07-24');
++-------------+-------------------+--------------------------+----------+-----------+------------+
+| employee_id | EmpName           | job_title                | salary   | Bonus     | Total_pay  |
++-------------+-------------------+--------------------------+----------+-----------+------------+
+|         102 | Lex De Haan       | Programmer               | 17000.00 | 1700.0000 | 18700.0000 |
+|         201 | Michael Hartstein | Marketing Representative | 13000.00 | 1300.0000 | 14300.0000 |
+|         176 | Jonathon Taylor   | Sales Manager            |  8600.00 |  860.0000 |  9460.0000 |
+|         176 | Jonathon Taylor   | Sales Representative     |  8600.00 |  860.0000 |  9460.0000 |
+|         114 | Den Raphaely      | Stock Clerk              | 11000.00 | 1100.0000 | 12100.0000 |
+|         122 | Payam Kaufling    | Stock Clerk              |  7900.00 |  790.0000 |  8690.0000 |
++-------------+-------------------+--------------------------+----------+-----------+------------+
+6 rows in set (0.00 sec)
+
+
+another version
+--------------------------------------------
+delimiter //
+create procedure EmpPayrollReport(IN s_date date, IN e_date date)
+begin
+	select e.employee_id,concat(e.first_name,' ',e.last_name) as EmpName, j.job_title, e.salary, (e.salary*0.10) as Bonus, (e.salary+(e.salary*0.10)) as Total_pay
+	from employees e
+	join job_history jh
+	on e.employee_id = jh.employee_id
+	and jh.start_date <=e_date
+	and(jh.end_date is NULL OR jh.end_date>=s_date)
+	join jobs j
+	on jh.job_id = j.job_id
+	where e.hire_date <= e_date;
+
+end //
+delimiter ;
+
+call PayrollReport('1993-01-13','1998-07-24');
+
+mysql> call PayrollReport('1990-01-01','1999-08-16');
++-------------+-------------------+--------------------------+----------+-----------+------------+
+| employee_id | EmpName           | job_title                | salary   | Bonus     | Total_pay  |
++-------------+-------------------+--------------------------+----------+-----------+------------+
+|         102 | Lex De Haan       | Programmer               | 17000.00 | 1700.0000 | 18700.0000 |
+|         201 | Michael Hartstein | Marketing Representative | 13000.00 | 1300.0000 | 14300.0000 |
+|         176 | Jonathon Taylor   | Sales Manager            |  8600.00 |  860.0000 |  9460.0000 |
+|         176 | Jonathon Taylor   | Sales Representative     |  8600.00 |  860.0000 |  9460.0000 |
+|         114 | Den Raphaely      | Stock Clerk              | 11000.00 | 1100.0000 | 12100.0000 |
+|         122 | Payam Kaufling    | Stock Clerk              |  7900.00 |  790.0000 |  8690.0000 |
++-------------+-------------------+--------------------------+----------+-----------+------------+
+6 rows in set (0.00 sec)
+
+
+
+============================================================================================================================================================================================
+
+7. Employee Tenure
+Objective: Create a stored procedure that calculates and returns the tenure (in years) for an employee based on their hire date.
+Input: p_employee_id IN NUMBER
+Output: Employee's tenure in years.
+Business Logic: The procedure should calculate the difference between the current date and the employee's hire date, returning the number of years the employee has worked.
+
+Ans:
+
+delimiter //
+drop procedure if exists EmployeeTenure;
+create procedure EmployeeTenure(IN emp_id int)
+begin
+	select employee_id,concat(first_name,'',last_name),hire_date, curdate() as Currentdate, timestampdiff(year,hire_date,curdate()) as Tenure_in_years
+	from employees
+	where employee_id = emp_id;
+end //
+delimiter ;
+
+mysql> call EmployeeTenure(175);
++-------------+---------------------------------+------------+-------------+-----------------+
+| employee_id | concat(first_name,'',last_name) | hire_date  | Currentdate | Tenure_in_years |
++-------------+---------------------------------+------------+-------------+-----------------+
+|         175 | AlyssaHutton                    | 1997-03-19 | 2025-03-30  |              28 |
++-------------+---------------------------------+------------+-------------+-----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call EmployeeTenure(183);
++-------------+---------------------------------+------------+-------------+-----------------+
+| employee_id | concat(first_name,'',last_name) | hire_date  | Currentdate | Tenure_in_years |
++-------------+---------------------------------+------------+-------------+-----------------+
+|         183 | GirardGeoni                     | 2000-02-03 | 2025-03-30  |              25 |
++-------------+---------------------------------+------------+-------------+-----------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call EmployeeTenure(187);
++-------------+---------------------------------+------------+-------------+-----------------+
+| employee_id | concat(first_name,'',last_name) | hire_date  | Currentdate | Tenure_in_years |
++-------------+---------------------------------+------------+-------------+-----------------+
+|         187 | AnthonyCabrio                   | 1999-02-07 | 2025-03-30  |              26 |
++-------------+---------------------------------+------------+-------------+-----------------+
+1 row in set (0.00 sec)
+
+
+
+
+============================================================================================================================================================================================
+8. Department Budget Summary
+Objective: Create a stored procedure that calculates and returns the total salary expense for a department.
+Input: p_department_id IN NUMBER
+Output: Total salary expense for the department.
+Business Logic: The procedure should sum the salaries of all employees in the given department and return the total salary expense.
+
+ans:
+
+delimiter //
+drop procedure if exists Dept_Budget_summary;
+create procedure Dept_Budget_summary(IN dept_id int)
+begin
+	select department_id,sum(salary) as totalSalary
+	from employees
+	where department_id = dept_id
+	group by department_id;
+end //
+delimiter ;
+
+mysql> call Dept_Budget_summary(100);
++---------------+-------------+
+| department_id | totalSalary |
++---------------+-------------+
+|           100 |    51600.00 |
++---------------+-------------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> call Dept_Budget_summary(50);
++---------------+-------------+
+| department_id | totalSalary |
++---------------+-------------+
+|            50 |   156400.00 |
++---------------+-------------+
+1 row in set (0.01 sec)
+
+Query OK, 0 rows affected (0.01 sec)
+
+
+====================================================================================================================================================================================================================================
+9. Find Employees with No Manager
+Objective: Create a stored procedure that identifies employees who do not have a manager assigned.
+Input: None
+Output: List of employees without a manager (Employee ID, Name, Job Title).
+Business Logic: The procedure should return a list of employees whose manager_id is NULL.
+
+ans:
+
+delimiter //
+drop procedure if exists Employee_with_noMgr;
+create procedure Employee_with_noMgr()
+begin
+	select e.employee_id,concat(e.first_name,' ',e.last_name) as EmpName,j.job_title
+	from employees e
+	join jobs j
+	on e.job_id = j.job_id
+	where e.manager_id is NULL;
+end //
+delimiter ;
+
+mysql> call Employee_with_noMgr;
++-------------+-------------+-----------+
+| employee_id | EmpName     | job_title |
++-------------+-------------+-----------+
+|         100 | Steven King | President |
++-------------+-------------+-----------+
+1 row in set (0.00 sec)
+
+Query OK, 0 rows affected (0.00 sec)
+
+
+====================================================================================================================================================================================================================================
+10. Employee Turnover Rate
+Objective: Create a stored procedure that calculates the turnover rate for a department within a given period.
+Input: p_department_id IN NUMBER, p_start_date IN DATE, p_end_date IN DATE
+Output: Turnover rate as a percentage of the total number of employees in that department who left during the specified period.
+Business Logic: The procedure should calculate the number of employees who left the department within the given date range and divide by the total number of employees in the department during that period.
+
+ans:
+
+delimiter //
+create procedure Employee_turnover_rate(IN dept_id int,IN S_date date,IN E_date date)
+begin
+	declare turnover decimal(5,2);
+	declare tot_emp int;
+	declare emp_left int;
+
+	-- calculate total employees
+
+	select count(*) into tot_emp
+	from employees
+	where department_id = dept_id;
+	
+	
+	-- calculate employees left in the given range
+
+	select count(distinct jh.employee_id) into emp_left
+	from job_history jh
+	left join employees e
+	on jh.employee_id = e.employee_id
+	where jh.department_id = dept_id 
+		and jh.end_date between s_date and e_date;
+
+	-- calculate turnover
+
+	if tot_emp > 0
+	then
+		set turnover = (emp_left/tot_emp) * 100;		
+	else
+		set turnover = 0;
+	end if;
+
+	select dept_id as Department_id,tot_emp as Total_employees_inDepartment, emp_left as Employees_left_department, turnover as Turnover_percenatage_Dept;
+end //
+delimiter ;
+
+call Employee_turnover_rate(90,'1989-09-21','1998-07-24');
+
+mysql> call Employee_turnover_rate(90,'1989-09-21','1998-07-24');
++---------------+------------------------------+---------------------------+---------------------------+
+| Department_id | Total_employees_inDepartment | Employees_left_department | Turnover_percenatage_Dept |
++---------------+------------------------------+---------------------------+---------------------------+
+|            90 |                            3 |                         1 |                     33.33 |
++---------------+------------------------------+---------------------------+---------------------------+
+1 row in set (0.00 sec)
+
+call Employee_turnover_rate(10,'1987-09-17','1999-12-19');
+

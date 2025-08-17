@@ -1,0 +1,132 @@
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+1
+List of Fruits are: 
+
+***************************
+
+Fruits [fruitName=Mango, fruitColor=Yellow, price=350.0, quantity=2]
+Fruits [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=4]
+Fruits [fruitName=Avacado, fruitColor=Green, price=350.0, quantity=1]
+Fruits [fruitName=Banana, fruitColor=White, price=120.0, quantity=12]
+Fruits [fruitName=Apple, fruitColor=Red, price=350.0, quantity=1]
+Fruits [fruitName=Guvava, fruitColor=LemonYellow, price=150.0, quantity=12]
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+2
+Sorting By Color updated Successfully!!...........
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+1
+List of Fruits are: 
+
+***************************
+
+Fruits [fruitName=Avacado, fruitColor=Green, price=350.0, quantity=1]
+Fruits [fruitName=Guvava, fruitColor=LemonYellow, price=150.0, quantity=12]
+Fruits [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=4]
+Fruits [fruitName=Apple, fruitColor=Red, price=350.0, quantity=1]
+Fruits [fruitName=Banana, fruitColor=White, price=120.0, quantity=12]
+Fruits [fruitName=Mango, fruitColor=Yellow, price=350.0, quantity=2]
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+3
+Sorting By Quantity updated Successfully!!...........
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+1
+List of Fruits are: 
+
+***************************
+
+Fruits [fruitName=Avacado, fruitColor=Green, price=350.0, quantity=1]
+Fruits [fruitName=Apple, fruitColor=Red, price=350.0, quantity=1]
+Fruits [fruitName=Mango, fruitColor=Yellow, price=350.0, quantity=2]
+Fruits [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=4]
+Fruits [fruitName=Guvava, fruitColor=LemonYellow, price=150.0, quantity=12]
+Fruits [fruitName=Banana, fruitColor=White, price=120.0, quantity=12]
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+4
+Sorting By Price updated Successfully!!...........
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+1
+List of Fruits are: 
+
+***************************
+
+Fruits [fruitName=Banana, fruitColor=White, price=120.0, quantity=12]
+Fruits [fruitName=Guvava, fruitColor=LemonYellow, price=150.0, quantity=12]
+Fruits [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=4]
+Fruits [fruitName=Avacado, fruitColor=Green, price=350.0, quantity=1]
+Fruits [fruitName=Apple, fruitColor=Red, price=350.0, quantity=1]
+Fruits [fruitName=Mango, fruitColor=Yellow, price=350.0, quantity=2]
+
+**********Fruit Menu***************
+1. Add FruitList
+2. Sort Fruits by Color
+3. Sort by Qunatity
+4. Sort by Price
+5. Exit the Program
+***************************
+
+Enter the choice:
+5
+Exit from the Program

@@ -1,0 +1,642 @@
+Assignment – 5
+-------------------------------------------------------------------------------------------------------------
+1. List sum of salary for each department.
+
+Ans:-
+
+mysql> select* from emp;
++-------+--------+-----------+------+------------+---------+---------+--------+
+| EMPNO | ENAME  | JOB       | MGR  | HIREDATE   | SAL     | COMM    | DEPTNO |
++-------+--------+-----------+------+------------+---------+---------+--------+
+|  7369 | SMITH  | CLERK     | 7902 | 1980-12-17 |  800.00 |    NULL |     20 |
+|  7499 | ALLEN  | SALESMAN  | 7698 | 1981-02-20 | 1600.00 |  300.00 |     30 |
+|  7521 | WARD   | SALESMAN  | 7698 | 1981-02-22 | 1250.00 |  500.00 |     30 |
+|  7566 | JONES  | MANAGER   | 7839 | 1981-04-02 | 2975.00 |    NULL |     20 |
+|  7654 | MARTIN | SALESMAN  | 7698 | 1981-09-28 | 1250.00 | 1400.00 |     30 |
+|  7698 | BLAKE  | MANAGER   | 7839 | 1981-05-01 | 2850.00 |    NULL |     30 |
+|  7782 | CLARK  | MANAGER   | 7839 | 1981-06-09 | 2450.00 |    NULL |     10 |
+|  7788 | SCOTT  | ANALYST   | 7566 | 1982-12-09 | 3000.00 |    NULL |     20 |
+|  7839 | KING   | PRESIDENT | NULL | 1981-11-17 | 5000.00 |    NULL |     10 |
+|  7844 | TURNER | SALESMAN  | 7698 | 1981-09-08 | 1500.00 |    0.00 |     30 |
+|  7876 | ADAMS  | CLERK     | 7788 | 1983-01-12 | 1100.00 |    NULL |     20 |
+|  7900 | JAMES  | CLERK     | 7698 | 1981-12-03 |  950.00 |    NULL |     30 |
+|  7902 | FORD   | ANALYST   | 7566 | 1981-12-03 | 3000.00 |    NULL |     20 |
+|  7934 | MILLER | CLERK     | 7782 | 1982-01-23 | 1300.00 |    NULL |     10 |
++-------+--------+-----------+------+------------+---------+---------+--------+
+14 rows in set (0.00 sec)
+
+mysql> select deptno,sum(sal)
+    -> from emp
+    -> group by deptno
+    -> order by deptno asc;
++--------+----------+
+| deptno | sum(sal) |
++--------+----------+
+|     10 |  8750.00 |
+|     20 | 10875.00 |
+|     30 |  9400.00 |
++--------+----------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+2. List department wise sum sal only if the sum for any department is  &gt; 10000.
+
+Ans: 
+
+mysql> select deptno,sum(sal)
+    -> from emp
+    -> group by deptno
+    -> having sum(sal) > 10000;
++--------+----------+
+| deptno | sum(sal) |
++--------+----------+
+|     20 | 10875.00 |
++--------+----------+
+1 row in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+3. Display job wise sum of salary for all departments (excluding dept 30) whose sum salary is
+&gt;9000.
+
+Ans:-mysql> select job, sum(sal)
+    -> from emp
+    -> group by job;
++-----------+----------+
+| job       | sum(sal) |
++-----------+----------+
+| CLERK     |  4150.00 |
+| SALESMAN  |  5600.00 |
+| MANAGER   |  8275.00 |
+| ANALYST   |  6000.00 |
+| PRESIDENT |  5000.00 |
++-----------+----------+
+5 rows in set (0.00 sec)
+
+mysql> select job, sum(sal)
+    -> from emp
+    -> where deptno <>30
+    -> group by job
+    -> having sum(sal) > 9000;
+Empty set (0.00 sec)
+
+----------------------------------------------------------------------------------------------------------------
+
+4. Display job wise max sal only for managers, clerks, salesman working in dept 10 and 20. Sort the
+data by des order of the max salary.
+
+Ans:-mysql> select job, max(sal) as maximum_salary
+    -> from emp
+    -> where job in('manager','clerk','salesman')
+    -> and deptno in(10,20)
+    -> group by job
+    -> order by max(sal) desc;
++---------+----------------+
+| job     | maximum_salary |
++---------+----------------+
+| MANAGER |        2975.00 |
+| CLERK   |        1300.00 |
++---------+----------------+
+2 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+
+5. Display job wise number of employees in all the department with sum salary &gt; 3000
+
+Ans:mysql> select job, sum(sal) as Sum_salary
+    -> from emp
+    -> group by job
+    -> having sum(sal) > 3000;
++-----------+------------+
+| job       | Sum_salary |
++-----------+------------+
+| CLERK     |    4150.00 |
+| SALESMAN  |    5600.00 |
+| MANAGER   |    8275.00 |
+| ANALYST   |    6000.00 |
+| PRESIDENT |    5000.00 |
++-----------+------------+
+5 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+
+6. Display the department number having atleast 3 employees in it.
+
+Ans: mysql> select deptno,count(*)
+    -> from emp
+    -> group by deptno
+    -> having count(*) >= 3;
++--------+----------+
+| deptno | count(*) |
++--------+----------+
+|     20 |        5 |
+|     30 |        6 |
+|     10 |        3 |
++--------+----------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+8. Display deptno, salary sum and min(sum) for all employees who are managers.
+
+Ans:mysql> select deptno,job, sum(sal) as Sum_salary,min(sal) as Minimum_salary
+    -> from emp
+    -> where job = 'Manager'
+    -> group by deptno
+    -> order by deptno asc;
++--------+---------+------------+----------------+
+| deptno | job     | Sum_salary | Minimum_salary |
++--------+---------+------------+----------------+
+|     10 | MANAGER |    2450.00 |        2450.00 |
+|     20 | MANAGER |    2975.00 |        2975.00 |
+|     30 | MANAGER |    2850.00 |        2850.00 |
++--------+---------+------------+----------------+
+3 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+
+9. Find sum(sal) for each dept having more than 2 clerk.
+
+Ans: mysql> select deptno, sum(sal), count(*)
+    -> from emp
+    -> where job = 'clerk'
+    -> group by deptno
+    -> having count(*) > 2;
+Empty set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+10. Calculate how many employees earn sal more than 1500 in each dept.
+
+Ans: mysql> select deptno,count(*) as salary_more_than_1500
+    -> from emp
+    -> where sal > 1500
+    -> group by deptno
+    -> order by deptno asc;
++--------+-----------------------+
+| deptno | salary_more_than_1500 |
++--------+-----------------------+
+|     10 |                     2 |
+|     20 |                     3 |
+|     30 |                     2 |
++--------+-----------------------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+11. Display all employees who earn sal more that Allen earns.
+
+
+Ans:	mysql> select ename,sal
+    -> from emp
+    -> where sal>  (select sal
+    ->          from emp
+    ->          where ename = 'Allen');
++-------+---------+
+| ename | sal     |
++-------+---------+
+| JONES | 2975.00 |
+| BLAKE | 2850.00 |
+| CLARK | 2450.00 |
+| SCOTT | 3000.00 |
+| KING  | 5000.00 |
+| FORD  | 3000.00 |
++-------+---------+
+6 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+12. Display all employees who earn more than average sal of dept 10.
+
+Ans: mysql> select ename, sal
+    -> from emp
+    -> where sal > (select avg(sal)
+    ->          from emp
+    ->          where deptno = 10);
++-------+---------+
+| ename | sal     |
++-------+---------+
+| JONES | 2975.00 |
+| SCOTT | 3000.00 |
+| KING  | 5000.00 |
+| FORD  | 3000.00 |
++-------+---------+
+4 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+
+13. Write a query which will display dept no and dept names to which no employee is assigned
+dept  . Use emp and dept table.
+
+Ans: mysql> select deptno, dname
+    -> from dept
+    -> where deptno not in(select deptno
+    ->                  from emp);
++--------+------------+
+| deptno | dname      |
++--------+------------+
+|     40 | OPERATIONS |
++--------+------------+
+1 row in set (0.00 sec)
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
+
+1. create table category(cid int primary key auto_increment, cname varchar (15) unique not
+null, description varchar(30))
+-----------------------------------------------------          
+cid cname description
+------------------------------------------------------
+1 chips very crunchy
+2 chocolate very chocolaty
+3 snacks yummy
+4 cold drinks thanda thanda cool cool
+
+Ans: mysql> desc category;
++-------------+-------------+------+-----+---------+----------------+
+| Field       | Type        | Null | Key | Default | Extra          |
++-------------+-------------+------+-----+---------+----------------+
+| cid         | int         | NO   | PRI | NULL    | auto_increment |
+| cname       | varchar(15) | NO   | UNI | NULL    |                |
+| description | varchar(30) | YES  |     | NULL    |                |
++-------------+-------------+------+-----+---------+----------------+
+3 rows in set (0.00 sec)
+
+ mysql> insert into category(cname,description)
+    -> values ('chips','Very crunchy'),
+    -> ('chocolate','Very chocolaty'),
+    -> ('snacks','Yummy'),
+    -> ('cool drinks','thanda thanda cool cool');
+Query OK, 4 rows affected (0.00 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from category;
++-----+-------------+-------------------------+
+| cid | cname       | description             |
++-----+-------------+-------------------------+
+|   1 | chips       | Very crunchy            |
+|   2 | chocolate   | Very chocolaty          |
+|   3 | snacks      | Yummy                   |
+|   4 | cool drinks | thanda thanda cool cool |
++-----+-------------+-------------------------+
+4 rows in set (0.00 sec)
+--------------------------------------------------------------------------------------------------------------------------
+
+2. create table Product(pid  int primary key, pname varchar (20), price float (6,2) default 20.00, qty
+int check(qty&gt;0)  cid int  ,   sid int,   constraint fk_cid foreign key(cid) references category(cid) on
+delete set null, 
+ constraint fk_sid foreign key(sid) references salesman(sid));
+--------------------------------------------------------------------------------------------
+prodid pname qty price catid sid
+----------------------------------------------------------------------------------------------
+123 lays            30 30.00 1 12
+111 pepsi 40 50.00 4 11
+134 nachos 50 50.00 1 12
+124 dairy milk 40 60.00 2 14
+125 pringles 40 60.00 1 14
+213 Sketch Pens 56 150.00 null 11
+167 eraser 90 5.00 null null
+
+
+
+Ans: mysql> create table New_product
+    -> (pid int primary key, pname varchar(20), price float(6,2) default 20.00, qty int check(qty>0),cid int, sid int, constraint fkcid foreign key(cid) references category(cid) on delete set null, constraint fk_sid foreign key(sid) references New_Salesman(sid));
+Query OK, 0 rows affected, 1 warning (0.04 sec)
+
+mysql> desc new_product;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| pid   | int         | NO   | PRI | NULL    |       |
+| pname | varchar(20) | YES  |     | NULL    |       |
+| price | float(6,2)  | YES  |     | 20.00   |       |
+| qty   | int         | YES  |     | NULL    |       |
+| cid   | int         | YES  | MUL | NULL    |       |
+| sid   | int         | YES  | MUL | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> insert into new_product
+    -> values (123,'lays',30.00,30,1,12),
+    -> (111,'pepsi',50.00,40,4,11),
+    -> (134,'nachos',50.00,50,1,12),
+    -> (124,'dairy milk',60.00,40,2,14),
+    -> (125,'pringles',60.00,40,1,14),
+    -> (213,'Sketch pens',150.00,56,NULL,11),
+    -> (167,'Eraser',5.00,90,NULL,NULL);
+Query OK, 7 rows affected (0.00 sec)
+Records: 7  Duplicates: 0  Warnings: 0
+
+mysql> select * from new_product;
++-----+-------------+--------+------+------+------+
+| pid | pname       | price  | qty  | cid  | sid  |
++-----+-------------+--------+------+------+------+
+| 111 | pepsi       |  50.00 |   40 |    4 |   11 |
+| 123 | lays        |  30.00 |   30 |    1 |   12 |
+| 124 | dairy milk  |  60.00 |   40 |    2 |   14 |
+| 125 | pringles    |  60.00 |   40 |    1 |   14 |
+| 134 | nachos      |  50.00 |   50 |    1 |   12 |
+| 167 | Eraser      |   5.00 |   90 | NULL | NULL |
+| 213 | Sketch pens | 150.00 |   56 | NULL |   11 |
++-----+-------------+--------+------+------+------+
+7 rows in set (0.00 sec)
+
+---------------------------------------------------------------------------------------------------------------------
+
+3. create table salesman(sid int primary key, sname varchar (15) unique not null, city varchar(15))
+---------------------------------
+sid sname city
+---------------------------------
+11 Rahul Pune
+12 Kirti Mumbai
+13 Prasad Nashik
+14 Arnav Amravati
+
+
+mysql> create table New_salesman
+    -> (sid int primary key, sname varchar(15) unique not null, city varchar(15));
+Query OK, 0 rows affected (0.03 sec)
+
+mysql> desc New_salesman;
++-------+-------------+------+-----+---------+-------+
+| Field | Type        | Null | Key | Default | Extra |
++-------+-------------+------+-----+---------+-------+
+| sid   | int         | NO   | PRI | NULL    |       |
+| sname | varchar(15) | NO   | UNI | NULL    |       |
+| city  | varchar(15) | YES  |     | NULL    |       |
++-------+-------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+mysql> insert into new_salesman
+    -> values (11,'Rahul','Pune'),
+    -> (12,'kirti','Mumbai'),
+    -> (13,'prasad','Nashik'),
+    -> (14,'Arnav','Amaravati');
+Query OK, 4 rows affected (0.01 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
++-----+--------+-----------+
+4 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+Q & A related to above tables which are interconnected with primary key and foreign key
+
+1. List all pid, pname, cid, cname  with category chips
+
+Ans: mysql> select pid,pname,cid
+    -> from new_product
+    -> where cid=(select cid
+    ->  from category
+    ->  where cname = 'chips');
++-----+----------+------+
+| pid | pname    | cid  |
++-----+----------+------+
+| 123 | lays     |    1 |
+| 125 | pringles |    1 |
+| 134 | nachos   |    1 |
++-----+----------+------+
+3 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+2. Display all products sold by kirti
+Ans : mysql> select *
+    -> from new_product
+    -> where sid = (select sid
+    ->          from new_salesman
+    ->          where sname = 'kirti');
++-----+--------+-------+------+------+------+
+| pid | pname  | price | qty  | cid  | sid  |
++-----+--------+-------+------+------+------+
+| 123 | lays   | 30.00 |   30 |    1 |   12 |
+| 134 | nachos | 50.00 |   50 |    1 |   12 |
++-----+--------+-------+------+------+------+
+2 rows in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+3. Display all salesmen who did not sell any product
+Ans: mysql> select *
+    -> from new_salesman
+    -> where sid not in (select distinct sid
+    ->  from new_product
+    ->  where sid is not null);
++-----+--------+--------+
+| sid | sname  | city   |
++-----+--------+--------+
+|  13 | prasad | Nashik |
++-----+--------+--------+
+1 row in set (0.00 sec)
+
+-------------------------------------------------------------------------------------------------------------
+
+4. Display all category for which no product is assigned
+Ans: mysql> select *
+    -> from category
+    -> where cid not in (select distinct cid
+    ->                          from new_product
+    ->                  where cid is not null);
++-----+--------+-------------+
+| cid | cname  | description |
++-----+--------+-------------+
+|   3 | snacks | Yummy       |
++-----+--------+-------------+
+1 row in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+5. Display all products to which  category is  not assigned
+Ans: mysql> select *
+    -> from new_product
+    -> where cid is NULL;
++-----+-------------+--------+------+------+------+
+| pid | pname       | price  | qty  | cid  | sid  |
++-----+-------------+--------+------+------+------+
+| 167 | Eraser      |   5.00 |   90 | NULL | NULL |
+| 213 | Sketch pens | 150.00 |   56 | NULL |   11 |
++-----+-------------+--------+------+------+------+
+2 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+6. List all salesmen who live in city where  name starts with P or N
+Ans: mysql> select *
+    -> from New_salesman
+    -> where REGEXP_like (city,'^[PN].*');
++-----+--------+--------+
+| sid | sname  | city   |
++-----+--------+--------+
+|  11 | Rahul  | Pune   |
+|  13 | prasad | Nashik |
++-----+--------+--------+
+2 rows in set (0.00 sec)
+-------------------------------------------------------------------------------------------------------------
+
+19. Try all TCL commands.
+Ans : 
+
+RollBack and autocommit
+-----------------------
+
+mysql> set autocommit=0;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into new_salesman
+    -> values(15,'anjum','YSR'),
+    ->      (16,'ankita','nashik');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | anjum  | YSR       |
+|  16 | ankita | nashik    |
++-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
++-----+--------+-----------+
+4 rows in set (0.00 sec)
+
+
+Rollback and commit
+-------------------
+
+mysql> insert into new_salesman
+    -> values(15,'anjum','YSR'),
+    -> (16,'ankita','nashik');
+Query OK, 2 rows affected (0.00 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+mysql> commit;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | anjum  | YSR       |
+|  16 | ankita | nashik    |
++-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> rollback;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | anjum  | YSR       |
+|  16 | ankita | nashik    |
++-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+SAVEPOINT EXAMPLE
+------------------
+
+mysql> start transaction;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into new_salesman
+    -> values (16,'Ankita',NUll);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> savepoint s1;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> insert into new_salesman
+    -> values (17,'Shreya',NULL);
+Query OK, 1 row affected (0.00 sec)
+
+mysql> savepoint s2;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | Anjum  | YSR       |
+|  16 | Ankita | NULL      |
+|  17 | Shreya | NULL      |
++-----+--------+-----------+
+7 rows in set (0.00 sec)
+
+mysql> rollback to s1;
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | Anjum  | YSR       |
+|  16 | Ankita | NULL      |
++-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> update new_salesman
+    -> set city = 'Nashik'
+    -> where sid = 16;
+Query OK, 1 row affected (0.01 sec)
+Rows matched: 1  Changed: 1  Warnings: 0
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | Anjum  | YSR       |
+|  16 | Ankita | Nashik    |
++-----+--------+-----------+
+6 rows in set (0.00 sec)
+
+mysql> savepoint s3;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> rollback to savepoint s3;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select * from new_salesman;
++-----+--------+-----------+
+| sid | sname  | city      |
++-----+--------+-----------+
+|  11 | Rahul  | Pune      |
+|  12 | kirti  | Mumbai    |
+|  13 | prasad | Nashik    |
+|  14 | Arnav  | Amaravati |
+|  15 | Anjum  | YSR       |
+|  16 | Ankita | Nashik    |
++-----+--------+-----------+
+6 rows in set (0.00 sec)

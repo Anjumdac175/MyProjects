@@ -1,0 +1,52 @@
+Requirement specifications - SRS
+Types:
+1-> Functional requirements ex:- what user gives like book, retrive, payments etc..
+2-> Non-Functional requirements ex;- system functionality like performance, usablity, security and reliablity
+3->constraints - limitations ex;- it has any restrictions to stick on
+
+key points:
+
+1->introduction
+	->purpose of the system
+	->target users
+	->scope of the project
+2-> system overview
+	->need to explain the project in high level
+3-> Functional Requirements
+	->detailed features and functionalities
+4-> Non-Functional Requirements
+	->perfomance, usablity and security
+5-> constraints& Assumptions
+	->Limitations and conditions
+6-> External Interfaces
+	-> APIs, databases and third party integrtions
+	
+------------------------------------------------------------------------------------------
+High level Design(HLD)
+ ->it the architectural blueprint of a system that provides a macro view of how different components of a system interacts.
+ ->it is a bridge btwn Requirement specifications and detailed design(Low level design).
+ 
+ major components:
+ 1-> System Architecture
+	->defines overall view of the system including clinet-server model, clous architecture and microservices.
+2-> Module Descriptions
+	->describes major components of the system like user management, booking system, payment methods and admin panel etc..
+3-> Technology stack
+	->specifys the programming languages, frameworks, databases and API's used like front-end, back-end, databases and payment gateway
+4-> Data Flow & interaction
+	-> how data moves btw components like user->booking system -> payments->ticket generation.
+5-> UML Diagrams
+	-> use case - defines user interactions
+	-> Component - show system components and relationships.
+	-> Sequential - Shows interactions btwn modules.
+---------------------------------------------------------------------------------------------
+low Level Design (LLD)
+->it is the blueprint that defines the implementation of each system module
+->it provides more in-depth specifications for developers, ensuring that all the components are built correctly and follow the system architecture
+
+major components:
+1->understand the HLD
+2->Break down each module into components
+3->create detailed class and sequential diagrams
+4->define algorithms and work-flow
+5->specify API contracts and database scheme

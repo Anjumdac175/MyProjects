@@ -1,0 +1,346 @@
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Registration Id: 
+250240120175
+Enter Name: 
+Anjum
+Enter Email: 
+nishadanjum@gmail.com
+Enter Password: 
+anjum@625
+Enter Date of Birth: 
+16-08-1998
+Enter Aadhar No: 
+233689975437
+Enter Phone Number: 
+7386205087
+Enter Graduation Completion Date: 
+30-06-2019
+Enter Graduation Degree: 
+BTECH
+Registration Successfull!!!..........
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+2
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Registration Id: 
+250240120187
+Enter Name: 
+Shreya
+Enter Email: 
+shreya@gmail.com
+Enter Password: 
+shr187@gmail.com
+Enter Date of Birth: 
+05-04-2000
+Enter Aadhar No: 
+125478963104
+Enter Phone Number: 
+7852694130
+Enter Graduation Completion Date: 
+26-06-2024
+Enter Graduation Degree: 
+MSc
+Registration Successfull!!!..........
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+2
+jobSeeker
+registrationId: 250240120187
+name: Shreya
+email: shreya@gmail.com
+password: shr187@gmail.com
+dateOfBirth: 2000-04-05
+aadharId: 125478963104
+phoneNumber: 7852694130
+graduationDate: 2024-06-26
+degree: Master of Science
+
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+1
+Enter Registration Id: 
+250240120183
+Enter Name: 
+Ankita
+Enter Email: 
+ankita@gmail.com
+Enter Password: 
+ankita@183
+Enter Date of Birth: 
+20-04-1999
+Enter Aadhar No: 
+456789561230
+Enter Phone Number: 
+8794563210
+Enter Graduation Completion Date: 
+25-03-2020
+Enter Graduation Degree: 
+BE
+Registration Successfull!!!..........
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+2
+jobSeeker
+registrationId: 250240120187
+name: Shreya
+email: shreya@gmail.com
+password: shr187@gmail.com
+dateOfBirth: 2000-04-05
+aadharId: 125478963104
+phoneNumber: 7852694130
+graduationDate: 2024-06-26
+degree: Master of Science
+
+jobSeeker
+registrationId: 250240120183
+name: Ankita
+email: ankita@gmail.com
+password: ankita@183
+dateOfBirth: 1999-04-20
+aadharId: 456789561230
+phoneNumber: 8794563210
+graduationDate: 2020-03-25
+degree: Bachelor of Engineering
+
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+4
+Enter Degree for which Details to be fecthed......
+Choose Degree from(BTECH,BE,BSc,MSc,MCA,MBA)
+BTECH
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+5
+Sorted by Email Successfully.........
+jobSeeker
+registrationId: 250240120183
+name: Ankita
+email: ankita@gmail.com
+password: ankita@183
+dateOfBirth: 1999-04-20
+aadharId: 456789561230
+phoneNumber: 8794563210
+graduationDate: 2020-03-25
+degree: Bachelor of Engineering
+
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+jobSeeker
+registrationId: 250240120187
+name: Shreya
+email: shreya@gmail.com
+password: shr187@gmail.com
+dateOfBirth: 2000-04-05
+aadharId: 125478963104
+phoneNumber: 7852694130
+graduationDate: 2024-06-26
+degree: Master of Science
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+6
+Sorted By Date of Birth Successfully.........
+jobSeeker
+registrationId: 250240120175
+name: Anjum
+email: nishadanjum@gmail.com
+password: anjum@625
+dateOfBirth: 1998-08-16
+aadharId: 233689975437
+phoneNumber: 7386205087
+graduationDate: 2019-06-30
+degree: Bachelor of Technology
+
+jobSeeker
+registrationId: 250240120183
+name: Ankita
+email: ankita@gmail.com
+password: ankita@183
+dateOfBirth: 1999-04-20
+aadharId: 456789561230
+phoneNumber: 8794563210
+graduationDate: 2020-03-25
+degree: Bachelor of Engineering
+
+jobSeeker
+registrationId: 250240120187
+name: Shreya
+email: shreya@gmail.com
+password: shr187@gmail.com
+dateOfBirth: 2000-04-05
+aadharId: 125478963104
+phoneNumber: 7852694130
+graduationDate: 2024-06-26
+degree: Master of Science
+
+
+********Job Seeker Potal************
+1. Job Seeker Registration
+2. Display All Registration
+3. Update Email
+4. Display Details By Degree
+5. Sort By Email
+6. Sort By Date of Birth
+7. Sort By Graduation Date
+8. Exit from the program
+*****************************
+
+Enter your Choice
+8
+Exit from Program.......

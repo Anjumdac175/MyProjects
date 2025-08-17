@@ -1,0 +1,138 @@
+Enter size of Fruit list
+5
+Enter the FruitList
+*******************************
+
+Fruit: 1
+
+Enter Fruit Name
+Mango
+
+Enter Fruit Color
+Yellow
+
+Enter Fruit Price
+200
+
+Enter Fruit Quantity
+3
+
+************************
+
+Enter the FruitList
+*******************************
+
+Fruit: 2
+
+Enter Fruit Name
+Apple
+
+Enter Fruit Color
+Red
+
+Enter Fruit Price
+150
+
+Enter Fruit Quantity
+1
+
+************************
+
+Enter the FruitList
+*******************************
+
+Fruit: 3
+
+Enter Fruit Name
+Pinapple
+
+Enter Fruit Color
+Yellow
+
+Enter Fruit Price
+250
+
+Enter Fruit Quantity
+4
+
+************************
+
+Enter the FruitList
+*******************************
+
+Fruit: 4
+
+Enter Fruit Name
+Kiwi
+
+Enter Fruit Color
+LemonGray
+
+Enter Fruit Price
+300
+
+Enter Fruit Quantity
+2
+
+************************
+
+Enter the FruitList
+*******************************
+
+Fruit: 5
+
+Enter Fruit Name
+Banana
+
+Enter Fruit Color
+White
+
+Enter Fruit Price
+100
+
+Enter Fruit Quantity
+12
+
+************************
+
+FruitList are:
+*******************************
+
+FruitList [fruitName=Mango, fruitColor=Yellow, price=200.0, quantity=3]
+FruitList [fruitName=Apple, fruitColor=Red, price=150.0, quantity=1]
+FruitList [fruitName=Pinapple, fruitColor=Yellow, price=250.0, quantity=4]
+FruitList [fruitName=Kiwi, fruitColor=LemonGray, price=300.0, quantity=2]
+FruitList [fruitName=Banana, fruitColor=White, price=100.0, quantity=12]
+
+
+After Adding Fruit with Add(): [FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Apple, fruitColor=Red, price=350.0, quantity=2], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1]]
+*******************************
+
+After Adding Fruit with AddFirst(): [FruitList [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=2], FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Apple, fruitColor=Red, price=350.0, quantity=2], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1]]
+*******************************
+
+After Adding Fruit with AddLast(): [FruitList [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=2], FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Apple, fruitColor=Red, price=350.0, quantity=2], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1], FruitList [fruitName=cherry, fruitColor=Red, price=150.0, quantity=4]]
+*******************************
+
+After Removing Fruit at Index 2: [FruitList [fruitName=Orange, fruitColor=Orange, price=250.0, quantity=2], FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1], FruitList [fruitName=cherry, fruitColor=Red, price=150.0, quantity=4]]
+*******************************
+
+After Removing Fruit with RemoveFirst: [FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1], FruitList [fruitName=cherry, fruitColor=Red, price=150.0, quantity=4]]
+*******************************
+
+After Removing Fruit with RemoveLast: [FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3], FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1]]
+*******************************
+
+After Getting Fruit At Index 1: FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1]
+*******************************
+
+After Getting Fruit with getFirst: FruitList [fruitName=Mango, fruitColor=Yelloe, price=350.0, quantity=3]
+*******************************
+
+After Getting Fruit with getLast: FruitList [fruitName=Avacado, fruitColor=LemonGreen, price=350.0, quantity=1]
+*******************************
+
+Fruits list size(): 2
+*******************************
+
+Is the list empty? false

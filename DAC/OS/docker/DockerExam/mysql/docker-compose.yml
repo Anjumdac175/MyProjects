@@ -1,0 +1,25 @@
+services:
+  mySqlContainer:
+    image: mysql:latest
+    container_name: mySqlContainer
+    ports:
+      - "8000:3306"
+    networks:
+      - sql-network
+    environment:
+      - MYSQL_ROOT_PASSWORD=Nishadanjum@625
+      - MYSQL_DATABASE=dac
+
+  sqlContainer:
+    build: .
+    image: sqlapp:latest 
+    container_name: sqlContainer
+    depends_on:
+      - mySqlContainer
+    networks:
+      - sql-network
+    # Optional: image name must be lowercase if you add it
+    # image: sqlapp:latest
+
+networks:
+  sql-network: {}

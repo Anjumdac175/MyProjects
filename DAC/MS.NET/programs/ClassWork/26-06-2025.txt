@@ -1,0 +1,23 @@
+Ms. NET class notes on 26-06-2025
+=====================================================================
+ In Fucntions we to pass by references we use 'ref' Keyword in main() and in function too
+ In case of ref we need a initial value is to be given
+ In case of 'out' if we have given initial values at main they will discard that values and init method initial values will be assigned
+with the help of 'out' key work we can pass uninitialized values to the function and must be initialized in that given function
+
+improt*
+
+==========================================================
+Nullable Types
+
+int? a;
+a = 100; 
+a =  null;
+
+long?
+decimal?
+
+==========================================================
+Arrays
+int[] arr = new int[5];
+arr is a reference to the int class internally

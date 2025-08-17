@@ -1,0 +1,22 @@
+To display the last 10 lines of a file named logfile.txt, you can use the tail command in Linux.
+- The sky is blue during the day.
+- Water boils at 100 degrees Celsius.
+- Birds migrate to warmer places during winter.
+- The sun rises in the east and sets in the west.
+- Plants need sunlight to perform photosynthesis.
+- Earth has one natural satellite, the Moon.
+- Gravity keeps everything grounded on Earth.
+- Lions are known as the king of the jungle.
+- Honey never spoils, even after thousands of years.
+- The Great Wall of China is visible from space.
+- Human body is made up of 60% water.
+- Antarctica is the coldest place on Earth.
+- The Amazon Rainforest produces 20% of the world’s oxygen.
+- There are seven continents on Earth.
+- Dolphins are highly intelligent marine animals.
+- The human heart beats around 100,000 times a day.
+- Mount Everest is the tallest mountain in the world.
+- Bananas are a rich source of potassium.
+- A leap year occurs every four years.
+- Electricity travels at the speed of light.
+

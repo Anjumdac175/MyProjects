@@ -1,0 +1,16 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+
+@{
+    ViewBag.Title = "Student DashBoard";
+    Layout = "_MyLayout";
+}
+
+<div class="container mt-5">
+    <h1 class="text-center fs-1 fw-bold">Student DashBoard</h1>
+    <div class="d-flex justify-content-center align-content-around gap-2">
+        <a asp-action="CreateStudent" class="btn btn-success btn-lg"> Add Student</a>
+        <a asp-action="ShowStudent" class="btn btn-primary btn-lg">View Students</a>
+    </div>
+</div>

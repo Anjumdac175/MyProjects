@@ -1,0 +1,48 @@
+Devops:
+********************************************
+Install Git in Ubuntu:
+=====================
+sudo apt update
+sudo apt install git
+
+git --version
+
+Configuring Git Account:
+=====================
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+
+Creating Own Repository
+================================
+mkdir my-new-project
+cd my-new-project
+
+initialize Git:
+======================
+git init
+
+Add files:
+========================
+touch Main.java
+git add .
+git commit -m "Initial commit"
+
+To open a file in VS Code:
+==================
+code .
+
+Install Java in WSL Ubuntu:
+=========================
+sudo apt update
+sudo apt install openjdk-17-jdk
+
+java -version
+
+
+Push into GitHub Repository
+================================
+git remote add origin <your-repository-url>
+git push -u origin master
+
+
+

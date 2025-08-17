@@ -1,0 +1,160 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\views\\orders\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:views\\orders\\vieworders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\views\\orders\\showorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:views\\orders\\showorders.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\views\\orders\\addorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:views\\orders\\addorder.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\models\\orderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:models\\orderdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:models\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\ordermvc\\views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1646CBBF-7B2A-4BCE-8B5E-09D23F894297}|OrderMVC.csproj|solutionrelative:views\\orders\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAADYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T03:02:34.663Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "Controllers\\OrdersController.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAkwCkAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T03:00:47.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderDAL.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Models\\OrderDAL.cs",
+              "RelativeDocumentMoniker": "Models\\OrderDAL.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Models\\OrderDAL.cs",
+              "RelativeToolTip": "Models\\OrderDAL.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAYwCYAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T02:59:27.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderModel.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Models\\OrderModel.cs",
+              "RelativeDocumentMoniker": "Models\\OrderModel.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Models\\OrderModel.cs",
+              "RelativeToolTip": "Models\\OrderModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T02:58:14.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ViewOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\ViewOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\ViewOrders.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\ViewOrders.cshtml",
+              "RelativeToolTip": "Views\\Orders\\ViewOrders.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T02:52:51.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ShowOrders.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\ShowOrders.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\ShowOrders.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\ShowOrders.cshtml",
+              "RelativeToolTip": "Views\\Orders\\ShowOrders.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABAAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T02:52:50.817Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AddOrder.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\AddOrder.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\AddOrder.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\AddOrder.cshtml",
+              "RelativeToolTip": "Views\\Orders\\AddOrder.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T02:52:49.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Orders\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\OrderMVC\\Views\\Orders\\Index.cshtml",
+              "RelativeToolTip": "Views\\Orders\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-08T02:52:48.073Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

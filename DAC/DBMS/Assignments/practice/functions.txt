@@ -1,0 +1,175 @@
+1. Problem: "The finance department needs to calculate the average salary for each department to analyze salary distribution and budget planning."
+
+Function: GetAverageDepartmentSalary(dept_id INT)
+
+mysql> delimiter //
+mysql> drop function if exists GetAverageDepartmentSalary;
+    -> create function GetAverageDepartmentSalary(dept_id INT) returns decimal(7,2)
+    -> begin
+    ->  declare avg_sal decimal(7,2);
+    ->  select avg(salary) into avg_sal
+    ->  from employees
+    ->  where department_id=dept_id;
+    ->  return avg_sal;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+Query OK, 0 rows affected (0.02 sec)
+
+mysql> delimiter ;
+
+mysql> set @dept_id=100;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @dept_id as Department_Id, GetAverageDepartmentSalary(@dept_id) as Average_salary;
++---------------+----------------+
+| Department_Id | Average_salary |
++---------------+----------------+
+|           100 |        8600.00 |
++---------------+----------------+
+1 row in set (0.00 sec)
+=====================================================================================================================================================
+2. Problem: "As an HR analyst, I need to quickly retrieve the full name of an employee given their employee ID for reporting purposes."
+
+Function: GetEmployeeFullName(emp_id INT)
+
+ans:
+mysql> delimiter //
+mysql> create function GetEmployeeFullName(emp_id INT) returns varchar(50)
+    -> begin
+    ->  declare fullname varchar(50);
+    ->  select concat(first_name,last_name) into fullname
+    ->  from employees
+    ->  where employee_id = emp_id;
+    ->
+    ->  return fullname;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> set @emp_id = 203;
+Query OK, 0 rows affected (0.00 sec)
+
+
+mysql> select @emp_id as Employee_Id, GetEmployeeFullName(@emp_id) as Full_Name_employee;
++-------------+--------------------+
+| Employee_Id | Full_Name_employee |
++-------------+--------------------+
+|         203 | SusanMavris        |
++-------------+--------------------+
+1 row in set (0.00 sec)
+========================================================================================================================================================================
+
+
+3.Problem: "When reviewing employee information, I need to know the department name an employee belongs to, given their employee ID."
+
+Function: GetEmployeeDepartmentName(emp_id INT)
+
+ans: 
+mysql> delimiter //
+mysql> create function GetEmployeeDepartmentName(emp_id INT) returns varchar(20)
+    -> begin
+    ->  declare dept_name varchar(20);
+    ->  select d.department_name into dept_name
+    ->  from employees e
+    ->  left join departments d
+    ->  on e.department_id = d.department_id
+    ->  where e.employee_id = emp_id;
+    ->
+    ->  return dept_name;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> set @emp_id = 175;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @emp_id as Employee_Id,GetEmployeeDepartmentName(@emp_id) as Employee_Department;
++-------------+---------------------+
+| Employee_Id | Employee_Department |
++-------------+---------------------+
+|         175 | Sales               |
++-------------+---------------------+
+1 row in set (0.00 sec)
+
+========================================================================================================================================================================
+
+4.Problem: "The HR department requires a count of employees in each department for workforce planning and resource allocation."
+
+Function: CountEmployeesInDepartment(dept_id INT)
+
+ans:
+
+mysql> delimiter //
+mysql> create function CountEmployeesInDepartment(dept_id INT) returns int
+    -> begin
+    ->  declare count_emp int;
+    ->  select count(*) into count_emp
+    ->  from Employees
+    ->  where department_id = dept_id;
+    ->
+    ->  return count_emp;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> set @dept_id = 50;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @dept_id as department_id,CountEmployeesInDepartment(@dept_id) as Employees_count;
++---------------+-----------------+
+| department_id | Employees_count |
++---------------+-----------------+
+|            50 |              45 |
++---------------+-----------------+
+1 row in set (0.00 sec)
+
+========================================================================================================================================================================
+5.Problem: "The HR department needs to know the highest salary within each department for salary benchmarking and to identify potential pay disparities."
+
+Function: GetHighestSalaryInDepartment(dept_id INT)
+ 
+ans:
+mysql> delimiter //
+mysql> create function GetHighestSalaryInDepartment(dept_id int) returns decimal(7,2)
+    -> begin
+    ->  declare msal decimal(7,2);
+    ->  select max(salary) into msal
+    ->  from employees
+    ->  where department_id=dept_id;
+    ->  return msal;
+    -> end //
+Query OK, 0 rows affected (0.01 sec)
+
+mysql> delimiter ;
+mysql> set @dept_id=50;
+Query OK, 0 rows affected (0.00 sec)
+
+mysql> select @dept_id, GetHighestSalaryInDepartment(@dept_id);
++----------+----------------------------------------+
+| @dept_id | GetHighestSalaryInDepartment(@dept_id) |
++----------+----------------------------------------+
+|       50 |                                8200.00 |
++----------+----------------------------------------+
+1 row in set (0.00 sec)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,187 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\student\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\student\\editstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\student\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\models\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:models\\studentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\student\\deletestudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\student\\deletestudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\student\\showstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\student\\showstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\student\\createstudent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|c:\\users\\shaik mohd suhail\\desktop\\dac courses\\ms.net\\programs\\webapps\\studentdatabase\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{47B6B235-4AA0-4BE4-8178-0E3F48F981E3}|StudentDatabase.csproj|solutionrelative:models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ShowStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\ShowStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\ShowStudent.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\ShowStudent.cshtml",
+              "RelativeToolTip": "Views\\Student\\ShowStudent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:38:02.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\Index.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\Index.cshtml",
+              "RelativeToolTip": "Views\\Student\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:38:00.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\EditStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\EditStudent.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\EditStudent.cshtml",
+              "RelativeToolTip": "Views\\Student\\EditStudent.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAsAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:37:58.826Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "DeleteStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\DeleteStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\DeleteStudent.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\DeleteStudent.cshtml",
+              "RelativeToolTip": "Views\\Student\\DeleteStudent.cshtml",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:37:56.45Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CreateStudent.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\CreateStudent.cshtml",
+              "RelativeDocumentMoniker": "Views\\Student\\CreateStudent.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\Student\\CreateStudent.cshtml",
+              "RelativeToolTip": "Views\\Student\\CreateStudent.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:37:53.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "Controllers\\StudentController.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Controllers\\StudentController.cs",
+              "RelativeToolTip": "Controllers\\StudentController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAYwCAAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T17:37:36.687Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "StudentRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Models\\StudentRepository.cs",
+              "RelativeDocumentMoniker": "Models\\StudentRepository.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Models\\StudentRepository.cs",
+              "RelativeToolTip": "Models\\StudentRepository.cs",
+              "ViewState": "AgIAAC8AAAAAAAAAAAAqwDwAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T17:29:30.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "Views\\_ViewStart.cshtml",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-07-05T17:39:03.937Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-07-05T17:32:46.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Student.cs",
+              "DocumentMoniker": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "Models\\Student.cs",
+              "ToolTip": "C:\\Users\\Shaik Mohd Suhail\\Desktop\\DAC COURSES\\Ms.NET\\programs\\WebApps\\StudentDatabase\\Models\\Student.cs",
+              "RelativeToolTip": "Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-05T17:29:26.561Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

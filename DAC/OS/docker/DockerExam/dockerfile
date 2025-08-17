@@ -1,0 +1,4 @@
+FROM openjdk:17-slim
+WORKDIR /exam
+COPY Tester.java /exam
+CMD [ "java","Tester.java" ]

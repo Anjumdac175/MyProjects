@@ -1,0 +1,162 @@
+Printers Loaded Successfully..........
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Printer Serial NO: 
+SN501
+Enter Printer Model NO: 
+Epson-L3150
+Enter Printer Price: 
+6400
+Enter Type of the Printer: 
+INKJET
+Enter Printer Manufactured Year: 
+25-04-2003
+Printer Record Saved Successfully
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+1
+Enter Printer Serial NO: 
+SN600
+Enter Printer Model NO: 
+TVS-MSP-250
+Enter Printer Price: 
+8500
+Enter Type of the Printer: 
+DOTMATRIX
+Enter Printer Manufactured Year: 
+06-03-1985
+Printer Record Saved Successfully
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+3
+Loaded Printers are: 
+Printer: {
+serialNo: SN200
+modelNo: CANON-PIXMA
+price: 6500.0
+type: INKJET
+manufacturingDate: 1980-10-22
+}
+Printer: {
+serialNo: SN100
+modelNo: HP-M200
+price: 5500.0
+type: LASER
+manufacturingDate: 1990-08-12
+}
+Printer: {
+serialNo: SN400
+modelNo: HP-LaserJet-1020
+price: 8000.0
+type: LASER
+manufacturingDate: 2008-02-20
+}
+Printer: {
+serialNo: SN300
+modelNo: EPSON-DOT
+price: 4100.0
+type: DOTMATRIX
+manufacturingDate: 2000-09-18
+}
+Printer: {
+serialNo: SN501
+modelNo: Epson-L3150
+price: 6400.0
+type: INKJET
+manufacturingDate: 2003-04-25
+}
+Printer: {
+serialNo: SN600
+modelNo: TVS-MSP-250
+price: 8500.0
+type: DOTMATRIX
+manufacturingDate: 1985-03-06
+}
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+2
+Enter Serial No to Update Price: 
+SN300
+Enter New Price: 9000
+Price Updated....
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+3
+Loaded Printers are: 
+Printer: {
+serialNo: SN200
+modelNo: CANON-PIXMA
+price: 6500.0
+type: INKJET
+manufacturingDate: 1980-10-22
+}
+Printer: {
+serialNo: SN100
+modelNo: HP-M200
+price: 5500.0
+type: LASER
+manufacturingDate: 1990-08-12
+}
+Printer: {
+serialNo: SN400
+modelNo: HP-LaserJet-1020
+price: 8000.0
+type: LASER
+manufacturingDate: 2008-02-20
+}
+Printer: {
+serialNo: SN300
+modelNo: EPSON-DOT
+price: 9000.0
+type: DOTMATRIX
+manufacturingDate: 2000-09-18
+}
+Printer: {
+serialNo: SN501
+modelNo: Epson-L3150
+price: 6400.0
+type: INKJET
+manufacturingDate: 2003-04-25
+}
+Printer: {
+serialNo: SN600
+modelNo: TVS-MSP-250
+price: 8500.0
+type: DOTMATRIX
+manufacturingDate: 1985-03-06
+}
+***********PRINTERLIST**********************
+ 1. Add Printers
+ 2. Print All Printers
+ 3. Update Printer Price
+ 4. Exit from Program************************
+
+Enter Your Choice
+4
+Exit Successfully

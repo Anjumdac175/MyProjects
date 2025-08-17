@@ -1,0 +1,37 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model StudentDatabase.Models.Student;
+@{
+    ViewBag.Title = "Register Student";
+    Layout = "_MyLayout";
+}
+
+
+<h2 class="text-center">Register Student</h2>
+<form asp-action="Create" class="container mt-4">
+    <div class="form-group mb-3">
+        <label asp-for="RollNo" class="form-label">Student Id</label>
+        <input asp-for="RollNo" class="form-control" />
+        <span asp-validation-for="RollNo" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Name" class="form-label">Student Name</label>
+        <input asp-for="Name" class="form-control" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Age" class="form-label">Age</label>
+        <input asp-for="Age" class="form-control" />
+        <span asp-validation-for="Age" class="text-danger"></span>
+    </div>
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-success">Submit</button>
+        <a asp-action="Index" class="btn btn-secondary ms-2">Cancel</a>
+    </div>
+</form>

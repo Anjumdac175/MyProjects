@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
+    <title>Login page</title>
+
+    <script>
+
+        function handleSubmit(event){
+            event.preventDefault();
+
+            window.location.href = "movies.html";
+        }
+
+        function handleReset(){
+            window.location.href = "Login.html";
+        }
+
+    </script>
+
+
+
+    
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-5">
+                <div class="card bg-secondary-subtle shadow">
+                    <div class="card-header text-center text-light bg-dark">
+                        <h3>Login Form</h3>
+                    </div>
+                    <div class="card-body">
+                        <form id="myForm" onsubmit="handleSubmit(event)">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Name</label>
+                                <input type="text" class="form-control" name="username" id="username" placeholder="enter your name" required>
+                            </div>
+                            <div class="mb-3 gap-3">
+                                <label class="form-label fw-semibold">Gender</label>
+                                <input type="radio" class="form-check-input" name="gender" id="gender" value="Male" />
+                                <label class="form-label">Male</label>
+                                <input type="radio" class="form-check-input" name="gender" id="gender" value="Female" />
+                                <label class="form-label">Female</label>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Country</label>
+                                <select name="country" id="country" class="form-select" required>
+                                    <option selected>--Select--</option>
+                                    <option value="India">India</option>
+                                    <option value="US">US</option>
+                                    <option value="Germany">Germany</option>
+                                </select>
+                            </div>
+                           
+                            <div class="mb-3">
+                                <button type="submit" id="loginbtn" class="btn btn-primary rounded-2">Login</button>
+                                <button type="button" id="resetbtn" class="btn btn-primary rounded-2" onclick="handleReset()" >Reset</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>

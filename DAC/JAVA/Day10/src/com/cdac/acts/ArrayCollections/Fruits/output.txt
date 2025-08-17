@@ -1,0 +1,78 @@
+Enter No of Fruits to be entered: 
+5
+***********************************
+
+Enter Name of the Fruit
+Mango
+Enter color of the Fruit
+Yellow
+Enter the Price of the Fruit
+200
+Enter the Qauntity of Fruit
+2
+Enter Name of the Fruit
+Apple
+Enter color of the Fruit
+Red
+Enter the Price of the Fruit
+320
+Enter the Qauntity of Fruit
+3
+Enter Name of the Fruit
+Guvava
+Enter color of the Fruit
+Green
+Enter the Price of the Fruit
+150
+Enter the Qauntity of Fruit
+1
+Enter Name of the Fruit
+Banana
+Enter color of the Fruit
+White
+Enter the Price of the Fruit
+100
+Enter the Qauntity of Fruit
+12
+Enter Name of the Fruit
+Grapes
+Enter color of the Fruit
+Black
+Enter the Price of the Fruit
+250
+Enter the Qauntity of Fruit
+4
+
+This Retrieving of data is using Traditional for loop.............
+Fruits in ArrayList are: 
+
+***********************************
+
+Fruit [fruitName: Mango, color: Yellow, price: 200.0, quantity: 2]
+Fruit [fruitName: Apple, color: Red, price: 320.0, quantity: 3]
+Fruit [fruitName: Guvava, color: Green, price: 150.0, quantity: 1]
+Fruit [fruitName: Banana, color: White, price: 100.0, quantity: 12]
+Fruit [fruitName: Grapes, color: Black, price: 250.0, quantity: 4]
+
+This Retrieving of data is using toString.............
+***********************************
+
+[Fruit [fruitName: Mango, color: Yellow, price: 200.0, quantity: 2], Fruit [fruitName: Apple, color: Red, price: 320.0, quantity: 3], Fruit [fruitName: Guvava, color: Green, price: 150.0, quantity: 1], Fruit [fruitName: Banana, color: White, price: 100.0, quantity: 12], Fruit [fruitName: Grapes, color: Black, price: 250.0, quantity: 4]]
+
+This Retrieving of data is using Advance Loop.............
+***********************************
+
+Fruit [fruitName: Mango, color: Yellow, price: 200.0, quantity: 2]
+Fruit [fruitName: Apple, color: Red, price: 320.0, quantity: 3]
+Fruit [fruitName: Guvava, color: Green, price: 150.0, quantity: 1]
+Fruit [fruitName: Banana, color: White, price: 100.0, quantity: 12]
+Fruit [fruitName: Grapes, color: Black, price: 250.0, quantity: 4]
+
+This Retrieving of data is using Iterators .............
+***********************************
+
+Fruit [fruitName: Mango, color: Yellow, price: 200.0, quantity: 2]
+Fruit [fruitName: Apple, color: Red, price: 320.0, quantity: 3]
+Fruit [fruitName: Guvava, color: Green, price: 150.0, quantity: 1]
+Fruit [fruitName: Banana, color: White, price: 100.0, quantity: 12]
+Fruit [fruitName: Grapes, color: Black, price: 250.0, quantity: 4]
