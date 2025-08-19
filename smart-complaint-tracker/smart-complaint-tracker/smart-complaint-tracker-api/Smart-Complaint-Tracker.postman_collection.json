@@ -1,0 +1,126 @@
+{
+  "info": {
+    "name": "Smart Complaint Tracker API",
+    "_postman_id": "f1d9a8b5-0000-0000-0000-000000000001",
+    "description": "Collection for Smart Complaint Tracker endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Complaint",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/complaints",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "complaints"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Broken transformer\",\n  \"description\": \"Sparking at night\",\n  \"category\": \"Electricity\",\n  \"area\": \"Ward-D\",\n  \"urgency\": 5,\n  \"status\": \"PENDING\"\n}"
+        }
+      }
+    },
+    {
+      "name": "List Complaints (search)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/complaints?q=road",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "complaints"
+          ],
+          "query": [
+            {
+              "key": "q",
+              "value": "road"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Top Urgent",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/complaints/urgent?limit=5",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "complaints",
+            "urgent"
+          ],
+          "query": [
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "name": "Category Frequency",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/complaints/category-freq",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "complaints",
+            "category-freq"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Update Status",
+      "request": {
+        "method": "PATCH",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "http://localhost:8080/api/complaints/1/status",
+          "host": [
+            "http://localhost:8080"
+          ],
+          "path": [
+            "api",
+            "complaints",
+            "1",
+            "status"
+          ]
+        },
+        "body": {
+          "mode": "raw",
+          "raw": "{\"status\": \"RESOLVED\"}"
+        }
+      }
+    }
+  ]
+}
